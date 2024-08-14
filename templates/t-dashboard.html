@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+{% block content %}
+<br>
+<br>
+<div>
+  {{ session }}님 환영합니다.
+   
+
+<form action="{{ doc_root }}t_dashboard" method="post">
+  <div class="col-12">
+    <div class="mb-4">
+      <button class="btn btn-secondary w-100">로그아웃</button>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,185 @@
+{% extends 'check_layout.html' %}
+{% block content %}
+ 
+
+
+ 
+   <br>
+    <br>
+    <br>
+    <br>
+ <div class="main-container mt-5" id="container">
+
+      <div class="overlay"></div>
+      <div class="cs-overlay"></div>
+      <div class="search-overlay"></div>
+
+
+
+
+  <div class="container col-xl-12 col-md-12 col-sm-12 col-12">
+
+      <div class="row ">
+        <div class="col-lg-12 col-12 layout-spacing">
+              
+
+          <div class="col-lg-12 col-12 layout-spacing">
+              <div class="statbox widget box box-shadow">
+                  <div class="widget-header">                                
+                      <div class="row">
+                          <div class="col-xl-12 col-md-12 col-sm-12 col-12 mt-3">
+                              <h4>컴퓨터 정보 수집 서비스</h4>
+                          </div>
+                          
+                      </div>
+                  </div>
+                  <div class="widget-content widget-content-area">
+                    
+                      <form name="RequestSend" method="post" action="{{ doc_root }}check/{{ service_id }}" onsubmit="return check()">
+                          <div class="form-group mb-4">
+                              <label for="exampleFormControlInput2">학년</label>
+                              <input type="text" class="form-control"  name="grade" placeholder="학년 예) 1, 전담실1" required>
+                              <div class="errors">{{ errors.grade }}</div>
+                          </div>
+                          <div class="form-group mb-4">
+                              <label for="exampleFormControlSelect1">반</label>
+                              <input type="text" class="form-control" name="class" placeholder="반 예) 1">
+                              <div class="errors">{{ errors.class }}</div>
+                              </input>
+                          </div>
+                          <div class="form-group mb-4">
+                              <label for="exampleFormControlSelect2">컴퓨터 메모리</label>
+                              <input type="text" class="form-control"  name="memory" placeholder="컴퓨터 메모리" required>  
+                              <div class="errors">{{ errors.request }}</div>
+                              </input>
+                          </div>
+                          <div class="row g-3 align-items-center4">
+                              <label for="exampleFormControlSelect2">IP 주소(ipv4)/ 아이피</label><br>
+                             
+                                <div class="col-auto">
+                                  <input type="number" class="form-control"  name="ipv41"  required> 
+                                </div>
+                                <div class="col-auto">
+                                  <input type="number" class="form-control"  name="ipv42"  required> 
+                                </div>
+                                <div class="col-auto">
+                                  <input type="number" class="form-control"  name="ipv43"  required> 
+                                </div>
+                                <div class="col-auto">
+                                  <input type="number" class="form-control"  name="ipv44"  required> 
+                                </div>
+                                
+                          
+                              <div class="errors">{{ errors.request }}</div>
+                              </input>
+                          </div>
+                          <div class="form-group mb-4">
+                              <label for="exampleFormControlSelect2">컴퓨터 이름</label>
+                              <input type="text" class="form-control"  name="com_name" placeholder="컴퓨터 이름" required>  
+                              <div class="errors">{{ errors.request }}</div>
+                              </input>
+                          </div>
+                         
+                          
+                          <input type="hidden" name="year" id="year" value="{{ year }}">
+                          <input type="hidden" name="service_id" id="service_id" value="{{ service_id }}">
+                          <input type="submit"  name="want_request" class="mt-4 mb-4 btn btn-primary" value="입력하기">
+                      </form>
+                  </div>
+              </div>
+          </div>
+
+           <div class="container">
+                  <div class="container col-md-12">
+                      <div class="row">
+
+                              <div class=" widget box box-shadow">
+
+                                  <div class="widget-header">
+                                      <div class="row">
+                                          <div class="col-xl-6 col-md-6 col-sm-6 col-6 mt-4 mx-4">
+                                              <h2></h2>
+                                              <br>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="widget-content widget-content-area">
+                                  <div class="container">
+                                  <form method="post" action="{{ doc_root }}check_excel_download/{{ service_id }}" >
+                                    <button type="submit" class="btn btn-primary" id="excel_download">엑셀 다운로드</button>
+                                  </form>
+                                    <br>
+                                    <p></p>
+                                    <table
+                                      class="table table-bordered"
+                                      
+                                    >
+                                    <thead>
+                                      <tr>
+                                        <th scope="col">순번</th>
+                                        <th scope="col">학년</th>
+                                        <th scope="col">반</th>
+                                        <th scope="col">메모리</th>
+                                        <th scope="col">IP</th>
+                                        <th scope="col">컴퓨터 이름</th>
+                                        <th scope="col">조사 년도</th>
+                                      </tr>
+
+                                    </thead>
+                                    <tbody>
+                                      {% for all in alls|reverse %}
+                                      <tr>
+                                        <td>{{ loop.index }}</td>
+                                        <td>{{ all.grade }}</td>
+                                        <td>{{ all.class }}</td>
+                                        <td>{{ all.memory }}</td>
+                                        <td>{{ all.ipv4 }}</td>
+                                        <td>{{ all.com_name }}</td>
+                                        <td>{{ all.year }}</td>
+                                      </tr>
+                                      {% endfor %}
+                                      
+                                    </tbody>
+
+                                    </tr>
+
+                                    </table>
+                                    
+
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+
+                  </div>
+                </div>
+
+          </div>
+  </div>
+</div>     
+<script>
+    function check(){
+        let formdata = document.RequestSend;
+
+        if (formdata.grade.value == ""){
+            alert("학년을 입력해주세요.");
+            formdata.grade.focus();
+            return false;
+        }
+        if (formdata.class.value == ""){
+            alert("반을 입력해주세요.");
+            formdata.class.focus();
+            return false;
+        }
+        if (formdata.name.value == ""){
+            alert("이름을 입력해주세요.");
+            formdata.name.focus();
+            return false;
+        }
+    }
+
+    document.getElementById('excel_download').addEventListener('click', function(){
+        
+    });
+    
+{% endblock %}
