@@ -1,19 +1,12 @@
 <?php 
 declare(strict_types=1);
-session_start();
-if(!isset($_SESSION['userid'])){
-    redirect('t-admin/');
-}
-$data['session'] = $_SESSION['userid'];
+error_reporting(E_ALL&~E_WARNING);
 
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    
-    if($_SESSION['userid']){
-        unset($_SESSION['useridd']);
-        redirect('t-admin/');
-    }
-    
-}
+$data = [];
+
+
+
+
 
 echo $twig->render('t-dashboard.html', $data);

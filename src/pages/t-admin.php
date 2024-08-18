@@ -1,36 +1,39 @@
 <?php
 declare(strict_types=1);
 
-session_start();
+
 $data = [];
 
-if(isset($_SESSION['userid'])){
-    redirect('t-dashboard/', $data);
-} 
-
-
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-
+  if (empty($_POST['userid']) || empty($_POST['password'])) {
+    $data['errors'] = '아이디와 비밀번호를 입력해주세요.';
+    echo "<script>alert('아이디와 비밀번호를 입력해주세요.');</script>";
+    redirect('t-admin/');
+    exit();
+  }
   $data['userid'] = $_POST['userid'];
-  $data['current-password'] = $_POST['current-password'];
-  $data['userid'] = $cms->getFcb()->getId($data['userid']);
-  $data['password'] = $cms->getFcb()->getPass($data['current-password']);
+  $data['password'] = $_POST['password'];
+
+  $data['userid2'] = $cms->getFcb()->getId($data['userid']);
+  $data['password2'] = $cms->getFcb()->getPass($data['password']);
+  $member['userName'] = $data['userid2']['userid'];
+  $member['userPw'] = $data['password2']['password'];
+  $cms->getSession()->create($member);
 
 
+  if ($data['userid2']['userid'] == $_POST['userid'] && $data['password2']['password'] == $_POST['password']) {
+    
+    $member['userName'] = $_POST['userid'];
+    $member['passWd'] =   $_POST['password'];
 
-
-  if ($data['userid']['userid'] == $_POST['userid']) {
-
-
-    if ($data['current-password']['current-password'] != $_POST['current-password']) {
-      $data['errors'] = '비밀번호가 일치하지 않습니다.';
+    redirect('t-dashboard');
+    
     } else {
-      $data['current-password'];
-      redirect('t-dashboard');
-    }
-
+    
+     $data['errors'] = '아이디가 존재하지 않거나 비밀번호가 일치하지 않습니다.';
+    redirect('t-admin/');
   }
-  }
+} 
 
 
 echo $twig->render('t-admin.html', $data);

@@ -11,10 +11,37 @@ try {
         id INT(255) NOT NULL AUTO_INCREMENT,
         userid VARCHAR(15) NULL UNIQUE,
         password TEXT NULL,
+        classname INT(255) NULL,
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
         updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-        PRIMARY KEY (id));
-        ";
+        PRIMARY KEY (id));";
+
+  $sql .= "
+        CREATE TABLE class (
+        id INT(255) NOT NULL AUTO_INCREMENT,
+        classname INT(255) NULL UNIQUE,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+        PRIMARY KEY (id));";
+  $sql .= "
+        CREATE TABLE subject (
+        id INT(255) NOT NULL AUTO_INCREMENT,
+        subjectname VARCHAR(255) NULL,
+        classname INT(255) NULL,
+        score VARCHAR(15) NULL,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+        PRIMARY KEY (id));";
+  $sql .= "
+        CREATE TABLE student (
+        id INT(255) NOT NULL AUTO_INCREMENT,
+        classname VARCHAR(255) NULL,
+        subjectname TEXT NULL,
+        studentnumber VARCHAR(15) NULL,
+        studentname TEXT NULL,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+        PRIMARY KEY (id));";
 
   $con = mysqli_connect("localhost", "neohum801", "min9610012@@", "neohum801");
   if( mysqli_multi_query($con, $sql) ){
