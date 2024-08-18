@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 session_start();
+
 $data = [];
 
 if (isset($_POST['errors']) ) {
@@ -22,6 +23,10 @@ if (isset($_POST['userid']) ) {
             echo "<script>alert('가입이 완료 되었습니다.');</script>";
             redirect('t-dashboard/', $data);
         }
+
+    //세션 변수 등록
+$_SESSION['userName'] = $data['login'];
+$_SESSION['userPw'] = $data['password'];
 
 }
 echo $twig->render('t-signin.html', $data);

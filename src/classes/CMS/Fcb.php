@@ -1,5 +1,9 @@
 <?php
-namespace PhpBook\CMS;                                   // Namespace declaration
+namespace PhpBook\CMS; 
+
+use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use PhpOffice\PhpSpreadsheet\Writer\Xlsx;// Namespace declaration
+use PhpOffice\PhpSpreadsheet\IOFactory;
 
 class Fcb
 {
@@ -51,7 +55,43 @@ class Fcb
 
         return $this->db->runSQL($sql, $arguments)->fetch();
     }
-  
+
+
+  public function setClassName(string $className)
+  {
+    try {
+      $sql = "INSERT INTO class (className) VALUES (:className);";
+      $arguments['className'] = $className;
+
+      return $this->db->runSQL($sql, $arguments)->fetch();
+    } catch (\Exception $e) {
+      return $e->getMessage();
+    }
+  }
+
+  public function insert(int $classname, int $number, string $name)
+  {
+    try {
+      $sql = "INSERT INTO students (classname, number, name) VALUES (:classname, :number, :name);";
+      
+      $arguments['classname'] = $classname;
+      $arguments['number'] = $number;
+      $arguments['name'] = $name;
+
+      return $this->db->runSQL($sql, $arguments)->fetch();
+    } catch (\Exception $e) {
+      return $e->getMessage();
+    }
+
+  }
+
+  public function getNumberOfStudent($classname)
+  {
+    $sql = "SELECT COUNT(*) FROM students WHERE classname = :classname;";
+    $arguments['classname'] = $classname;
+
+    return $this->db->runSQL($sql, $arguments)->fetch();
+  }
 
 
     // Get summaries of articles
