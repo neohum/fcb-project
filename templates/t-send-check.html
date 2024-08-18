@@ -185,7 +185,6 @@
                                   <p>
                         
                                   <br>
-                                  <a href="t-send-check" class="btn btn-primary">점검 목록 생성하기</a>
                                   <button type="button" class="btn" onclick="addCheck()">1. 체크박스 생성</button>
                                   <button type="button" class="btn" onclick="add5Check()">2. 5단계 선택형 생성</button>
                                   <button type="button" class="btn" onclick="add3Check()">3. 상,중,하 생성</button>
@@ -238,7 +237,7 @@
         var check = '';
         var input = '';
         var http = new XMLHttpRequest();
-        var data = new FormData();
+        //var data = new FormData();
        
         function addNumber(){
           number = document.getElementById("number").value;
@@ -262,6 +261,8 @@
             check.appendChild(input);
             
           }
+          data = 'test'
+          data.append('number', number);
           http.open('POST', '/www/t-send-check', true);
             http.send(data);
           check = ''

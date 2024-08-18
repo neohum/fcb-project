@@ -17,16 +17,11 @@ try {
         PRIMARY KEY (id));";
 
   $sql .= "
-        CREATE TABLE class (
-        id INT(255) NOT NULL AUTO_INCREMENT,
-        classname INT(255) NULL UNIQUE,
-        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-        updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-        PRIMARY KEY (id));";
-  $sql .= "
         CREATE TABLE subject (
         id INT(255) NOT NULL AUTO_INCREMENT,
         subjectname VARCHAR(255) NULL,
+        studentnumber VARCHAR(15) NULL,
+        subjectnumber VARCHAR(15) NULL,
         classname INT(255) NULL,
         score VARCHAR(15) NULL,
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,

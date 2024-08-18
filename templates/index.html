@@ -22,16 +22,17 @@
                                     <p>고학년을 대상으로 학생 스스로가 자신의 과제 등을 스스로 평가하는 서비스입니다.</p>
                                     
                                 </div>
+                                <form action="/" method="post">
                                 <div class="col-md-12">
                                     <div class="mb-3">
                                         <label class="form-label">인증번호</label>
-                                        <input type="number" class="form-control" placeholder="예) 123 456 789">
+                                        <input type="number" id="classname" name="classname" class="form-control" placeholder="예) 123 456 789">
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="mb-4">
                                         <label class="form-label">이름</label>
-                                        <input type="text" class="form-control" placeholder="예)홍길동, 빈칸이 없어야 합니다.">
+                                        <input type="text" id="studentname" name="studentname" class="form-control" placeholder="예)홍길동, 빈칸이 없어야 합니다.">
                                     </div>
                                 </div>
                                 
@@ -40,7 +41,7 @@
                                         <button class="btn btn-primary w-100">입장하기</button>
                                     </div>
                                 </div>
-
+                            </form>
                                 <div class="col-12">
                                     <div class="mb-4">
                                       <a href="{{ doc_root }}t-admin" class="btn btn-secondary w-100">관리자 페이지</a>
