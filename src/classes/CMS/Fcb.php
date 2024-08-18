@@ -1,9 +1,7 @@
 <?php
 namespace PhpBook\CMS; 
 
-use PhpOffice\PhpSpreadsheet\Spreadsheet;
-use PhpOffice\PhpSpreadsheet\Writer\Xlsx;// Namespace declaration
-use PhpOffice\PhpSpreadsheet\IOFactory;
+
 
 class Fcb
 {
@@ -69,14 +67,29 @@ class Fcb
     }
   }
 
-  public function insert(int $classname, int $number, string $name)
+  public function insert(int $classname, int $studentnumber, string $studentname)
   {
     try {
-      $sql = "INSERT INTO students (classname, number, name) VALUES (:classname, :number, :name);";
+      $sql = "INSERT INTO student (classname, studentnumber, studentname) VALUES (:classname, :studentnumber, :studentname);";
       
       $arguments['classname'] = $classname;
-      $arguments['number'] = $number;
-      $arguments['name'] = $name;
+      $arguments['studentnumber'] = $studentnumber;
+      $arguments['studentname'] = $studentname;
+
+      return $this->db->runSQL($sql, $arguments)->fetch();
+    } catch (\Exception $e) {
+      return $e->getMessage();
+    }
+
+  }
+  public function setSubject(int $classname, string $studentnumber)
+  {
+    try {
+      $sql = "INSERT INTO subject (classname, studentnumber) VALUES (:classname, :studentnumber);";
+      
+      $arguments['classname'] = $classname;
+      $arguments['studentnumber'] = $studentnumber;
+      
 
       return $this->db->runSQL($sql, $arguments)->fetch();
     } catch (\Exception $e) {
@@ -89,6 +102,15 @@ class Fcb
   {
     $sql = "SELECT COUNT(*) FROM students WHERE classname = :classname;";
     $arguments['classname'] = $classname;
+
+    return $this->db->runSQL($sql, $arguments)->fetch();
+  }
+
+  public function login(int $classname, string $studentname)
+  {
+    $sql = "SELECT * FROM student WHERE classname = :classname AND studentname = :studentname;";
+    $arguments['classname'] = $classname;
+    $arguments['studentname'] = $studentname;
 
     return $this->db->runSQL($sql, $arguments)->fetch();
   }

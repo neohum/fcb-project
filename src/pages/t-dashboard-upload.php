@@ -2,18 +2,15 @@
 declare(strict_types=1);
 error_reporting(E_ALL);
 
-use PhpOffice\PhpSpreadsheet\IOFactory;
-use PhpOffice\PhpSpreadsheet\Spreadsheet;
-use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
-use PhpOffice\PhpSpreadsheet\Worksheet\Worksheet;
+
 
 
 $data = [];
 
 $data['className1'] = explode('/', $_SERVER['REQUEST_URI']);
 $data['className'] = ($data['className1'][3]);
-$data['className'] = (string)$data['className'];
-$cms->getFcb()->setClassName($data['className']);
+
+
 
 
 // if(!empty($_FILES['file'])){
@@ -25,7 +22,7 @@ $cms->getFcb()->setClassName($data['className']);
 //     }
 // }
 
-$classname1 = $data['className'];
+
 
 
 // if(!empty($_FILES['file'])){

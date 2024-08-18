@@ -13,8 +13,8 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* t-dashboard.html */
-class __TwigTemplate_fc39257cbe08395a2f1b40952a667d34 extends Template
+/* t-dashboard-regis-s.html */
+class __TwigTemplate_13fe0dafd04ed916b984e5b11098fdd2 extends Template
 {
     private $source;
     private $macros = [];
@@ -39,7 +39,7 @@ class __TwigTemplate_fc39257cbe08395a2f1b40952a667d34 extends Template
     protected function doDisplay(array $context, array $blocks = [])
     {
         $macros = $this->macros;
-        $this->parent = $this->loadTemplate("layout.html", "t-dashboard.html", 1);
+        $this->parent = $this->loadTemplate("layout.html", "t-dashboard-regis-s.html", 1);
         yield from $this->parent->unwrap()->yield($context, array_merge($this->blocks, $blocks));
     }
 
@@ -48,9 +48,7 @@ class __TwigTemplate_fc39257cbe08395a2f1b40952a667d34 extends Template
     {
         $macros = $this->macros;
         // line 3
-        yield "
-
-   <!-- BEGIN LOADER -->
+        yield " <!-- BEGIN LOADER -->
     <div id=\"load_screen\"> <div class=\"loader\"> <div class=\"loader-content\">
         <div class=\"spinner-grow align-self-center\"></div>
     </div></div></div>
@@ -76,23 +74,19 @@ class __TwigTemplate_fc39257cbe08395a2f1b40952a667d34 extends Template
 
             <ul class=\"navbar-item flex-row ms-lg-auto ms-0 action-area\">
 
-              
-
-
-
-                <li class=\"nav-item dropdown user-profile-dropdown  order-lg-0 order-1\">
+                 <li class=\"nav-item dropdown user-profile-dropdown  order-lg-0 order-1\">
                     ";
-        // line 36
-        if ((CoreExtension::getAttribute($this->env, $this->source, ($context["session"] ?? null), "userName", [], "any", false, false, false, 36) == 0)) {
-            // line 37
+        // line 30
+        if ((CoreExtension::getAttribute($this->env, $this->source, ($context["session"] ?? null), "userName", [], "any", false, false, false, 30) == 0)) {
+            // line 31
             yield "                    <a href=\"";
             yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["doc_root"] ?? null), "html", null, true);
             yield "t-admin\" >로그인</a>
                     ";
         } else {
-            // line 39
+            // line 33
             yield "                                ";
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, ($context["session"] ?? null), "userName", [], "any", false, false, false, 39), "html", null, true);
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, ($context["session"] ?? null), "userName", [], "any", false, false, false, 33), "html", null, true);
             yield "님, 환영합니다. 
                            
                </li>
@@ -103,18 +97,17 @@ class __TwigTemplate_fc39257cbe08395a2f1b40952a667d34 extends Template
               <ul class=\"navbar-item flex-row action-area\">
               <li class=\"nav-item dropdown user-profile-dropdown  order-lg-0 order-1\">
                  <a href=\"";
-            // line 48
+            // line 42
             yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["doc_root"] ?? null), "html", null, true);
             yield "t-logout\" >로그아웃</a>
                 </li>
             </ul>
             ";
         }
-        // line 52
+        // line 46
         yield "        </header>
     </div>
     <!--  END NAVBAR  -->
-  
 
     <!--  BEGIN MAIN CONTAINER  -->
     <div class=\"main-container\" id=\"container\">
@@ -146,8 +139,8 @@ class __TwigTemplate_fc39257cbe08395a2f1b40952a667d34 extends Template
                 </div>
                 <div class=\"shadow-bottom\"></div>
                 <ul class=\"list-unstyled menu-categories\" id=\"accordionExample\">
-                    <li class=\"menu active\">
-                        <a href=\"t-dashboard\" data-bs-toggle=\"dropdown\" aria-expanded=\"true\" class=\"dropdown-toggle\">
+                    <li class=\"menu \">
+                        <a href=\"t-dashboard\"  class=\"dropdown-toggle\">
                             <div class=\"\">
                                 <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-home\"><path d=\"M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z\"></path><polyline points=\"9 22 9 12 15 12 15 22\"></polyline></svg>
                                 <span>학생 점검 목록 생성</span>
@@ -163,9 +156,9 @@ class __TwigTemplate_fc39257cbe08395a2f1b40952a667d34 extends Template
                         <div class=\"heading\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-minus\"><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"></line></svg><span>APPLICATIONS</span></div>
                     </li>
 
-                    <li class=\"menu\">
+                    <li class=\"menu active\">
                         <a href=\"";
-        // line 105
+        // line 98
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["doc_root"] ?? null), "html", null, true);
         yield "t-dashboard-regis-s\"  class=\"dropdown-toggle\">
                             <div class=\"\">
@@ -183,7 +176,7 @@ class __TwigTemplate_fc39257cbe08395a2f1b40952a667d34 extends Template
 
                     <li class=\"menu\">
                         <a href=\"";
-        // line 120
+        // line 113
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["doc_root"] ?? null), "html", null, true);
         yield "t-dashboard-make-s\"class=\"dropdown-toggle\">
                             <div class=\"\">
@@ -196,7 +189,75 @@ class __TwigTemplate_fc39257cbe08395a2f1b40952a667d34 extends Template
                       
                     </li>
 
-                 
+                    <li class=\"menu\">
+                        <a href=\"#elements\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\" class=\"dropdown-toggle\">
+                            <div class=\"\">
+                                <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-zap\"><polygon points=\"13 2 3 14 12 14 11 22 21 10 12 10 13 2\"></polygon></svg>
+                                <span>Elements</span>
+                            </div>
+                            <div>
+                                <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-chevron-right\"><polyline points=\"9 18 15 12 9 6\"></polyline></svg>
+                            </div>
+                        </a>
+                       
+                    </li>
+
+                    <li class=\"menu menu-heading\">
+                        <div class=\"heading\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-minus\"><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"></line></svg><span>TABLES AND FORMS</span></div>
+                    </li>
+
+                    <li class=\"menu\">
+                        <a href=\"#tables\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\" class=\"dropdown-toggle\">
+                            <div class=\"\">
+                                <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-layers\"><polygon points=\"12 2 2 7 12 12 22 7 12 2\"></polygon><polyline points=\"2 17 12 22 22 17\"></polyline><polyline points=\"2 12 12 17 22 12\"></polyline></svg>
+                                <span>Tables</span>
+                            </div>
+                            <div>
+                                <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-chevron-right\"><polyline points=\"9 18 15 12 9 6\"></polyline></svg>
+                            </div>
+                        </a>
+                        
+                    </li>
+
+                    <li class=\"menu\">
+                        <a href=\"#forms\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\" class=\"dropdown-toggle\">
+                            <div class=\"\">
+                                <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-clipboard\"><path d=\"M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2\"></path><rect x=\"8\" y=\"2\" width=\"8\" height=\"4\" rx=\"1\" ry=\"1\"></rect></svg>
+                                <span>Forms</span>
+                            </div>
+                            <div>
+                                <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-chevron-right\"><polyline points=\"9 18 15 12 9 6\"></polyline></svg>
+                            </div>
+                        </a>
+                        
+                    </li>
+
+                    <li class=\"menu\">
+                        <a href=\"#pages\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\" class=\"dropdown-toggle\">
+                            <div class=\"\">
+                                <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-file\"><path d=\"M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z\"></path><polyline points=\"13 2 13 9 20 9\"></polyline></svg>
+                                <span>Pages</span>
+                            </div>
+                            <div>
+                                <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-chevron-right\"><polyline points=\"9 18 15 12 9 6\"></polyline></svg>
+                            </div>
+                        </a>
+                        
+                    </li>
+
+                    <li class=\"menu\">
+                        <a href=\"#more\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\" class=\"dropdown-toggle\">
+                            <div class=\"\">
+                                <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-plus-circle\"><circle cx=\"12\" cy=\"12\" r=\"10\"></circle><line x1=\"12\" y1=\"8\" x2=\"12\" y2=\"16\"></line><line x1=\"8\" y1=\"12\" x2=\"16\" y2=\"12\"></line></svg>
+                                <span>More</span>
+                            </div>
+                            <div>
+                                <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-chevron-right\"><polyline points=\"9 18 15 12 9 6\"></polyline></svg>
+                            </div>
+                        </a>
+                        
+                    </li>
+
                 </ul>
                 
             </nav>
@@ -235,40 +296,51 @@ class __TwigTemplate_fc39257cbe08395a2f1b40952a667d34 extends Template
                     <!--  END BREADCRUMBS  -->
                    <br>
     
-        
-                   <div class=\"middle-content container-xxl p-0\">
-                      <div class=\"row layout\">
-                          <div class=\"col-lg-12 layout-spacing\">
-                              <div class=\"widget widget-table-one\">
-                                  <div class=\"widget-heading\">
-                                      <h5 class=\"\">생성된 점검 목록</h5>
-                                  </div>
-                                  <div class=\"col-lg-2\">
-                                  <input type=\"number\" class=\"form-control\" placeholder=\"학생수를 입력 해주세요\" id=\"number\">
-                                  </div>
-                                  <div> 
-                                    <p>
-                                  </div>
-                                  <button type=\"button\" class=\"btn btn-primary\" onclick=\"addNumber()\">1. 학생 수 입력 하기</button>
-                                  <p>
-                        
-                                  <br>
-                                  <a href=\"t-send-check\" class=\"btn btn-primary\">점검 목록 생성하기</a>
-                                  <button type=\"button\" class=\"btn\" onclick=\"addCheck()\">1. 체크박스 생성</button>
-                                  <button type=\"button\" class=\"btn\" onclick=\"add5Check()\">2. 5단계 선택형 생성</button>
-                                  <button type=\"button\" class=\"btn\" onclick=\"add3Check()\">3. 상,중,하 생성</button>
-                                  <button type=\"button\" class=\"btn\" onclick=\"addWittingCheck()\">4. 주관식 생성</button>
-                                  <div type=\"checkbox\" id=\"check\"></div>
-                                  
+                   <ul class=\"navbar-nav flex-row ms-auto breadcrumb-action-dropdown\">
+                        <li class=\"nav-item more-dropdown\">
+                            <div class=\"nav-item more-dropdown ml-130 mb-20\">
+                                <a class=\"dropdown-toggle btn\" href=\"";
+        // line 234
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["doc_root"] ?? null), "html", null, true);
+        yield "t-oxmake\" role=\"button\" id=\"customDropdown\" data-bs-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
+                                            <span>O,X 선택형 생성하기</span>
+                                </a>
                               </div>
-                          </div>
-                        </div>
+                              
+                            </div>
+  
+                        </li>
+                          <li class=\"nav-item more-dropdown ml-130 mb-20\">
+                            <div class=\"dropdown  custom-dropdown-icon\">
+                                <a class=\"mt=20 dropdown-toggle btn\" href=\"#\" role=\"button\" id=\"customDropdown\" data-bs-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
+                                            <span>5단계 선택형</span>
+                                </a>
+                              </div>
+  
+                        </li>
+                        <p>
+                       <p>
+                          <li class=\"nav-item more-dropdown ml-130 mb-20\">
+                            <div class=\"dropdown  custom-dropdown-icon\">
+                         <a class=\"mt=20 dropdown-toggle btn\" href=\"#\" role=\"button\" id=\"customDropdown\" data-bs-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
+                                    <span>주관식</span>
+                                </a>
+                              </div>
+  
+                        </li>
+                        <p>
+                          <table>
+                            <tr>
+                             
+                            </tr>
+                    </ul>
+
                 </div>
 
             </div>
-         
-            
-
+            <br>
+            <br>
+            <br>
             <br>
             <p>
           <p>
@@ -301,86 +373,7 @@ class __TwigTemplate_fc39257cbe08395a2f1b40952a667d34 extends Template
     <script src=\"../src/plugins/src/apex/apexcharts.min.js\"></script>
     <script src=\"../src/assets/js/dashboard/dash_1.js\"></script>
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
-     <script>
-        var number = 0;
-        var check = '';
-        var input = '';
-        var http = new XMLHttpRequest();
-        var data = new FormData();
-       
-        function addNumber(){
-          number = document.getElementById(\"number\").value;
-          console.log(localStorage.getItem('number'));
-          for (var i = 0; i < number; i++){
-           
-            console.log(store);
-            
-          }
-        }
-        
-        function addCheck(){
-          for(var i = 0; i < number; i++){
-            check = document.getElementById(\"check\");
-            input = document.createElement(\"input\");
-            input.type = \"checkbox\";
-            input.id = \"check\";
-            
-            var br = document.createElement(\"br\");
-            check.appendChild(br);
-            check.appendChild(input);
-            
-          }
-          http.open('POST', '/www/t-send-check', true);
-            http.send(data);
-          check = ''
-         
-        }
 
-        function add5Check(){
-          for(var i = 0; i < number; i++){
-            check = document.getElementById(\"check\");
-            input = document.createElement(\"input\");
-              input.type = \"radio\";
-              input.id = \"check\";
-              
-
-              var p = document.createElement(\"p\");
-              check.appendChild(p);
-              check.appendChild(input);
-            }
-            
-          
-          check = ''
-        }
-
-        function add3Check(){
-          for(var i = 0; i < number; i++){
-            check = document.getElementById(\"check\");
-            var input = document.createElement(\"input\");
-            for (var j = 0; j < 3; j++){
-              input.type = \"radio\";
-              input.id = \"check\";
-              check.appendChild(input);
-            }
-            
-            check.appendChild(input);
-          }
-          check = ''
-        }
-
-        function addWittingCheck(){
-          for(var i = 0; i < number; i++){
-            var check = document.getElementById(\"check\");
-            var input = document.createElement(\"textarea\");
-            input.type = \"textarea\";
-            input.id = \"check\";
-            
-          }
-          check = ''
-        }
-
-
-      </script>
 
 
 
@@ -393,7 +386,7 @@ class __TwigTemplate_fc39257cbe08395a2f1b40952a667d34 extends Template
      */
     public function getTemplateName()
     {
-        return "t-dashboard.html";
+        return "t-dashboard-regis-s.html";
     }
 
     /**
@@ -409,16 +402,14 @@ class __TwigTemplate_fc39257cbe08395a2f1b40952a667d34 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  187 => 120,  169 => 105,  114 => 52,  107 => 48,  94 => 39,  88 => 37,  86 => 36,  51 => 3,  47 => 2,  36 => 1,);
+        return array (  304 => 234,  180 => 113,  162 => 98,  108 => 46,  101 => 42,  88 => 33,  82 => 31,  80 => 30,  51 => 3,  47 => 2,  36 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'layout.html' %}
 {% block content %}
-
-
-   <!-- BEGIN LOADER -->
+ <!-- BEGIN LOADER -->
     <div id=\"load_screen\"> <div class=\"loader\"> <div class=\"loader-content\">
         <div class=\"spinner-grow align-self-center\"></div>
     </div></div></div>
@@ -444,11 +435,7 @@ class __TwigTemplate_fc39257cbe08395a2f1b40952a667d34 extends Template
 
             <ul class=\"navbar-item flex-row ms-lg-auto ms-0 action-area\">
 
-              
-
-
-
-                <li class=\"nav-item dropdown user-profile-dropdown  order-lg-0 order-1\">
+                 <li class=\"nav-item dropdown user-profile-dropdown  order-lg-0 order-1\">
                     {% if session.userName == 0%}
                     <a href=\"{{ doc_root }}t-admin\" >로그인</a>
                     {% else %}
@@ -468,7 +455,6 @@ class __TwigTemplate_fc39257cbe08395a2f1b40952a667d34 extends Template
         </header>
     </div>
     <!--  END NAVBAR  -->
-  
 
     <!--  BEGIN MAIN CONTAINER  -->
     <div class=\"main-container\" id=\"container\">
@@ -500,8 +486,8 @@ class __TwigTemplate_fc39257cbe08395a2f1b40952a667d34 extends Template
                 </div>
                 <div class=\"shadow-bottom\"></div>
                 <ul class=\"list-unstyled menu-categories\" id=\"accordionExample\">
-                    <li class=\"menu active\">
-                        <a href=\"t-dashboard\" data-bs-toggle=\"dropdown\" aria-expanded=\"true\" class=\"dropdown-toggle\">
+                    <li class=\"menu \">
+                        <a href=\"t-dashboard\"  class=\"dropdown-toggle\">
                             <div class=\"\">
                                 <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-home\"><path d=\"M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z\"></path><polyline points=\"9 22 9 12 15 12 15 22\"></polyline></svg>
                                 <span>학생 점검 목록 생성</span>
@@ -517,7 +503,7 @@ class __TwigTemplate_fc39257cbe08395a2f1b40952a667d34 extends Template
                         <div class=\"heading\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-minus\"><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"></line></svg><span>APPLICATIONS</span></div>
                     </li>
 
-                    <li class=\"menu\">
+                    <li class=\"menu active\">
                         <a href=\"{{ doc_root }}t-dashboard-regis-s\"  class=\"dropdown-toggle\">
                             <div class=\"\">
                                 <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-cpu\"><rect x=\"4\" y=\"4\" width=\"16\" height=\"16\" rx=\"2\" ry=\"2\"></rect><rect x=\"9\" y=\"9\" width=\"6\" height=\"6\"></rect><line x1=\"9\" y1=\"1\" x2=\"9\" y2=\"4\"></line><line x1=\"15\" y1=\"1\" x2=\"15\" y2=\"4\"></line><line x1=\"9\" y1=\"20\" x2=\"9\" y2=\"23\"></line><line x1=\"15\" y1=\"20\" x2=\"15\" y2=\"23\"></line><line x1=\"20\" y1=\"9\" x2=\"23\" y2=\"9\"></line><line x1=\"20\" y1=\"14\" x2=\"23\" y2=\"14\"></line><line x1=\"1\" y1=\"9\" x2=\"4\" y2=\"9\"></line><line x1=\"1\" y1=\"14\" x2=\"4\" y2=\"14\"></line></svg>
@@ -544,7 +530,75 @@ class __TwigTemplate_fc39257cbe08395a2f1b40952a667d34 extends Template
                       
                     </li>
 
-                 
+                    <li class=\"menu\">
+                        <a href=\"#elements\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\" class=\"dropdown-toggle\">
+                            <div class=\"\">
+                                <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-zap\"><polygon points=\"13 2 3 14 12 14 11 22 21 10 12 10 13 2\"></polygon></svg>
+                                <span>Elements</span>
+                            </div>
+                            <div>
+                                <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-chevron-right\"><polyline points=\"9 18 15 12 9 6\"></polyline></svg>
+                            </div>
+                        </a>
+                       
+                    </li>
+
+                    <li class=\"menu menu-heading\">
+                        <div class=\"heading\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-minus\"><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"></line></svg><span>TABLES AND FORMS</span></div>
+                    </li>
+
+                    <li class=\"menu\">
+                        <a href=\"#tables\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\" class=\"dropdown-toggle\">
+                            <div class=\"\">
+                                <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-layers\"><polygon points=\"12 2 2 7 12 12 22 7 12 2\"></polygon><polyline points=\"2 17 12 22 22 17\"></polyline><polyline points=\"2 12 12 17 22 12\"></polyline></svg>
+                                <span>Tables</span>
+                            </div>
+                            <div>
+                                <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-chevron-right\"><polyline points=\"9 18 15 12 9 6\"></polyline></svg>
+                            </div>
+                        </a>
+                        
+                    </li>
+
+                    <li class=\"menu\">
+                        <a href=\"#forms\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\" class=\"dropdown-toggle\">
+                            <div class=\"\">
+                                <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-clipboard\"><path d=\"M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2\"></path><rect x=\"8\" y=\"2\" width=\"8\" height=\"4\" rx=\"1\" ry=\"1\"></rect></svg>
+                                <span>Forms</span>
+                            </div>
+                            <div>
+                                <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-chevron-right\"><polyline points=\"9 18 15 12 9 6\"></polyline></svg>
+                            </div>
+                        </a>
+                        
+                    </li>
+
+                    <li class=\"menu\">
+                        <a href=\"#pages\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\" class=\"dropdown-toggle\">
+                            <div class=\"\">
+                                <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-file\"><path d=\"M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z\"></path><polyline points=\"13 2 13 9 20 9\"></polyline></svg>
+                                <span>Pages</span>
+                            </div>
+                            <div>
+                                <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-chevron-right\"><polyline points=\"9 18 15 12 9 6\"></polyline></svg>
+                            </div>
+                        </a>
+                        
+                    </li>
+
+                    <li class=\"menu\">
+                        <a href=\"#more\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\" class=\"dropdown-toggle\">
+                            <div class=\"\">
+                                <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-plus-circle\"><circle cx=\"12\" cy=\"12\" r=\"10\"></circle><line x1=\"12\" y1=\"8\" x2=\"12\" y2=\"16\"></line><line x1=\"8\" y1=\"12\" x2=\"16\" y2=\"12\"></line></svg>
+                                <span>More</span>
+                            </div>
+                            <div>
+                                <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-chevron-right\"><polyline points=\"9 18 15 12 9 6\"></polyline></svg>
+                            </div>
+                        </a>
+                        
+                    </li>
+
                 </ul>
                 
             </nav>
@@ -583,40 +637,48 @@ class __TwigTemplate_fc39257cbe08395a2f1b40952a667d34 extends Template
                     <!--  END BREADCRUMBS  -->
                    <br>
     
-        
-                   <div class=\"middle-content container-xxl p-0\">
-                      <div class=\"row layout\">
-                          <div class=\"col-lg-12 layout-spacing\">
-                              <div class=\"widget widget-table-one\">
-                                  <div class=\"widget-heading\">
-                                      <h5 class=\"\">생성된 점검 목록</h5>
-                                  </div>
-                                  <div class=\"col-lg-2\">
-                                  <input type=\"number\" class=\"form-control\" placeholder=\"학생수를 입력 해주세요\" id=\"number\">
-                                  </div>
-                                  <div> 
-                                    <p>
-                                  </div>
-                                  <button type=\"button\" class=\"btn btn-primary\" onclick=\"addNumber()\">1. 학생 수 입력 하기</button>
-                                  <p>
-                        
-                                  <br>
-                                  <a href=\"t-send-check\" class=\"btn btn-primary\">점검 목록 생성하기</a>
-                                  <button type=\"button\" class=\"btn\" onclick=\"addCheck()\">1. 체크박스 생성</button>
-                                  <button type=\"button\" class=\"btn\" onclick=\"add5Check()\">2. 5단계 선택형 생성</button>
-                                  <button type=\"button\" class=\"btn\" onclick=\"add3Check()\">3. 상,중,하 생성</button>
-                                  <button type=\"button\" class=\"btn\" onclick=\"addWittingCheck()\">4. 주관식 생성</button>
-                                  <div type=\"checkbox\" id=\"check\"></div>
-                                  
+                   <ul class=\"navbar-nav flex-row ms-auto breadcrumb-action-dropdown\">
+                        <li class=\"nav-item more-dropdown\">
+                            <div class=\"nav-item more-dropdown ml-130 mb-20\">
+                                <a class=\"dropdown-toggle btn\" href=\"{{ doc_root }}t-oxmake\" role=\"button\" id=\"customDropdown\" data-bs-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
+                                            <span>O,X 선택형 생성하기</span>
+                                </a>
                               </div>
-                          </div>
-                        </div>
+                              
+                            </div>
+  
+                        </li>
+                          <li class=\"nav-item more-dropdown ml-130 mb-20\">
+                            <div class=\"dropdown  custom-dropdown-icon\">
+                                <a class=\"mt=20 dropdown-toggle btn\" href=\"#\" role=\"button\" id=\"customDropdown\" data-bs-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
+                                            <span>5단계 선택형</span>
+                                </a>
+                              </div>
+  
+                        </li>
+                        <p>
+                       <p>
+                          <li class=\"nav-item more-dropdown ml-130 mb-20\">
+                            <div class=\"dropdown  custom-dropdown-icon\">
+                         <a class=\"mt=20 dropdown-toggle btn\" href=\"#\" role=\"button\" id=\"customDropdown\" data-bs-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
+                                    <span>주관식</span>
+                                </a>
+                              </div>
+  
+                        </li>
+                        <p>
+                          <table>
+                            <tr>
+                             
+                            </tr>
+                    </ul>
+
                 </div>
 
             </div>
-         
-            
-
+            <br>
+            <br>
+            <br>
             <br>
             <p>
           <p>
@@ -649,89 +711,10 @@ class __TwigTemplate_fc39257cbe08395a2f1b40952a667d34 extends Template
     <script src=\"../src/plugins/src/apex/apexcharts.min.js\"></script>
     <script src=\"../src/assets/js/dashboard/dash_1.js\"></script>
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
-     <script>
-        var number = 0;
-        var check = '';
-        var input = '';
-        var http = new XMLHttpRequest();
-        var data = new FormData();
-       
-        function addNumber(){
-          number = document.getElementById(\"number\").value;
-          console.log(localStorage.getItem('number'));
-          for (var i = 0; i < number; i++){
-           
-            console.log(store);
-            
-          }
-        }
-        
-        function addCheck(){
-          for(var i = 0; i < number; i++){
-            check = document.getElementById(\"check\");
-            input = document.createElement(\"input\");
-            input.type = \"checkbox\";
-            input.id = \"check\";
-            
-            var br = document.createElement(\"br\");
-            check.appendChild(br);
-            check.appendChild(input);
-            
-          }
-          http.open('POST', '/www/t-send-check', true);
-            http.send(data);
-          check = ''
-         
-        }
-
-        function add5Check(){
-          for(var i = 0; i < number; i++){
-            check = document.getElementById(\"check\");
-            input = document.createElement(\"input\");
-              input.type = \"radio\";
-              input.id = \"check\";
-              
-
-              var p = document.createElement(\"p\");
-              check.appendChild(p);
-              check.appendChild(input);
-            }
-            
-          
-          check = ''
-        }
-
-        function add3Check(){
-          for(var i = 0; i < number; i++){
-            check = document.getElementById(\"check\");
-            var input = document.createElement(\"input\");
-            for (var j = 0; j < 3; j++){
-              input.type = \"radio\";
-              input.id = \"check\";
-              check.appendChild(input);
-            }
-            
-            check.appendChild(input);
-          }
-          check = ''
-        }
-
-        function addWittingCheck(){
-          for(var i = 0; i < number; i++){
-            var check = document.getElementById(\"check\");
-            var input = document.createElement(\"textarea\");
-            input.type = \"textarea\";
-            input.id = \"check\";
-            
-          }
-          check = ''
-        }
-
-
-      </script>
 
 
 
-{% endblock %}", "t-dashboard.html", "/Users/nm/works/project/fbc/templates/t-dashboard.html");
+
+{% endblock %}", "t-dashboard-regis-s.html", "/Users/nm/works/project/fbc/templates/t-dashboard-regis-s.html");
     }
 }

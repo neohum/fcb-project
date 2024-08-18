@@ -13,8 +13,8 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* index.html */
-class __TwigTemplate_1054725d4f0c7f5dbbdfc772353eab17 extends Template
+/* t-signin.html */
+class __TwigTemplate_96f046b5a91afe90b703b55382b3d33c extends Template
 {
     private $source;
     private $macros = [];
@@ -32,24 +32,27 @@ class __TwigTemplate_1054725d4f0c7f5dbbdfc772353eab17 extends Template
 
     protected function doGetParent(array $context)
     {
-        // line 1
+        // line 3
         return "layout.html";
     }
 
     protected function doDisplay(array $context, array $blocks = [])
     {
         $macros = $this->macros;
-        $this->parent = $this->loadTemplate("layout.html", "index.html", 1);
+        $this->parent = $this->loadTemplate("layout.html", "t-signin.html", 3);
         yield from $this->parent->unwrap()->yield($context, array_merge($this->blocks, $blocks));
     }
 
-    // line 2
+    // line 4
     public function block_content($context, array $blocks = [])
     {
         $macros = $this->macros;
-        // line 3
+        // line 5
         yield "<br>
 <br>
+
+
+
 
 
 
@@ -62,44 +65,59 @@ class __TwigTemplate_1054725d4f0c7f5dbbdfc772353eab17 extends Template
                 <div class=\"col-xxl-4 col-xl-5 col-lg-5 col-md-8 col-12 d-flex flex-column align-self-center mx-auto\">
                     <div class=\"card mt-3 mb-3\">
                         <div class=\"card-body\">
-    
+                          
                             <div class=\"row\">
                                 <div class=\"col-md-12 mb-3\">
                                     
-                                    <center><h2>신뢰 기반 학생 자율 점검표 <br>서비스</h2></center>
-                                    <p>고학년을 대상으로 학생 스스로가 자신의 과제 등을 스스로 평가하는 서비스입니다.</p>
+                                    <h2>관리자 가입하기</h2>
                                     
+                              <form action=\"";
+        // line 28
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["doc_root"] ?? null), "html", null, true);
+        yield "t-signin\" method=\"post\">
                                 </div>
-                                <form action=\"/\" method=\"post\">
                                 <div class=\"col-md-12\">
                                     <div class=\"mb-3\">
-                                        <label class=\"form-label\">인증번호</label>
-                                        <input type=\"number\" id=\"classname\" name=\"classname\" class=\"form-control\" placeholder=\"예) 123 456 789\">
+                                        <label class=\"form-label\">아이디</label>
+                                      ";
+        // line 33
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["errors"] ?? null), "html", null, true);
+        yield " ";
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["success"] ?? null), "html", null, true);
+        yield "
+                                        <input type=\"text\" name=\"userid\" id=\"userid\" class=\"form-control\">
                                     </div>
                                 </div>
                                 <div class=\"col-12\">
                                     <div class=\"mb-4\">
-                                        <label class=\"form-label\">이름</label>
-                                        <input type=\"text\" id=\"studentname\" name=\"studentname\" class=\"form-control\" placeholder=\"예)홍길동, 빈칸이 없어야 합니다.\">
+                                        <label class=\"form-label\">비밀번호</label>
+                                        <input type=\"password\" name=\"current-password\" id=\"current-password\" class=\"form-control\">
                                     </div>
                                 </div>
+                              
                                 
                                 <div class=\"col-12\">
                                     <div class=\"mb-4\">
-                                        <button class=\"btn btn-primary w-100\">입장하기</button>
+                                        <button type=\"submit\" class=\"btn btn-secondary w-100\">생성하기</button>
                                     </div>
                                 </div>
+                                
                             </form>
-                                <div class=\"col-12\">
-                                    <div class=\"mb-4\">
-                                      <a href=\"";
-        // line 47
+    
+                             <div class=\"col-12\">
+                                    <div class=\"text-center\">
+                                        <p class=\"mb-0\"> 로그인으로 가고 싶으신가요?<a href=\"";
+        // line 55
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["doc_root"] ?? null), "html", null, true);
-        yield "t-admin\" class=\"btn btn-secondary w-100\">관리자 페이지</a>
-                                        
-                                
+        yield "t-admin\" class=\"text-warning\">로그인으로 가기</a></p>
                                     </div>
-                                </div>
+                                </div> 
+                              </div>
+                              <div class=\"col-12\">
+                                    <div class=\"text-center\">
+                                        <p class=\"mb-0\"> 홈으로 가고 싶으신가요?<a href=\"/\" class=\"text-warning\">홈으로 가기</a></p>
+                                    </div>
+                                </div> 
                               </div>
                         </div>
                     </div>
@@ -107,19 +125,12 @@ class __TwigTemplate_1054725d4f0c7f5dbbdfc772353eab17 extends Template
             </div>
         </div>
     </div>
-  
-                                
-                                
+
                            
     
     <!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
     <script src=\"../src/bootstrap/js/bootstrap.bundle.min.js\"></script>
-    <!-- END GLOBAL MANDATORY SCRIPTS -->
-
-
-
-
-
+    <!-- END GLO -->
 ";
         return; yield '';
     }
@@ -129,7 +140,7 @@ class __TwigTemplate_1054725d4f0c7f5dbbdfc772353eab17 extends Template
      */
     public function getTemplateName()
     {
-        return "index.html";
+        return "t-signin.html";
     }
 
     /**
@@ -145,15 +156,20 @@ class __TwigTemplate_1054725d4f0c7f5dbbdfc772353eab17 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  97 => 47,  51 => 3,  47 => 2,  36 => 1,);
+        return array (  111 => 55,  84 => 33,  76 => 28,  51 => 5,  47 => 4,  36 => 3,);
     }
 
     public function getSourceContext()
     {
-        return new Source("{% extends 'layout.html' %}
+        return new Source("
+
+{% extends 'layout.html' %}
 {% block content %}
 <br>
 <br>
+
+
+
 
 
 
@@ -166,41 +182,48 @@ class __TwigTemplate_1054725d4f0c7f5dbbdfc772353eab17 extends Template
                 <div class=\"col-xxl-4 col-xl-5 col-lg-5 col-md-8 col-12 d-flex flex-column align-self-center mx-auto\">
                     <div class=\"card mt-3 mb-3\">
                         <div class=\"card-body\">
-    
+                          
                             <div class=\"row\">
                                 <div class=\"col-md-12 mb-3\">
                                     
-                                    <center><h2>신뢰 기반 학생 자율 점검표 <br>서비스</h2></center>
-                                    <p>고학년을 대상으로 학생 스스로가 자신의 과제 등을 스스로 평가하는 서비스입니다.</p>
+                                    <h2>관리자 가입하기</h2>
                                     
+                              <form action=\"{{ doc_root }}t-signin\" method=\"post\">
                                 </div>
-                                <form action=\"/\" method=\"post\">
                                 <div class=\"col-md-12\">
                                     <div class=\"mb-3\">
-                                        <label class=\"form-label\">인증번호</label>
-                                        <input type=\"number\" id=\"classname\" name=\"classname\" class=\"form-control\" placeholder=\"예) 123 456 789\">
+                                        <label class=\"form-label\">아이디</label>
+                                      {{ errors }} {{ success }}
+                                        <input type=\"text\" name=\"userid\" id=\"userid\" class=\"form-control\">
                                     </div>
                                 </div>
                                 <div class=\"col-12\">
                                     <div class=\"mb-4\">
-                                        <label class=\"form-label\">이름</label>
-                                        <input type=\"text\" id=\"studentname\" name=\"studentname\" class=\"form-control\" placeholder=\"예)홍길동, 빈칸이 없어야 합니다.\">
+                                        <label class=\"form-label\">비밀번호</label>
+                                        <input type=\"password\" name=\"current-password\" id=\"current-password\" class=\"form-control\">
                                     </div>
                                 </div>
+                              
                                 
                                 <div class=\"col-12\">
                                     <div class=\"mb-4\">
-                                        <button class=\"btn btn-primary w-100\">입장하기</button>
+                                        <button type=\"submit\" class=\"btn btn-secondary w-100\">생성하기</button>
                                     </div>
                                 </div>
+                                
                             </form>
-                                <div class=\"col-12\">
-                                    <div class=\"mb-4\">
-                                      <a href=\"{{ doc_root }}t-admin\" class=\"btn btn-secondary w-100\">관리자 페이지</a>
-                                        
-                                
+    
+                             <div class=\"col-12\">
+                                    <div class=\"text-center\">
+                                        <p class=\"mb-0\"> 로그인으로 가고 싶으신가요?<a href=\"{{ doc_root }}t-admin\" class=\"text-warning\">로그인으로 가기</a></p>
                                     </div>
-                                </div>
+                                </div> 
+                              </div>
+                              <div class=\"col-12\">
+                                    <div class=\"text-center\">
+                                        <p class=\"mb-0\"> 홈으로 가고 싶으신가요?<a href=\"/\" class=\"text-warning\">홈으로 가기</a></p>
+                                    </div>
+                                </div> 
                               </div>
                         </div>
                     </div>
@@ -208,19 +231,12 @@ class __TwigTemplate_1054725d4f0c7f5dbbdfc772353eab17 extends Template
             </div>
         </div>
     </div>
-  
-                                
-                                
+
                            
     
     <!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
     <script src=\"../src/bootstrap/js/bootstrap.bundle.min.js\"></script>
-    <!-- END GLOBAL MANDATORY SCRIPTS -->
-
-
-
-
-
-{% endblock %}", "index.html", "/Users/nm/works/project/fbc/templates/index.html");
+    <!-- END GLO -->
+{% endblock %}", "t-signin.html", "/Users/nm/works/project/fbc/templates/t-signin.html");
     }
 }
