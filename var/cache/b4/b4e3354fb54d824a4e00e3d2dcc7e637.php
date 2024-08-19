@@ -199,13 +199,36 @@ class __TwigTemplate_dde6b3b52fe0c1447470e8899c91333f extends Template
                     <!--  END BREADCRUMBS  -->
                    <br>
     
-               
+               <h1>나의 평가 관리</h1>
+                <br>
+                <table>
+                    <tr>
+                        <th scope=\"col\"><h4>점검 받아야할 항목</h4></th>
+                        <th scope=\"col\"><h4> </h4></th>
+                        <th scope=\"col\"><h4>평가 완료된 항목</h4></th>
+                    </tr>
+                    <tr>
+                        <td>학생 학번</td>
+                        <td> </td>
+                        <td>";
+        // line 154
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, ($context["session"] ?? null), "studentid", [], "any", false, false, false, 154), "html", null, true);
+        yield "</td>
+                    </tr>
+                    <tr>
+                        <td>학생 반</td>
+                        <td> </td>
+                        <td>";
+        // line 159
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, ($context["session"] ?? null), "classname", [], "any", false, false, false, 159), "html", null, true);
+        yield "</td>
+                    </tr>
+                </table>
 
             </div>
             <br>
             <br>
-            <br>
-            <br>
+            
             <p>
           <p>
             <!--  BEGIN FOOTER  -->
@@ -246,7 +269,7 @@ class __TwigTemplate_dde6b3b52fe0c1447470e8899c91333f extends Template
     <script>
       localStorage.clear();
       localStorage.setItem('className', '";
-        // line 189
+        // line 206
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["className"] ?? null), "html", null, true);
         yield "');
     </script>
@@ -280,7 +303,7 @@ class __TwigTemplate_dde6b3b52fe0c1447470e8899c91333f extends Template
      */
     public function getDebugInfo()
     {
-        return array (  250 => 189,  108 => 49,  89 => 36,  85 => 34,  83 => 33,  51 => 3,  47 => 2,  36 => 1,);
+        return array (  273 => 206,  223 => 159,  215 => 154,  108 => 49,  89 => 36,  85 => 34,  83 => 33,  51 => 3,  47 => 2,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -427,13 +450,30 @@ class __TwigTemplate_dde6b3b52fe0c1447470e8899c91333f extends Template
                     <!--  END BREADCRUMBS  -->
                    <br>
     
-               
+               <h1>나의 평가 관리</h1>
+                <br>
+                <table>
+                    <tr>
+                        <th scope=\"col\"><h4>점검 받아야할 항목</h4></th>
+                        <th scope=\"col\"><h4> </h4></th>
+                        <th scope=\"col\"><h4>평가 완료된 항목</h4></th>
+                    </tr>
+                    <tr>
+                        <td>학생 학번</td>
+                        <td> </td>
+                        <td>{{ session.studentid }}</td>
+                    </tr>
+                    <tr>
+                        <td>학생 반</td>
+                        <td> </td>
+                        <td>{{ session.classname }}</td>
+                    </tr>
+                </table>
 
             </div>
             <br>
             <br>
-            <br>
-            <br>
+            
             <p>
           <p>
             <!--  BEGIN FOOTER  -->

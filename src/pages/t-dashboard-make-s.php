@@ -15,6 +15,9 @@ $data['className4'] = $data['className1']." /".$data['className2']."/ ".$data['c
 $data['className5'] = $data['className1'].$data['className2'].$data['className3'];
 $data['className'] = (string)$data['className5'];
 
+$_SESSION['classTotal'] = $cms->getFcb()->getClassTotal($data['className']);
+$_SESSION['classname'] = $data['className'];
+
 
 
 

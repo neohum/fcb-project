@@ -241,25 +241,23 @@ class __TwigTemplate_fc39257cbe08395a2f1b40952a667d34 extends Template
                           <div class=\"col-lg-12 layout-spacing\">
                               <div class=\"widget widget-table-one\">
                                   <div class=\"widget-heading\">
-                                      <h5 class=\"\">생성된 점검 목록</h5>
+                                      <h5 class=\"\">학생 점검 목록 생성 하기</h5>
                                   </div>
-                                  <div class=\"col-lg-2\">
-                                  <input type=\"number\" class=\"form-control\" placeholder=\"학생수를 입력 해주세요\" id=\"number\">
-                                  </div>
-                                  <div> 
-                                    <p>
-                                  </div>
-                                  <button type=\"button\" class=\"btn btn-primary\" onclick=\"addNumber()\">1. 학생 수 입력 하기</button>
-                                  <p>
-                        
-                                  <br>
-                                  <a href=\"t-send-check\" class=\"btn btn-primary\">점검 목록 생성하기</a>
-                                  <button type=\"button\" class=\"btn\" onclick=\"addCheck()\">1. 체크박스 생성</button>
-                                  <button type=\"button\" class=\"btn\" onclick=\"add5Check()\">2. 5단계 선택형 생성</button>
-                                  <button type=\"button\" class=\"btn\" onclick=\"add3Check()\">3. 상,중,하 생성</button>
-                                  <button type=\"button\" class=\"btn\" onclick=\"addWittingCheck()\">4. 주관식 생성</button>
-                                  <div type=\"checkbox\" id=\"check\"></div>
+                                  <div class=\"widget-content\">
                                   
+                                  <a href=\"t-dashboard-check\" type=\"submit\" class=\"btn btn-primary\" >1. 체크박스 생성</a>
+                                  
+                                 
+                                  <a href=\"t-dashboard-5check\" type=\"submit\" class=\"btn btn-primary\" >2. 5단계 선택형 생성</a>
+                                 
+                                 
+                                  <a href=\"t-dashboard-3check\" type=\"submit\" class=\"btn btn-primary\" >3. 상,중,하 생성</a>
+                                
+                                
+                                  <a href=\"t-dashboard-writing\" type=\"submit\" class=\"btn btn-primary\" >4. 주관식 생성</a>
+                                 
+                                </div>
+                                 
                               </div>
                           </div>
                         </div>
@@ -301,90 +299,7 @@ class __TwigTemplate_fc39257cbe08395a2f1b40952a667d34 extends Template
     <script src=\"../src/plugins/src/apex/apexcharts.min.js\"></script>
     <script src=\"../src/assets/js/dashboard/dash_1.js\"></script>
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
-     <script>
-        var number = 0;
-        var check = '';
-        var input = '';
-        var http = new XMLHttpRequest();
-        var data = new FormData();
-       
-        function addNumber(){
-          number = document.getElementById(\"number\").value;
-          console.log(localStorage.getItem('number'));
-          for (var i = 0; i < number; i++){
-           
-            console.log(store);
-            
-          }
-        }
-        
-        function addCheck(){
-          for(var i = 0; i < number; i++){
-            check = document.getElementById(\"check\");
-            input = document.createElement(\"input\");
-            input.type = \"checkbox\";
-            input.id = \"check\";
-            
-            var br = document.createElement(\"br\");
-            check.appendChild(br);
-            check.appendChild(input);
-            
-          }
-          http.open('POST', '/www/t-send-check', true);
-            http.send(data);
-          check = ''
-         
-        }
-
-        function add5Check(){
-          for(var i = 0; i < number; i++){
-            check = document.getElementById(\"check\");
-            input = document.createElement(\"input\");
-              input.type = \"radio\";
-              input.id = \"check\";
-              
-
-              var p = document.createElement(\"p\");
-              check.appendChild(p);
-              check.appendChild(input);
-            }
-            
-          
-          check = ''
-        }
-
-        function add3Check(){
-          for(var i = 0; i < number; i++){
-            check = document.getElementById(\"check\");
-            var input = document.createElement(\"input\");
-            for (var j = 0; j < 3; j++){
-              input.type = \"radio\";
-              input.id = \"check\";
-              check.appendChild(input);
-            }
-            
-            check.appendChild(input);
-          }
-          check = ''
-        }
-
-        function addWittingCheck(){
-          for(var i = 0; i < number; i++){
-            var check = document.getElementById(\"check\");
-            var input = document.createElement(\"textarea\");
-            input.type = \"textarea\";
-            input.id = \"check\";
-            
-          }
-          check = ''
-        }
-
-
-      </script>
-
-
-
-";
+     ";
         return; yield '';
     }
 
@@ -589,25 +504,23 @@ class __TwigTemplate_fc39257cbe08395a2f1b40952a667d34 extends Template
                           <div class=\"col-lg-12 layout-spacing\">
                               <div class=\"widget widget-table-one\">
                                   <div class=\"widget-heading\">
-                                      <h5 class=\"\">생성된 점검 목록</h5>
+                                      <h5 class=\"\">학생 점검 목록 생성 하기</h5>
                                   </div>
-                                  <div class=\"col-lg-2\">
-                                  <input type=\"number\" class=\"form-control\" placeholder=\"학생수를 입력 해주세요\" id=\"number\">
-                                  </div>
-                                  <div> 
-                                    <p>
-                                  </div>
-                                  <button type=\"button\" class=\"btn btn-primary\" onclick=\"addNumber()\">1. 학생 수 입력 하기</button>
-                                  <p>
-                        
-                                  <br>
-                                  <a href=\"t-send-check\" class=\"btn btn-primary\">점검 목록 생성하기</a>
-                                  <button type=\"button\" class=\"btn\" onclick=\"addCheck()\">1. 체크박스 생성</button>
-                                  <button type=\"button\" class=\"btn\" onclick=\"add5Check()\">2. 5단계 선택형 생성</button>
-                                  <button type=\"button\" class=\"btn\" onclick=\"add3Check()\">3. 상,중,하 생성</button>
-                                  <button type=\"button\" class=\"btn\" onclick=\"addWittingCheck()\">4. 주관식 생성</button>
-                                  <div type=\"checkbox\" id=\"check\"></div>
+                                  <div class=\"widget-content\">
                                   
+                                  <a href=\"t-dashboard-check\" type=\"submit\" class=\"btn btn-primary\" >1. 체크박스 생성</a>
+                                  
+                                 
+                                  <a href=\"t-dashboard-5check\" type=\"submit\" class=\"btn btn-primary\" >2. 5단계 선택형 생성</a>
+                                 
+                                 
+                                  <a href=\"t-dashboard-3check\" type=\"submit\" class=\"btn btn-primary\" >3. 상,중,하 생성</a>
+                                
+                                
+                                  <a href=\"t-dashboard-writing\" type=\"submit\" class=\"btn btn-primary\" >4. 주관식 생성</a>
+                                 
+                                </div>
+                                 
                               </div>
                           </div>
                         </div>
@@ -649,89 +562,6 @@ class __TwigTemplate_fc39257cbe08395a2f1b40952a667d34 extends Template
     <script src=\"../src/plugins/src/apex/apexcharts.min.js\"></script>
     <script src=\"../src/assets/js/dashboard/dash_1.js\"></script>
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
-     <script>
-        var number = 0;
-        var check = '';
-        var input = '';
-        var http = new XMLHttpRequest();
-        var data = new FormData();
-       
-        function addNumber(){
-          number = document.getElementById(\"number\").value;
-          console.log(localStorage.getItem('number'));
-          for (var i = 0; i < number; i++){
-           
-            console.log(store);
-            
-          }
-        }
-        
-        function addCheck(){
-          for(var i = 0; i < number; i++){
-            check = document.getElementById(\"check\");
-            input = document.createElement(\"input\");
-            input.type = \"checkbox\";
-            input.id = \"check\";
-            
-            var br = document.createElement(\"br\");
-            check.appendChild(br);
-            check.appendChild(input);
-            
-          }
-          http.open('POST', '/www/t-send-check', true);
-            http.send(data);
-          check = ''
-         
-        }
-
-        function add5Check(){
-          for(var i = 0; i < number; i++){
-            check = document.getElementById(\"check\");
-            input = document.createElement(\"input\");
-              input.type = \"radio\";
-              input.id = \"check\";
-              
-
-              var p = document.createElement(\"p\");
-              check.appendChild(p);
-              check.appendChild(input);
-            }
-            
-          
-          check = ''
-        }
-
-        function add3Check(){
-          for(var i = 0; i < number; i++){
-            check = document.getElementById(\"check\");
-            var input = document.createElement(\"input\");
-            for (var j = 0; j < 3; j++){
-              input.type = \"radio\";
-              input.id = \"check\";
-              check.appendChild(input);
-            }
-            
-            check.appendChild(input);
-          }
-          check = ''
-        }
-
-        function addWittingCheck(){
-          for(var i = 0; i < number; i++){
-            var check = document.getElementById(\"check\");
-            var input = document.createElement(\"textarea\");
-            input.type = \"textarea\";
-            input.id = \"check\";
-            
-          }
-          check = ''
-        }
-
-
-      </script>
-
-
-
-{% endblock %}", "t-dashboard.html", "/Users/nm/works/project/fbc/templates/t-dashboard.html");
+     {% endblock %}", "t-dashboard.html", "/Users/nm/works/project/fbc/templates/t-dashboard.html");
     }
 }

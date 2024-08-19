@@ -32,7 +32,7 @@ if(!empty($_FILES['file'])){
         }
         
         $cms->getFcb()->insert($data[$rowIndex][0], $data[$rowIndex][1], $data[$rowIndex][2]);
-        $cms->getFcb()->setSubject($data[$rowIndex][0], $data[$rowIndex][2]);
+        
     }
 }
 
