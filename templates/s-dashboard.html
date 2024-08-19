@@ -140,13 +140,30 @@
                     <!--  END BREADCRUMBS  -->
                    <br>
     
-               
+               <h1>나의 평가 관리</h1>
+                <br>
+                <table>
+                    <tr>
+                        <th scope="col"><h4>점검 받아야할 항목</h4></th>
+                        <th scope="col"><h4> </h4></th>
+                        <th scope="col"><h4>평가 완료된 항목</h4></th>
+                    </tr>
+                    <tr>
+                        <td>학생 학번</td>
+                        <td> </td>
+                        <td>{{ session.studentid }}</td>
+                    </tr>
+                    <tr>
+                        <td>학생 반</td>
+                        <td> </td>
+                        <td>{{ session.classname }}</td>
+                    </tr>
+                </table>
 
             </div>
             <br>
             <br>
-            <br>
-            <br>
+            
             <p>
           <p>
             <!--  BEGIN FOOTER  -->

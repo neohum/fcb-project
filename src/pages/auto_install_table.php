@@ -23,7 +23,9 @@ try {
         studentnumber VARCHAR(15) NULL,
         subjectnumber VARCHAR(15) NULL,
         classname INT(255) NULL,
+        studentname TEXT NULL,
         score VARCHAR(15) NULL,
+        score2 VARCHAR(15) NULL,
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
         updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
         PRIMARY KEY (id));";
@@ -31,7 +33,6 @@ try {
         CREATE TABLE student (
         id INT(255) NOT NULL AUTO_INCREMENT,
         classname VARCHAR(255) NULL,
-        subjectname TEXT NULL,
         studentnumber VARCHAR(15) NULL,
         studentname TEXT NULL,
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,

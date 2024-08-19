@@ -82,29 +82,68 @@ class Fcb
     }
 
   }
-  public function setSubject(int $classname, string $studentnumber)
+  public function setSubjectCheck(string $subjectname, $studentnumber, int $classname, $studentname)
   {
-    try {
-      $sql = "INSERT INTO subject (classname, studentnumber) VALUES (:classname, :studentnumber);";
+  
+      $sql = "INSERT INTO subject (subjectname, studentnumber, classname, studentname) VALUES (:subjectname, :studentnumber, :classname, :studentname);";
       
-      $arguments['classname'] = $classname;
+      $arguments['subjectname'] = $subjectname;
       $arguments['studentnumber'] = $studentnumber;
+      $arguments['classname'] = $classname;
+      $arguments['studentname'] = $studentname;
       
 
       return $this->db->runSQL($sql, $arguments)->fetch();
-    } catch (\Exception $e) {
-      return $e->getMessage();
-    }
-
+  
   }
 
-  public function getNumberOfStudent($classname)
+
+    public function setSubject5Check(string $subjectname, $studentnumber, int $classname, $studentname)
   {
-    $sql = "SELECT COUNT(*) FROM students WHERE classname = :classname;";
-    $arguments['classname'] = $classname;
+  
+      $sql = "INSERT INTO subject (subjectname, studentnumber, classname, studentname) VALUES (:subjectname, :studentnumber, :classname, :studentname);";
+      
+      $arguments['subjectname'] = $subjectname;
+      $arguments['studentnumber'] = $studentnumber;
+      $arguments['classname'] = $classname;
+      $arguments['studentname'] = $studentname;
+      
 
-    return $this->db->runSQL($sql, $arguments)->fetch();
+      return $this->db->runSQL($sql, $arguments)->fetch();
+  
   }
+
+    public function setSubject3Check(string $subjectname, $studentnumber, int $classname, $studentname)
+  {
+  
+      $sql = "INSERT INTO subject (subjectname, studentnumber, classname, studentname) VALUES (:subjectname, :studentnumber, :classname, :studentname);";
+      
+      $arguments['subjectname'] = $subjectname;
+      $arguments['studentnumber'] = $studentnumber;
+      $arguments['classname'] = $classname;
+      $arguments['studentname'] = $studentname;
+      
+
+      return $this->db->runSQL($sql, $arguments)->fetch();
+  
+  }
+
+    public function setSubjectWriting(string $subjectname, $studentnumber, int $classname, $studentname)
+  {
+  
+      $sql = "INSERT INTO subject (subjectname, studentnumber, classname, studentname) VALUES (:subjectname, :studentnumber, :classname, :studentname);";
+      
+      $arguments['subjectname'] = $subjectname;
+      $arguments['studentnumber'] = $studentnumber;
+      $arguments['classname'] = $classname;
+      $arguments['studentname'] = $studentname;
+      
+
+      return $this->db->runSQL($sql, $arguments)->fetch();
+  
+  }
+
+ 
 
   public function login(int $classname, string $studentname)
   {
@@ -124,7 +163,21 @@ class Fcb
       return $this->db->runSQL($sql)->fetchAll(); // Return data
     }
 
+    public function getClassTotal($classname)
+    {
+      $sql = "SELECT COUNT(*) FROM student WHERE className = :classname;";
+      $arguments['classname'] = $classname;
 
+      return $this->db->runSQL($sql, $arguments)->fetch();
+    }
   
+    public function getStudentName(int $classname, $studentnumber)
+    {
+      $sql = "SELECT studentname FROM student WHERE classname = :classname AND studentnumber = :studentnumber;";
+      $arguments['classname'] = $classname;
+      $arguments['studentnumber'] = $studentnumber;
+
+      return $this->db->runSQL($sql, $arguments)->fetch();
+    }
 
 }
