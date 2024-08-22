@@ -56,7 +56,7 @@ class __TwigTemplate_2ff01592f8ad33662428e752c8879c43 extends Template
       <link href=\"/layouts/vertical-light-menu/css/dark/plugins.css\" rel=\"stylesheet\" type=\"text/css\" />
     
        <!-- Css File -->
-      <link rel=\"stylesheet\" href=\"/css/bootstrap.min.css\">
+   
       <link rel=\"stylesheet\" href=\"/css/animate.min.css\">
       <link rel=\"stylesheet\" href=\"/css/font-awesome.min.css\">
       <link rel=\"stylesheet\" href=\"/css/mediabox.min.css\">
@@ -97,12 +97,12 @@ class __TwigTemplate_2ff01592f8ad33662428e752c8879c43 extends Template
      
 
     <!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
-    <script src=\"/src/bootstrap/js/bootstrap.bundle.min.js\"></script>
+   
     <!-- END GLOBAL MANDATORY SCRIPTS -->
         <!-- **** All JS Files ***** -->
     <script src=\"/js/jquery.min.js\"></>
     <script src=\"/js/popper.min.js\"></script>
-    <script src=\"/js/bootstrap.min.js\"></script>
+    
 
       
     <script src=\"/src/bootstrap/js/bootstrap.bundle.min.js\"></script>
@@ -166,7 +166,7 @@ class __TwigTemplate_2ff01592f8ad33662428e752c8879c43 extends Template
       <link href=\"/layouts/vertical-light-menu/css/dark/plugins.css\" rel=\"stylesheet\" type=\"text/css\" />
     
        <!-- Css File -->
-      <link rel=\"stylesheet\" href=\"/css/bootstrap.min.css\">
+   
       <link rel=\"stylesheet\" href=\"/css/animate.min.css\">
       <link rel=\"stylesheet\" href=\"/css/font-awesome.min.css\">
       <link rel=\"stylesheet\" href=\"/css/mediabox.min.css\">
@@ -204,12 +204,12 @@ class __TwigTemplate_2ff01592f8ad33662428e752c8879c43 extends Template
      
 
     <!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
-    <script src=\"/src/bootstrap/js/bootstrap.bundle.min.js\"></script>
+   
     <!-- END GLOBAL MANDATORY SCRIPTS -->
         <!-- **** All JS Files ***** -->
     <script src=\"/js/jquery.min.js\"></>
     <script src=\"/js/popper.min.js\"></script>
-    <script src=\"/js/bootstrap.min.js\"></script>
+    
 
       
     <script src=\"/src/bootstrap/js/bootstrap.bundle.min.js\"></script>

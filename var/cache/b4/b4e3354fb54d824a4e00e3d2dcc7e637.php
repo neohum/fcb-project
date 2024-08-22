@@ -61,7 +61,7 @@ class __TwigTemplate_dde6b3b52fe0c1447470e8899c91333f extends Template
     <div class=\"header-container container-xxl\">
         <header class=\"header navbar navbar-expand-sm expand-header\">
 
-            <a href=\"javascript:void(0);\" class=\"sidebarCollapse\" data-placement=\"bottom\"><svg xmlns=\"http:</td> <td>www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-menu\"><line x1=\"3\" y1=\"12\" x2=\"21\" y2=\"12\"></line><line x1=\"3\" y1=\"6\" x2=\"21\" y2=\"6\"></line><line x1=\"3\" y1=\"18\" x2=\"21\" y2=\"18\"></line></svg></a>
+            <a href=\"/\" class=\"sidebarCollapse\" data-placement=\"bottom\"><svg xmlns=\"http:</td> <td>www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-menu\"><line x1=\"3\" y1=\"12\" x2=\"21\" y2=\"12\"></line><line x1=\"3\" y1=\"6\" x2=\"21\" y2=\"6\"></line><line x1=\"3\" y1=\"18\" x2=\"21\" y2=\"18\"></line></svg></a>
             
             <ul class=\"navbar-item theme-brand flex-row  text-center\">
                 <li class=\"nav-item theme-logo\">
@@ -209,7 +209,7 @@ class __TwigTemplate_dde6b3b52fe0c1447470e8899c91333f extends Template
                     <!--  END BREADCRUMBS  -->
                    <br>
     
-               <h1>나의 평가 결과</h1>
+               <h1>오늘 나의 평가 결과</h1>
                 <br>
                 <table>
         
@@ -236,127 +236,147 @@ class __TwigTemplate_dde6b3b52fe0c1447470e8899c91333f extends Template
             <br>
             <br>
         <div class=\"container text-center\">
-         
+         <table class=\"table table-bordered table-sm\" style=\"table-layout:fixed;\">
             
-              <div class=\"row\">
-                <div class=\"col\">유형</div>
-                <div class=\"col\">항목</div>
-                <div class=\"col\">점수1</div>
-                <div class=\"col\">점수2</div>
-                <div class=\"col\">생성일</div>
-              </div>
+              <thead>
+                <tr>
+                  <td >유형</td>
+                  <td >항목</td>
+                  <td style=\"
+                              width: 200px;
+                              
+                              overflow: hidden;\">점수1</td>
+                  <td style=\"
+                                width: 200px;
+                                
+                                overflow: hidden;\">점수2</td>
+                  <td >생성일</td>
+                </tr>
+              </thead>
 
-            <div class=\"row\">
+            <tbody>
             ";
-        // line 185
+        // line 193
         $context['_parent'] = $context;
         $context['_seq'] = CoreExtension::ensureTraversable(($context["checklists"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["checklist"]) {
-            // line 186
-            yield "            
+            // line 194
+            yield "            <tr id=\"check_list\">
             
-              <div class=\"col\">";
-            // line 188
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "subjectname", [], "any", false, false, false, 188), "html", null, true);
-            yield "</div>  
-              <div class=\"col\">";
-            // line 189
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "subjectname2", [], "any", false, false, false, 189), "html", null, true);
-            yield "</div> 
+              <td >";
+            // line 196
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "subjectname", [], "any", false, false, false, 196), "html", null, true);
+            yield "</td>  
+              <td >";
+            // line 197
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "subjectname2", [], "any", false, false, false, 197), "html", null, true);
+            yield "</td> 
               
                 ";
-            // line 191
-            if ((CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "subjectname", [], "any", false, false, false, 191) == "Writing")) {
-                // line 192
-                yield "              <div class=\"col\">
+            // line 199
+            if ((CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "subjectname", [], "any", false, false, false, 199) == "Writing")) {
+                // line 200
+                yield "              <td id=\"writing_score\" class=\"\" style=\"
+                                                      width: 200px;
+                                                      white-space: nowrap;
+                                                      overflow: hidden;
+                                                      text-overflow: ellipsis;
+
+                                                      
+                                                      white-space: normal;\">
                   ";
-                // line 193
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "score", [], "any", false, false, false, 193), "html", null, true);
+                // line 208
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "score", [], "any", false, false, false, 208), "html", null, true);
                 yield "
-              </div>
-               <div class=\"col\">";
-                // line 195
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "score2", [], "any", false, false, false, 195), "html", null, true);
-                yield "</div>  
-               <div class=\"col\">";
-                // line 196
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Twig\Extension\CoreExtension']->formatDate(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "created_at", [], "any", false, false, false, 196), "Y-m-d"), "html", null, true);
-                yield "</div>  
-            
+              </td>
+               <td id=\"writing_score2\" style=\"
+                                              width: 200px;
+                                              white-space: nowrap;
+                                              overflow: hidden;
+                                              text-overflow: ellipsis;
+
+                                              
+                                              white-space: normal;
+                                          \">";
+                // line 218
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "score2", [], "any", false, false, false, 218), "html", null, true);
+                yield "</td>  
+               <td>";
+                // line 219
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Twig\Extension\CoreExtension']->formatDate(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "created_at", [], "any", false, false, false, 219), "Y-m-d"), "html", null, true);
+                yield "</td>  
+         
              
             
                
                 ";
-            } elseif ((CoreExtension::getAttribute($this->env, $this->source,             // line 201
-$context["checklist"], "subjectname", [], "any", false, false, false, 201) == "5Check")) {
-                // line 202
-                yield "                <div class=\"col\">
+            } elseif ((CoreExtension::getAttribute($this->env, $this->source,             // line 224
+$context["checklist"], "subjectname", [], "any", false, false, false, 224) == "5CheckBox")) {
+                // line 225
+                yield "                <td id=\"checkbox5_score\">
                   ";
-                // line 203
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "score", [], "any", false, false, false, 203), "html", null, true);
+                // line 226
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "score", [], "any", false, false, false, 226), "html", null, true);
                 yield "
-               </div>  
-               <div class=\"col\">";
-                // line 205
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "score2", [], "any", false, false, false, 205), "html", null, true);
-                yield "</div>  
-               <div class=\"col\">";
-                // line 206
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Twig\Extension\CoreExtension']->formatDate(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "created_at", [], "any", false, false, false, 206), "Y-m-d"), "html", null, true);
-                yield "</div>
-               </div>
+               </td>  
+               <td id=\"checkbox5_score2\">";
+                // line 228
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "score2", [], "any", false, false, false, 228), "html", null, true);
+                yield "</td>  
+               <td>";
+                // line 229
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Twig\Extension\CoreExtension']->formatDate(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "created_at", [], "any", false, false, false, 229), "Y-m-d"), "html", null, true);
+                yield "</td>
+              
 
             
                
                 ";
-            } elseif ((CoreExtension::getAttribute($this->env, $this->source,             // line 211
-$context["checklist"], "subjectname", [], "any", false, false, false, 211) == "3Check")) {
-                // line 212
-                yield "                <div class=\"col\">
+            } elseif ((CoreExtension::getAttribute($this->env, $this->source,             // line 234
+$context["checklist"], "subjectname", [], "any", false, false, false, 234) == "3CheckBox")) {
+                // line 235
+                yield "                <td id=\"checkbox3_score\">
                   ";
-                // line 213
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "score", [], "any", false, false, false, 213), "html", null, true);
+                // line 236
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "score", [], "any", false, false, false, 236), "html", null, true);
                 yield "
-              </div> 
-                <div class=\"col\">";
-                // line 215
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "score2", [], "any", false, false, false, 215), "html", null, true);
-                yield " </div> 
-                <div class=\"col\">";
-                // line 216
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Twig\Extension\CoreExtension']->formatDate(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "created_at", [], "any", false, false, false, 216), "Y-m-d"), "html", null, true);
-                yield "</div>
-              </div>
+                </td> 
+                <td id=\"checkbox3_score2\">";
+                // line 238
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "score2", [], "any", false, false, false, 238), "html", null, true);
+                yield " </td> 
+                <td>";
+                // line 239
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Twig\Extension\CoreExtension']->formatDate(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "created_at", [], "any", false, false, false, 239), "Y-m-d"), "html", null, true);
+                yield "</td>
+            
 
            
                
                 ";
-            } elseif ((CoreExtension::getAttribute($this->env, $this->source,             // line 221
-$context["checklist"], "subjectname", [], "any", false, false, false, 221) == "Check")) {
-                // line 222
-                yield "                <div class=\"col\">
-                <div class=\"checklist\">
-                
+            } elseif ((CoreExtension::getAttribute($this->env, $this->source,             // line 244
+$context["checklist"], "subjectname", [], "any", false, false, false, 244) == "CheckBox")) {
+                // line 245
+                yield "                <td id=\"checkbox_score\">
                 ";
-                // line 225
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "score", [], "any", false, false, false, 225), "html", null, true);
+                // line 246
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "score", [], "any", false, false, false, 246), "html", null, true);
                 yield " 
-                </div>
-               </div> 
-               
-               <div class=\"col\">";
-                // line 229
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "score2", [], "any", false, false, false, 229), "html", null, true);
-                yield " </div>
-               <div class=\"col\">";
-                // line 230
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Twig\Extension\CoreExtension']->formatDate(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "created_at", [], "any", false, false, false, 230), "Y-m-d"), "html", null, true);
-                yield "</div>
-              </div>
+                </td>
+               <td id=\"checkbox_score2\">";
+                // line 248
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "score2", [], "any", false, false, false, 248), "html", null, true);
+                yield " </td>
+               <td>";
+                // line 249
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Twig\Extension\CoreExtension']->formatDate(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "created_at", [], "any", false, false, false, 249), "Y-m-d"), "html", null, true);
+                yield "</td>
+             
               ";
             }
-            // line 233
-            yield "            </div>
+            // line 252
+            yield "              </tr>
+            
           
 
             ";
@@ -364,11 +384,15 @@ $context["checklist"], "subjectname", [], "any", false, false, false, 221) == "C
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['checklist'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 237
-        yield "          </div>
+        // line 257
+        yield "            </tbody>
+          </table>
+        </div>
             <!--  BEGIN FOOTER  -->
+
+            
           <div>
-            <div class=\"footer-wrapper\">
+            <div class=\"footer-wrapper mb-5\">
                 <div class=\"footer-section f-section-1\">
                     <p class=\"\">Copyright © <span class=\"dynamic-year\">2024</span> <a target=\"_blank\" href=\"https:</td> <td>designreset.com/cork-admin/\">DesignReset</a>, All rights reserved.</p>
                 </div>
@@ -385,36 +409,98 @@ $context["checklist"], "subjectname", [], "any", false, false, false, 221) == "C
 
     <!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
     <script src=\"../src/bootstrap/js/bootstrap.bundle.min.js\"></script>
-    <script src=\"../src/plugins/src/perfect-scrollbar/perfect-scrollbar.min.js\"></script>
+    
     <script src=\"../src/plugins/src/mousetrap/mousetrap.min.js\"></script>
     <script src=\"../src/plugins/src/waves/waves.min.js\"></script>
     <script src=\"../layouts/horizontal-light-menu/app.js\"></script>
     <!-- END GLOBAL MANDATORY SCRIPTS -->
 
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
-    <script src=\"../src/plugins/src/apex/apexcharts.min.js\"></script>
-    <script src=\"../src/assets/js/dashboard/dash_1.js\"></script>
-    <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
-
-     <script>
-      var className = localStorage.getItem('className');
-      document.getElementById('className').value = className;
-    </script>
-
-    <script>
-      localStorage.clear();
-      localStorage.setItem('className', '";
-        // line 275
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["className"] ?? null), "html", null, true);
-        yield "');
-    </script>
-
-    <script>
-      let checklist = document.querySelector('.checklist');
-      console.log(checklist);
-
 
    
+    <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
+
+    
+
+    <script>
+      let writing_score = document.getElementById('writing_score');
+      let writing_score2 = document.getElementById('writing_score2');
+      let checkbox_score = document.getElementById('checkbox_score');
+      let checkbox_score2 = document.getElementById('checkbox_score2');
+      let checkbox3_score = document.getElementById('checkbox3_score');
+      let checkbox3_score2 = document.getElementById('checkbox3_score2');
+      let checkbox5_score = document.getElementById('checkbox5_score');
+      let checkbox5_score2 = document.getElementById('checkbox5_score2');
+      
+    
+      if (writing_score.innerHTML == 0) {
+        writing_score.innerHTML = \"미작성\";
+      }
+      if (writing_score2.innerHTML == 0) {
+        writing_score2.innerHTML = \"미작성\";
+      }
+      if (checkbox_score.innerHTML == 0) {
+        checkbox_score.innerHTML = \"미작성\";
+      } else {
+        checkbox_score.innerHTML = \"<input type='checkbox' checked disabled />\";
+      }
+
+      if (checkbox_score2.innerHTML == 0) {
+        checkbox_score2.innerHTML = \"미작성\";
+      } else {
+        checkbox_score2.innerHTML = \"<input type='checkbox' checked disabled />\";
+      }
+     
+      if (checkbox3_score.innerHTML == 0) {
+        checkbox3_score.innerHTML = \"미작성\";
+      } else if (checkbox3_score.innerHTML == 1) {
+        checkbox3_score.innerHTML = \"<input type='checkbox' checked disabled />&ensp;<input type='checkbox'disabled />&ensp;<input type='checkbox'disabled  />\";
+      } else if (checkbox3_score.innerHTML == 2) {
+        checkbox3_score.innerHTML = \"<input type='checkbox'  disabled />&ensp;<input type='checkbox' checked disabled />&ensp;<input type='checkbox' disabled />\";
+      } else if (checkbox3_score.innerHTML == 3) {
+        checkbox3_score.innerHTML = \"<input type='checkbox' disabled />&ensp;<input type='checkbox'  disabled />&ensp;<input type='checkbox' checked disabled />\";
+      }
+
+      if (checkbox3_score2.innerHTML == 0) {
+        checkbox3_score2.innerHTML = \"미작성\";
+      } else if (checkbox3_score2.innerHTML == 1) {
+        checkbox3_score2.innerHTML = \"<input type='checkbox' checked disabled />&ensp;<input type='checkbox'disabled />&ensp;<input type='checkbox'disabled  />\";
+      } else if (checkbox3_score2.innerHTML == 2) {
+        checkbox3_score2.innerHTML = \"<input type='checkbox'  disabled />&ensp;<input type='checkbox' checked disabled />&ensp;<input type='checkbox' disabled />\";
+      } else if (checkbox3_score2.innerHTML == 3) {
+        checkbox3_score2.innerHTML = \"<input type='checkbox' disabled />&ensp;<input type='checkbox'  disabled />&ensp;<input type='checkbox' checked disabled />\";
+      }
+
+      if (checkbox5_score.innerHTML == 0) {
+        checkbox5_score.innerHTML = \"미작성\";
+      } else if (checkbox5_score.innerHTML == 1) {
+        checkbox5_score.innerHTML = \"<input type='checkbox' checked disabled />&ensp;<input type='checkbox'disabled />&ensp;<input type='checkbox'disabled />&ensp;<input type='checkbox'disabled />&ensp;<input type='checkbox'disabled />\";
+      } else if (checkbox5_score.innerHTML == 2) {
+        checkbox5_score.innerHTML = \"<input type='checkbox'  disabled />&ensp;<input type='checkbox' checked disabled />&ensp;<input type='checkbox' disabled />&ensp;<input type='checkbox' disabled />&ensp;<input type='checkbox' disabled />\";
+      } else if (checkbox5_score.innerHTML == 3) {
+        checkbox5_score.innerHTML = \"<input type='checkbox' disabled />&ensp;<input type='checkbox'  disabled />&ensp;<input type='checkbox' checked disabled />&ensp;<input type='checkbox' disabled />&ensp;<input type='checkbox' disabled />\";
+      } else if (checkbox5_score.innerHTML == 4) {
+        checkbox5_score.innerHTML = \"<input type='checkbox' disabled />&ensp;<input type='checkbox'  disabled />&ensp;<input type='checkbox' disabled />&ensp;<input type='checkbox' checked disabled />&ensp;<input type='checkbox' disabled />\";
+      } else if (checkbox5_score.innerHTML == 5) {
+        checkbox5_score.innerHTML = \"<input type='checkbox' disabled />&ensp;<input type='checkbox'  disabled />&ensp;<input type='checkbox' disabled />&ensp;<input type='checkbox' disabled />&ensp;<input type='checkbox' checked disabled />\";
+      }
+
+      if (checkbox5_score2.innerHTML == 0) {
+        checkbox5_score2.innerHTML = \"미작성\";
+      } else if (checkbox5_score2.innerHTML == 1) {
+        checkbox5_score2.innerHTML = \"<input type='checkbox' checked disabled />&ensp;<input type='checkbox'disabled />&ensp;<input type='checkbox'disabled />&ensp;<input type='checkbox'disabled />&ensp;<input type='checkbox'disabled />\";
+      } else if (checkbox5_score2.innerHTML == 2) {
+        checkbox5_score2.innerHTML = \"<input type='checkbox'  disabled />&ensp;<input type='checkbox' checked disabled />&ensp;<input type='checkbox' disabled />&ensp;<input type='checkbox' disabled />&ensp;<input type='checkbox' disabled />\";
+      } else if (checkbox5_score2.innerHTML == 3) {
+        checkbox5_score2.innerHTML = \"<input type='checkbox' disabled />&ensp;<input type='checkbox'  disabled />&ensp;<input type='checkbox' checked disabled />&ensp;<input type='checkbox' disabled />&ensp;<input type='checkbox' disabled />\";
+      } else if (checkbox5_score2.innerHTML == 4) {
+        checkbox5_score2.innerHTML = \"<input type='checkbox' disabled />&ensp;<input type='checkbox'  disabled />&ensp;<input type='checkbox' disabled />&ensp;<input type='checkbox' checked disabled />&ensp;<input type='checkbox' disabled />\";
+      } else if (checkbox5_score2.innerHTML == 5) {
+        checkbox5_score2.innerHTML = \"<input type='checkbox' disabled />&ensp;<input type='checkbox'  disabled />&ensp;<input type='checkbox' disabled />&ensp;<input type='checkbox' disabled />&ensp;<input type='checkbox' checked disabled />\";
+      }
+    
+
+    </script>
 
 
 
@@ -443,7 +529,7 @@ $context["checklist"], "subjectname", [], "any", false, false, false, 221) == "C
      */
     public function getDebugInfo()
     {
-        return array (  408 => 275,  368 => 237,  359 => 233,  353 => 230,  349 => 229,  342 => 225,  337 => 222,  335 => 221,  327 => 216,  323 => 215,  318 => 213,  315 => 212,  313 => 211,  305 => 206,  301 => 205,  296 => 203,  293 => 202,  291 => 201,  283 => 196,  279 => 195,  274 => 193,  271 => 192,  269 => 191,  264 => 189,  260 => 188,  256 => 186,  252 => 185,  229 => 165,  221 => 160,  108 => 49,  89 => 36,  85 => 34,  83 => 33,  51 => 3,  47 => 2,  36 => 1,);
+        return array (  388 => 257,  378 => 252,  372 => 249,  368 => 248,  363 => 246,  360 => 245,  358 => 244,  350 => 239,  346 => 238,  341 => 236,  338 => 235,  336 => 234,  328 => 229,  324 => 228,  319 => 226,  316 => 225,  314 => 224,  306 => 219,  302 => 218,  289 => 208,  279 => 200,  277 => 199,  272 => 197,  268 => 196,  264 => 194,  260 => 193,  229 => 165,  221 => 160,  108 => 49,  89 => 36,  85 => 34,  83 => 33,  51 => 3,  47 => 2,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -463,7 +549,7 @@ $context["checklist"], "subjectname", [], "any", false, false, false, 221) == "C
     <div class=\"header-container container-xxl\">
         <header class=\"header navbar navbar-expand-sm expand-header\">
 
-            <a href=\"javascript:void(0);\" class=\"sidebarCollapse\" data-placement=\"bottom\"><svg xmlns=\"http:</td> <td>www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-menu\"><line x1=\"3\" y1=\"12\" x2=\"21\" y2=\"12\"></line><line x1=\"3\" y1=\"6\" x2=\"21\" y2=\"6\"></line><line x1=\"3\" y1=\"18\" x2=\"21\" y2=\"18\"></line></svg></a>
+            <a href=\"/\" class=\"sidebarCollapse\" data-placement=\"bottom\"><svg xmlns=\"http:</td> <td>www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-menu\"><line x1=\"3\" y1=\"12\" x2=\"21\" y2=\"12\"></line><line x1=\"3\" y1=\"6\" x2=\"21\" y2=\"6\"></line><line x1=\"3\" y1=\"18\" x2=\"21\" y2=\"18\"></line></svg></a>
             
             <ul class=\"navbar-item theme-brand flex-row  text-center\">
                 <li class=\"nav-item theme-logo\">
@@ -600,7 +686,7 @@ $context["checklist"], "subjectname", [], "any", false, false, false, 221) == "C
                     <!--  END BREADCRUMBS  -->
                    <br>
     
-               <h1>나의 평가 결과</h1>
+               <h1>오늘 나의 평가 결과</h1>
                 <br>
                 <table>
         
@@ -621,73 +707,97 @@ $context["checklist"], "subjectname", [], "any", false, false, false, 221) == "C
             <br>
             <br>
         <div class=\"container text-center\">
-         
+         <table class=\"table table-bordered table-sm\" style=\"table-layout:fixed;\">
             
-              <div class=\"row\">
-                <div class=\"col\">유형</div>
-                <div class=\"col\">항목</div>
-                <div class=\"col\">점수1</div>
-                <div class=\"col\">점수2</div>
-                <div class=\"col\">생성일</div>
-              </div>
+              <thead>
+                <tr>
+                  <td >유형</td>
+                  <td >항목</td>
+                  <td style=\"
+                              width: 200px;
+                              
+                              overflow: hidden;\">점수1</td>
+                  <td style=\"
+                                width: 200px;
+                                
+                                overflow: hidden;\">점수2</td>
+                  <td >생성일</td>
+                </tr>
+              </thead>
 
-            <div class=\"row\">
+            <tbody>
             {% for checklist in checklists %}
+            <tr id=\"check_list\">
             
-            
-              <div class=\"col\">{{ checklist.subjectname }}</div>  
-              <div class=\"col\">{{ checklist.subjectname2 }}</div> 
+              <td >{{ checklist.subjectname }}</td>  
+              <td >{{ checklist.subjectname2 }}</td> 
               
                 {% if checklist.subjectname == \"Writing\" %}
-              <div class=\"col\">
+              <td id=\"writing_score\" class=\"\" style=\"
+                                                      width: 200px;
+                                                      white-space: nowrap;
+                                                      overflow: hidden;
+                                                      text-overflow: ellipsis;
+
+                                                      
+                                                      white-space: normal;\">
                   {{ checklist.score }}
-              </div>
-               <div class=\"col\">{{ checklist.score2 }}</div>  
-               <div class=\"col\">{{ checklist.created_at|date('Y-m-d') }}</div>  
-            
+              </td>
+               <td id=\"writing_score2\" style=\"
+                                              width: 200px;
+                                              white-space: nowrap;
+                                              overflow: hidden;
+                                              text-overflow: ellipsis;
+
+                                              
+                                              white-space: normal;
+                                          \">{{ checklist.score2 }}</td>  
+               <td>{{ checklist.created_at|date('Y-m-d') }}</td>  
+         
              
             
                
-                {% elseif checklist.subjectname== \"5Check\"%}
-                <div class=\"col\">
+                {% elseif checklist.subjectname== \"5CheckBox\"%}
+                <td id=\"checkbox5_score\">
                   {{ checklist.score }}
-               </div>  
-               <div class=\"col\">{{ checklist.score2 }}</div>  
-               <div class=\"col\">{{ checklist.created_at|date('Y-m-d') }}</div>
-               </div>
+               </td>  
+               <td id=\"checkbox5_score2\">{{ checklist.score2 }}</td>  
+               <td>{{ checklist.created_at|date('Y-m-d') }}</td>
+              
 
             
                
-                {% elseif checklist.subjectname == \"3Check\" %}
-                <div class=\"col\">
+                {% elseif checklist.subjectname == \"3CheckBox\" %}
+                <td id=\"checkbox3_score\">
                   {{ checklist.score }}
-              </div> 
-                <div class=\"col\">{{ checklist.score2 }} </div> 
-                <div class=\"col\">{{ checklist.created_at|date('Y-m-d') }}</div>
-              </div>
+                </td> 
+                <td id=\"checkbox3_score2\">{{ checklist.score2 }} </td> 
+                <td>{{ checklist.created_at|date('Y-m-d') }}</td>
+            
 
            
                
-                {% elseif checklist.subjectname == \"Check\" %}
-                <div class=\"col\">
-                <div class=\"checklist\">
-                
+                {% elseif checklist.subjectname == \"CheckBox\" %}
+                <td id=\"checkbox_score\">
                 {{ checklist.score }} 
-                </div>
-               </div> 
-               
-               <div class=\"col\">{{ checklist.score2 }} </div>
-               <div class=\"col\">{{ checklist.created_at|date('Y-m-d') }}</div>
-              </div>
+                </td>
+               <td id=\"checkbox_score2\">{{ checklist.score2 }} </td>
+               <td>{{ checklist.created_at|date('Y-m-d') }}</td>
+             
               {% endif %}
-            </div>
+              </tr>
+            
           
 
             {% endfor %}
-          </div>
+            </tbody>
+          </table>
+        </div>
             <!--  BEGIN FOOTER  -->
+
+            
           <div>
-            <div class=\"footer-wrapper\">
+            <div class=\"footer-wrapper mb-5\">
                 <div class=\"footer-section f-section-1\">
                     <p class=\"\">Copyright © <span class=\"dynamic-year\">2024</span> <a target=\"_blank\" href=\"https:</td> <td>designreset.com/cork-admin/\">DesignReset</a>, All rights reserved.</p>
                 </div>
@@ -704,33 +814,98 @@ $context["checklist"], "subjectname", [], "any", false, false, false, 221) == "C
 
     <!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
     <script src=\"../src/bootstrap/js/bootstrap.bundle.min.js\"></script>
-    <script src=\"../src/plugins/src/perfect-scrollbar/perfect-scrollbar.min.js\"></script>
+    
     <script src=\"../src/plugins/src/mousetrap/mousetrap.min.js\"></script>
     <script src=\"../src/plugins/src/waves/waves.min.js\"></script>
     <script src=\"../layouts/horizontal-light-menu/app.js\"></script>
     <!-- END GLOBAL MANDATORY SCRIPTS -->
 
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
-    <script src=\"../src/plugins/src/apex/apexcharts.min.js\"></script>
-    <script src=\"../src/assets/js/dashboard/dash_1.js\"></script>
-    <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
-
-     <script>
-      var className = localStorage.getItem('className');
-      document.getElementById('className').value = className;
-    </script>
-
-    <script>
-      localStorage.clear();
-      localStorage.setItem('className', '{{ className }}');
-    </script>
-
-    <script>
-      let checklist = document.querySelector('.checklist');
-      console.log(checklist);
-
 
    
+    <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
+
+    
+
+    <script>
+      let writing_score = document.getElementById('writing_score');
+      let writing_score2 = document.getElementById('writing_score2');
+      let checkbox_score = document.getElementById('checkbox_score');
+      let checkbox_score2 = document.getElementById('checkbox_score2');
+      let checkbox3_score = document.getElementById('checkbox3_score');
+      let checkbox3_score2 = document.getElementById('checkbox3_score2');
+      let checkbox5_score = document.getElementById('checkbox5_score');
+      let checkbox5_score2 = document.getElementById('checkbox5_score2');
+      
+    
+      if (writing_score.innerHTML == 0) {
+        writing_score.innerHTML = \"미작성\";
+      }
+      if (writing_score2.innerHTML == 0) {
+        writing_score2.innerHTML = \"미작성\";
+      }
+      if (checkbox_score.innerHTML == 0) {
+        checkbox_score.innerHTML = \"미작성\";
+      } else {
+        checkbox_score.innerHTML = \"<input type='checkbox' checked disabled />\";
+      }
+
+      if (checkbox_score2.innerHTML == 0) {
+        checkbox_score2.innerHTML = \"미작성\";
+      } else {
+        checkbox_score2.innerHTML = \"<input type='checkbox' checked disabled />\";
+      }
+     
+      if (checkbox3_score.innerHTML == 0) {
+        checkbox3_score.innerHTML = \"미작성\";
+      } else if (checkbox3_score.innerHTML == 1) {
+        checkbox3_score.innerHTML = \"<input type='checkbox' checked disabled />&ensp;<input type='checkbox'disabled />&ensp;<input type='checkbox'disabled  />\";
+      } else if (checkbox3_score.innerHTML == 2) {
+        checkbox3_score.innerHTML = \"<input type='checkbox'  disabled />&ensp;<input type='checkbox' checked disabled />&ensp;<input type='checkbox' disabled />\";
+      } else if (checkbox3_score.innerHTML == 3) {
+        checkbox3_score.innerHTML = \"<input type='checkbox' disabled />&ensp;<input type='checkbox'  disabled />&ensp;<input type='checkbox' checked disabled />\";
+      }
+
+      if (checkbox3_score2.innerHTML == 0) {
+        checkbox3_score2.innerHTML = \"미작성\";
+      } else if (checkbox3_score2.innerHTML == 1) {
+        checkbox3_score2.innerHTML = \"<input type='checkbox' checked disabled />&ensp;<input type='checkbox'disabled />&ensp;<input type='checkbox'disabled  />\";
+      } else if (checkbox3_score2.innerHTML == 2) {
+        checkbox3_score2.innerHTML = \"<input type='checkbox'  disabled />&ensp;<input type='checkbox' checked disabled />&ensp;<input type='checkbox' disabled />\";
+      } else if (checkbox3_score2.innerHTML == 3) {
+        checkbox3_score2.innerHTML = \"<input type='checkbox' disabled />&ensp;<input type='checkbox'  disabled />&ensp;<input type='checkbox' checked disabled />\";
+      }
+
+      if (checkbox5_score.innerHTML == 0) {
+        checkbox5_score.innerHTML = \"미작성\";
+      } else if (checkbox5_score.innerHTML == 1) {
+        checkbox5_score.innerHTML = \"<input type='checkbox' checked disabled />&ensp;<input type='checkbox'disabled />&ensp;<input type='checkbox'disabled />&ensp;<input type='checkbox'disabled />&ensp;<input type='checkbox'disabled />\";
+      } else if (checkbox5_score.innerHTML == 2) {
+        checkbox5_score.innerHTML = \"<input type='checkbox'  disabled />&ensp;<input type='checkbox' checked disabled />&ensp;<input type='checkbox' disabled />&ensp;<input type='checkbox' disabled />&ensp;<input type='checkbox' disabled />\";
+      } else if (checkbox5_score.innerHTML == 3) {
+        checkbox5_score.innerHTML = \"<input type='checkbox' disabled />&ensp;<input type='checkbox'  disabled />&ensp;<input type='checkbox' checked disabled />&ensp;<input type='checkbox' disabled />&ensp;<input type='checkbox' disabled />\";
+      } else if (checkbox5_score.innerHTML == 4) {
+        checkbox5_score.innerHTML = \"<input type='checkbox' disabled />&ensp;<input type='checkbox'  disabled />&ensp;<input type='checkbox' disabled />&ensp;<input type='checkbox' checked disabled />&ensp;<input type='checkbox' disabled />\";
+      } else if (checkbox5_score.innerHTML == 5) {
+        checkbox5_score.innerHTML = \"<input type='checkbox' disabled />&ensp;<input type='checkbox'  disabled />&ensp;<input type='checkbox' disabled />&ensp;<input type='checkbox' disabled />&ensp;<input type='checkbox' checked disabled />\";
+      }
+
+      if (checkbox5_score2.innerHTML == 0) {
+        checkbox5_score2.innerHTML = \"미작성\";
+      } else if (checkbox5_score2.innerHTML == 1) {
+        checkbox5_score2.innerHTML = \"<input type='checkbox' checked disabled />&ensp;<input type='checkbox'disabled />&ensp;<input type='checkbox'disabled />&ensp;<input type='checkbox'disabled />&ensp;<input type='checkbox'disabled />\";
+      } else if (checkbox5_score2.innerHTML == 2) {
+        checkbox5_score2.innerHTML = \"<input type='checkbox'  disabled />&ensp;<input type='checkbox' checked disabled />&ensp;<input type='checkbox' disabled />&ensp;<input type='checkbox' disabled />&ensp;<input type='checkbox' disabled />\";
+      } else if (checkbox5_score2.innerHTML == 3) {
+        checkbox5_score2.innerHTML = \"<input type='checkbox' disabled />&ensp;<input type='checkbox'  disabled />&ensp;<input type='checkbox' checked disabled />&ensp;<input type='checkbox' disabled />&ensp;<input type='checkbox' disabled />\";
+      } else if (checkbox5_score2.innerHTML == 4) {
+        checkbox5_score2.innerHTML = \"<input type='checkbox' disabled />&ensp;<input type='checkbox'  disabled />&ensp;<input type='checkbox' disabled />&ensp;<input type='checkbox' checked disabled />&ensp;<input type='checkbox' disabled />\";
+      } else if (checkbox5_score2.innerHTML == 5) {
+        checkbox5_score2.innerHTML = \"<input type='checkbox' disabled />&ensp;<input type='checkbox'  disabled />&ensp;<input type='checkbox' disabled />&ensp;<input type='checkbox' disabled />&ensp;<input type='checkbox' checked disabled />\";
+      }
+    
+
+    </script>
 
 
 
