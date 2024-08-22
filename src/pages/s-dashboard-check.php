@@ -12,4 +12,4 @@ $data['checklists'] = $cms->getFcb()->getCheckList($data['classname'], $data['st
 
 
 
-echo $twig->render('s-dashboard.html', $data);
+echo $twig->render('s-dashboard-check.html', $data);
