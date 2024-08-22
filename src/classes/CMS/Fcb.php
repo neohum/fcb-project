@@ -195,5 +195,52 @@ class Fcb
       return $this->db->runSQL($sql, $arguments)->fetchAll();
     }
 
+    public function getStudentNumber( $classname, string $studentname)
+    {
+      $sql = "SELECT studentnumber FROM student WHERE classname = :classname AND studentname = :studentname;";
+      $arguments['classname'] = $classname;
+      $arguments['studentname'] = $studentname;
+
+      return $this->db->runSQL($sql, $arguments)->fetch();
+    }
+
+    public function getNextStudent1( $classname, $studentnumber)
+    {
+      $sql = "SELECT studentname FROM student WHERE classname = :classname AND studentnumber = :studentnumber;";
+      $arguments['classname'] = $classname;
+      $arguments['studentnumber'] = $studentnumber;
+
+      return $this->db->runSQL($sql, $arguments)->fetch();
+    }
+
+    public function getNextStudent2( $classname, $studentnumber)
+    {
+      $sql = "SELECT studentname FROM student WHERE classname = :classname AND studentnumber = :studentnumber;";
+      $arguments['classname'] = $classname;
+      $arguments['studentnumber'] = $studentnumber;
+
+      return $this->db->runSQL($sql, $arguments)->fetch();
+    }
+    
+    public function getNextStudentName1($classname, $studentname)
+    {
+      $sql = "SELECT * FROM student WHERE classname = :classname AND studentname = :studentname;";
+      $arguments['classname'] = $classname;
+      $arguments['studentname'] = $studentname;
+
+      return $this->db->runSQL($sql, $arguments)->fetch();
+    }
+
+    public function getNextStudentName2($classname, $studentname)
+    {
+      $sql = "SELECT * FROM student WHERE classname = :classname AND studentname = :studentname;";
+      $arguments['classname'] = $classname;
+      $arguments['studentname'] = $studentname;
+
+      return $this->db->runSQL($sql, $arguments)->fetch();
+    }
+
+
+
 
 }
