@@ -214,7 +214,7 @@ class __TwigTemplate_cdf111911503b3ba71bd1c7e025f38c5 extends Template
                 <table>
         
                     <tr>
-                        <td>점검하는 사람</td>
+                        <td>점검하는 학생</td>
                         <td> </td>
                         <td>";
         // line 160
@@ -231,6 +231,55 @@ class __TwigTemplate_cdf111911503b3ba71bd1c7e025f38c5 extends Template
                     </tr>
 
                 </table>
+                <table>
+        
+                    <tr>
+                        <td>검검 해야할 학생</td>
+                        <td> </td>
+                        ";
+        // line 174
+        $context['_parent'] = $context;
+        $context['_seq'] = CoreExtension::ensureTraversable(($context["next_student_info1s"] ?? null));
+        foreach ($context['_seq'] as $context["_key"] => $context["next_student_info1"]) {
+            // line 175
+            yield "                        <td>";
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["next_student_info1"], "studentname", [], "any", false, false, false, 175), "html", null, true);
+            yield "</td>
+                        ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['next_student_info1'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 177
+        yield "                    </tr>
+                    <tr>
+                        <td>생성된 클래스명</td>
+                        <td> </td>
+                        <td>";
+        // line 181
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["classname"] ?? null), "html", null, true);
+        yield "</td>
+                    </tr>
+
+                    <tr>
+                        <td>검검 해야할 학생</td>
+                        <td> </td>
+                        <td>";
+        // line 187
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["next_sutdent_info2"] ?? null), "html", null, true);
+        yield "</td>
+                    </tr>
+                    <tr>
+                        <td>생성된 클래스명</td>
+                        <td> </td>
+                        <td>";
+        // line 192
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["classname"] ?? null), "html", null, true);
+        yield "</td>
+                    </tr>
+
+                </table>
+             
              
             </div>
             <br>
@@ -246,118 +295,118 @@ class __TwigTemplate_cdf111911503b3ba71bd1c7e025f38c5 extends Template
                 <div class=\"col\">생성일</div>
               </div>
             ";
-        // line 183
+        // line 211
         $context['_parent'] = $context;
         $context['_seq'] = CoreExtension::ensureTraversable(($context["checklists"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["checklist"]) {
-            // line 184
+            // line 212
             yield "            
             <div class=\"row\">
               <div class=\"col\">";
-            // line 186
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "subjectname", [], "any", false, false, false, 186), "html", null, true);
+            // line 214
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "subjectname", [], "any", false, false, false, 214), "html", null, true);
             yield "</div>  
               <div class=\"col\">";
-            // line 187
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "subjectname2", [], "any", false, false, false, 187), "html", null, true);
+            // line 215
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "subjectname2", [], "any", false, false, false, 215), "html", null, true);
             yield "</div> 
               <div class=\"col\">
                 ";
-            // line 189
-            if ((CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "subjectname", [], "any", false, false, false, 189) == "Writing")) {
-                // line 190
+            // line 217
+            if ((CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "subjectname", [], "any", false, false, false, 217) == "Writing")) {
+                // line 218
                 yield "              ";
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "score", [], "any", false, false, false, 190), "html", null, true);
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "score", [], "any", false, false, false, 218), "html", null, true);
                 yield "
               </div>
                <div class=\"col\">";
-                // line 192
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "score2", [], "any", false, false, false, 192), "html", null, true);
+                // line 220
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "score2", [], "any", false, false, false, 220), "html", null, true);
                 yield "</div>  
                <div class=\"col\">";
-                // line 193
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Twig\Extension\CoreExtension']->formatDate(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "created_at", [], "any", false, false, false, 193), "Y-m-d"), "html", null, true);
+                // line 221
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Twig\Extension\CoreExtension']->formatDate(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "created_at", [], "any", false, false, false, 221), "Y-m-d"), "html", null, true);
                 yield "</div>  
             </div>
              
             <div class=\"row\">
                <div class=\"col\">
                 ";
-            } elseif ((CoreExtension::getAttribute($this->env, $this->source,             // line 198
-$context["checklist"], "subjectname", [], "any", false, false, false, 198) == "5Check")) {
-                // line 199
+            } elseif ((CoreExtension::getAttribute($this->env, $this->source,             // line 226
+$context["checklist"], "subjectname", [], "any", false, false, false, 226) == "5Check")) {
+                // line 227
                 yield "              ";
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "score", [], "any", false, false, false, 199), "html", null, true);
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "score", [], "any", false, false, false, 227), "html", null, true);
                 yield "
                </div>  
                <div class=\"col\">";
-                // line 201
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "score2", [], "any", false, false, false, 201), "html", null, true);
+                // line 229
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "score2", [], "any", false, false, false, 229), "html", null, true);
                 yield "</div>  
                <div class=\"col\">";
-                // line 202
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Twig\Extension\CoreExtension']->formatDate(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "created_at", [], "any", false, false, false, 202), "Y-m-d"), "html", null, true);
+                // line 230
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Twig\Extension\CoreExtension']->formatDate(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "created_at", [], "any", false, false, false, 230), "Y-m-d"), "html", null, true);
                 yield "</div>
               </div>
               <div class=\"row\">
                <div class=\"col\">
                 ";
-            } elseif ((CoreExtension::getAttribute($this->env, $this->source,             // line 206
-$context["checklist"], "subjectname", [], "any", false, false, false, 206) == "4Check")) {
-                // line 207
+            } elseif ((CoreExtension::getAttribute($this->env, $this->source,             // line 234
+$context["checklist"], "subjectname", [], "any", false, false, false, 234) == "4Check")) {
+                // line 235
                 yield "              ";
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "score", [], "any", false, false, false, 207), "html", null, true);
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "score", [], "any", false, false, false, 235), "html", null, true);
                 yield "
                </div>  
                <div class=\"col\">";
-                // line 209
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "score2", [], "any", false, false, false, 209), "html", null, true);
+                // line 237
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "score2", [], "any", false, false, false, 237), "html", null, true);
                 yield "</div> 
                <div class=\"col\"></div>";
-                // line 210
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Twig\Extension\CoreExtension']->formatDate(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "created_at", [], "any", false, false, false, 210), "Y-m-d"), "html", null, true);
+                // line 238
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Twig\Extension\CoreExtension']->formatDate(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "created_at", [], "any", false, false, false, 238), "Y-m-d"), "html", null, true);
                 yield "</td>
               </div>
               <div class=\"row\">
                <div class=\"col\">";
-            } elseif ((CoreExtension::getAttribute($this->env, $this->source,             // line 213
-$context["checklist"], "subjectname", [], "any", false, false, false, 213) == "3Check")) {
-                // line 214
+            } elseif ((CoreExtension::getAttribute($this->env, $this->source,             // line 241
+$context["checklist"], "subjectname", [], "any", false, false, false, 241) == "3Check")) {
+                // line 242
                 yield "              ";
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "score", [], "any", false, false, false, 214), "html", null, true);
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "score", [], "any", false, false, false, 242), "html", null, true);
                 yield "
             </div> ";
-                // line 215
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "score2", [], "any", false, false, false, 215), "html", null, true);
+                // line 243
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "score2", [], "any", false, false, false, 243), "html", null, true);
                 yield " 
             <div class=\"col\"></div> 
             <div class=\"col\">";
-                // line 217
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Twig\Extension\CoreExtension']->formatDate(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "created_at", [], "any", false, false, false, 217), "Y-m-d"), "html", null, true);
+                // line 245
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Twig\Extension\CoreExtension']->formatDate(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "created_at", [], "any", false, false, false, 245), "Y-m-d"), "html", null, true);
                 yield "</div>
               </div>
               <div class=\"row\">
                <div class=\"col\">
                 ";
             } else {
-                // line 222
+                // line 250
                 yield "              ";
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "score", [], "any", false, false, false, 222), "html", null, true);
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "score", [], "any", false, false, false, 250), "html", null, true);
                 yield "
                </div> 
                ";
-                // line 224
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "score2", [], "any", false, false, false, 224), "html", null, true);
+                // line 252
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "score2", [], "any", false, false, false, 252), "html", null, true);
                 yield " 
                <div class=\"col\"></div>
                <div class=\"col\">";
-                // line 226
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Twig\Extension\CoreExtension']->formatDate(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "created_at", [], "any", false, false, false, 226), "Y-m-d"), "html", null, true);
+                // line 254
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Twig\Extension\CoreExtension']->formatDate(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "created_at", [], "any", false, false, false, 254), "Y-m-d"), "html", null, true);
                 yield "</div>
               </div>
               ";
             }
-            // line 229
+            // line 257
             yield "            
 
             ";
@@ -365,7 +414,7 @@ $context["checklist"], "subjectname", [], "any", false, false, false, 213) == "3
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['checklist'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 232
+        // line 260
         yield "          </div>
             <!--  BEGIN FOOTER  -->
           <div>
@@ -405,7 +454,7 @@ $context["checklist"], "subjectname", [], "any", false, false, false, 213) == "3
     <script>
       localStorage.clear();
       localStorage.setItem('className', '";
-        // line 270
+        // line 298
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["className"] ?? null), "html", null, true);
         yield "');
     </script>
@@ -439,7 +488,7 @@ $context["checklist"], "subjectname", [], "any", false, false, false, 213) == "3
      */
     public function getDebugInfo()
     {
-        return array (  409 => 270,  369 => 232,  361 => 229,  355 => 226,  350 => 224,  344 => 222,  336 => 217,  331 => 215,  326 => 214,  324 => 213,  318 => 210,  314 => 209,  308 => 207,  306 => 206,  299 => 202,  295 => 201,  289 => 199,  287 => 198,  279 => 193,  275 => 192,  269 => 190,  267 => 189,  262 => 187,  258 => 186,  254 => 184,  250 => 183,  229 => 165,  221 => 160,  108 => 49,  89 => 36,  85 => 34,  83 => 33,  51 => 3,  47 => 2,  36 => 1,);
+        return array (  458 => 298,  418 => 260,  410 => 257,  404 => 254,  399 => 252,  393 => 250,  385 => 245,  380 => 243,  375 => 242,  373 => 241,  367 => 238,  363 => 237,  357 => 235,  355 => 234,  348 => 230,  344 => 229,  338 => 227,  336 => 226,  328 => 221,  324 => 220,  318 => 218,  316 => 217,  311 => 215,  307 => 214,  303 => 212,  299 => 211,  277 => 192,  269 => 187,  260 => 181,  254 => 177,  245 => 175,  241 => 174,  229 => 165,  221 => 160,  108 => 49,  89 => 36,  85 => 34,  83 => 33,  51 => 3,  47 => 2,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -601,7 +650,7 @@ $context["checklist"], "subjectname", [], "any", false, false, false, 213) == "3
                 <table>
         
                     <tr>
-                        <td>점검하는 사람</td>
+                        <td>점검하는 학생</td>
                         <td> </td>
                         <td>{{ studentname }}</td>
                     </tr>
@@ -612,6 +661,34 @@ $context["checklist"], "subjectname", [], "any", false, false, false, 213) == "3
                     </tr>
 
                 </table>
+                <table>
+        
+                    <tr>
+                        <td>검검 해야할 학생</td>
+                        <td> </td>
+                        {% for next_student_info1 in next_student_info1s %}
+                        <td>{{ next_student_info1.studentname}}</td>
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                        <td>생성된 클래스명</td>
+                        <td> </td>
+                        <td>{{ classname }}</td>
+                    </tr>
+
+                    <tr>
+                        <td>검검 해야할 학생</td>
+                        <td> </td>
+                        <td>{{ next_sutdent_info2 }}</td>
+                    </tr>
+                    <tr>
+                        <td>생성된 클래스명</td>
+                        <td> </td>
+                        <td>{{ classname }}</td>
+                    </tr>
+
+                </table>
+             
              
             </div>
             <br>

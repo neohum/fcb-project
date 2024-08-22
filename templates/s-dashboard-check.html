@@ -155,7 +155,7 @@
                 <table>
         
                     <tr>
-                        <td>점검하는 사람</td>
+                        <td>점검하는 학생</td>
                         <td> </td>
                         <td>{{ studentname }}</td>
                     </tr>
@@ -166,6 +166,34 @@
                     </tr>
 
                 </table>
+                <table>
+        
+                    <tr>
+                        <td>검검 해야할 학생</td>
+                        <td> </td>
+                        {% for next_student_info1 in next_student_info1s %}
+                        <td>{{ next_student_info1.studentname}}</td>
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                        <td>생성된 클래스명</td>
+                        <td> </td>
+                        <td>{{ classname }}</td>
+                    </tr>
+
+                    <tr>
+                        <td>검검 해야할 학생</td>
+                        <td> </td>
+                        <td>{{ next_sutdent_info2 }}</td>
+                    </tr>
+                    <tr>
+                        <td>생성된 클래스명</td>
+                        <td> </td>
+                        <td>{{ classname }}</td>
+                    </tr>
+
+                </table>
+             
              
             </div>
             <br>
