@@ -5,6 +5,14 @@ $data = [];
 $data['subjectname'] = "Writing";
 $_SESSION['classname'] = 962279173;
 
+
+$data['subjectname2'] = "";
+
+if ( $_SERVER['REQUEST_METHOD'] === 'POST'  ) {
+
+  $data['subjectname2'] = $_POST['writing'];
+} 
+
 $classTotal = $cms->getFcb()->getClassTotal($_SESSION['classname']);
 
 $value = 0;
@@ -23,7 +31,7 @@ while ($i <= $value) {
   } else {
   $data['studentname'] = $cms->getFcb()->getStudentName($_SESSION['classname'], $j);
     foreach ($data['studentname'] as $key => $value) {
-      $cms->getFcb()->setSubjectCheck($data['subjectname'], $j, $_SESSION['classname'], $value);
+      $cms->getFcb()->setSubjectCheck($data['subjectname'], $j, $data['subjectname2'], $_SESSION['classname'], $value);
       $i++;
       
     }

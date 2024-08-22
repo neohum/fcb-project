@@ -176,18 +176,30 @@
                                       <h5 class="">학생 점검 목록 생성 하기</h5>
                                   </div>
                                   <div class="widget-content">
-                                  
-                                  <a href="t-dashboard-check" type="submit" class="btn btn-primary" >1. 체크박스 생성</a>
-                                  
-                                 
-                                  <a href="t-dashboard-5check" type="submit" class="btn btn-primary" >2. 5단계 선택형 생성</a>
-                                 
-                                 
-                                  <a href="t-dashboard-3check" type="submit" class="btn btn-primary" >3. 상,중,하 생성</a>
-                                
-                                
-                                  <a href="t-dashboard-writing" type="submit" class="btn btn-primary" >4. 주관식 생성</a>
-                                 
+                                  <form action="t-dashboard-check" method="post">
+                                  <input type = "text" class="form-control" id="check" name="check" placeholder="1. 체크박스 생성의 평가 항목의 명칭을 정해주세요" required />
+                                  <br>
+                                  <button type="submit" id="btncheck" name="btncheck" class="btn btn-primary" >1. 체크박스 생성</button>
+                                  </form>
+                                  <br>
+                                  <form action="t-dashboard-5check" method="post">
+                                  <input type = "text"  class="form-control" id="5check" name="5check" placeholder="2. 5단계 선택형 생성의 평가 항목의 명칭을 정해주세요" required />
+                                  <br>
+                                  <button  type="submit"id="btn5check" name="btn5check" class="btn btn-primary" >2. 5단계 선택형 생성</button>
+                                  </form>
+                                  <br>
+                                  <form action="t-dashboard-3check" method="post">
+                                  <input type = "text"  class="form-control" id="3check" name="3check" placeholder="3. 상,중,하 생성의 평가 항목의 명칭을 정해주세요" required />
+                                  <br>
+                                  <button  type="submit" id="btn3check" name="btn3check" class="btn btn-primary" >3. 상,중,하 생성</button>
+                                  </form>
+                                  <br>
+                                  <form action="t-dashboard-writing" method="post">
+                                  <input type = "text"  class="form-control" id="writing" name="writing" placeholder="4. 주관식 생성의 평가 항목의 명칭을 정해주세요" required />
+                                  <br>
+                                  <button  type="submit" id="btnwriting" name="btnwriting" class="btn btn-primary" >4. 주관식 생성</button>
+                                  </form>
+                                  <br>
                                 </div>
                                  
                               </div>
@@ -231,4 +243,41 @@
     <script src="../src/plugins/src/apex/apexcharts.min.js"></script>
     <script src="../src/assets/js/dashboard/dash_1.js"></script>
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
+     <script>
+      let check = document.getElementById('check');
+      let check2 = document.getElementById('5check');
+      let check3 = document.getElementById('3check');
+      let check4 = document.getElementById('writing');
+      let btncheck = document.getElementById('btncheck');
+      let btn5check = document.getElementById('btn5check');
+      let btn3check = document.getElementById('btn3check');
+      let btnwriting = document.getElementById('btnwriting');
+      btncheck.addEventListener('click', function(){
+        if(check.value == ''){
+          alert('평가 항목의 명칭을 정해주세요');
+          return false;
+        }
+      });
+      btn5check.addEventListener('click', function(){
+        if(check2.value == ''){
+          alert('평가 항목의 명칭을 정해주세요');
+          return false;
+        }
+      });
+      btn3check.addEventListener('click', function(){
+        if(check3.value == ''){
+          alert('평가 항목의 명칭을 정해주세요');
+          return false;
+        }
+      });
+      btnwriting.addEventListener('click', function(){
+        if(check4.value == ''){
+          alert('평가 항목의 명칭을 정해주세요');
+          return false;
+        }
+      });
+    </script>
+
+
+
      {% endblock %}

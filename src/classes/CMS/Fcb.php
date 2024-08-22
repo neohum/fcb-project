@@ -82,13 +82,14 @@ class Fcb
     }
 
   }
-  public function setSubjectCheck(string $subjectname, $studentnumber, int $classname, $studentname)
+  public function setSubjectCheck(string $subjectname, $studentnumber, $subjectname2, int $classname, $studentname)
   {
   
-      $sql = "INSERT INTO subject (subjectname, studentnumber, classname, studentname) VALUES (:subjectname, :studentnumber, :classname, :studentname);";
+      $sql = "INSERT INTO subject (subjectname, studentnumber, subjectname2, classname, studentname) VALUES (:subjectname, :studentnumber, :subjectname2, :classname, :studentname);";
       
       $arguments['subjectname'] = $subjectname;
       $arguments['studentnumber'] = $studentnumber;
+      $arguments['subjectname2'] = $subjectname2;
       $arguments['classname'] = $classname;
       $arguments['studentname'] = $studentname;
       
@@ -98,13 +99,31 @@ class Fcb
   }
 
 
-    public function setSubject5Check(string $subjectname, $studentnumber, int $classname, $studentname)
+    public function setSubject5Check(string $subjectname, $studentnumber, $subjectname2, int $classname, $studentname)
   {
   
-      $sql = "INSERT INTO subject (subjectname, studentnumber, classname, studentname) VALUES (:subjectname, :studentnumber, :classname, :studentname);";
+      $sql = "INSERT INTO subject (subjectname, studentnumber, subjectname2, classname, studentname) VALUES (:subjectname, :studentnumber, :subjectname2, :classname, :studentname);";
       
       $arguments['subjectname'] = $subjectname;
       $arguments['studentnumber'] = $studentnumber;
+      $arguments['subjectname2'] = $subjectname2;
+      $arguments['classname'] = $classname;
+      $arguments['studentname'] = $studentname;
+
+      
+
+      return $this->db->runSQL($sql, $arguments)->fetch();
+  
+  }
+
+    public function setSubject3Check(string $subjectname, $studentnumber, $subjectname2, int $classname, $studentname)
+  {
+  
+      $sql = "INSERT INTO subject (subjectname, studentnumber, subjectname2 classname, studentname) VALUES (:subjectname, :studentnumber, :subjectname2, :classname, :studentname);";
+      
+      $arguments['subjectname'] = $subjectname;
+      $arguments['studentnumber'] = $studentnumber;
+      $arguments['subjectname2'] = $subjectname2;
       $arguments['classname'] = $classname;
       $arguments['studentname'] = $studentname;
       
@@ -113,28 +132,14 @@ class Fcb
   
   }
 
-    public function setSubject3Check(string $subjectname, $studentnumber, int $classname, $studentname)
+    public function setSubjectWriting(string $subjectname, $studentnumber, $subjectname2, int $classname, $studentname)
   {
   
-      $sql = "INSERT INTO subject (subjectname, studentnumber, classname, studentname) VALUES (:subjectname, :studentnumber, :classname, :studentname);";
+      $sql = "INSERT INTO subject (subjectname, studentnumber, subjectname2, classname, studentname) VALUES (:subjectname, :studentnumber, :subjectname2, :classname, :studentname);";
       
       $arguments['subjectname'] = $subjectname;
       $arguments['studentnumber'] = $studentnumber;
-      $arguments['classname'] = $classname;
-      $arguments['studentname'] = $studentname;
-      
-
-      return $this->db->runSQL($sql, $arguments)->fetch();
-  
-  }
-
-    public function setSubjectWriting(string $subjectname, $studentnumber, int $classname, $studentname)
-  {
-  
-      $sql = "INSERT INTO subject (subjectname, studentnumber, classname, studentname) VALUES (:subjectname, :studentnumber, :classname, :studentname);";
-      
-      $arguments['subjectname'] = $subjectname;
-      $arguments['studentnumber'] = $studentnumber;
+      $arguments['subjectname2'] = $subjectname2;
       $arguments['classname'] = $classname;
       $arguments['studentname'] = $studentname;
       
@@ -179,5 +184,16 @@ class Fcb
 
       return $this->db->runSQL($sql, $arguments)->fetch();
     }
+
+    public function getCheckList( $classname, string $studentname)
+    {
+      $sql = "SELECT subjectname,subjectname2, score, score2, created_at FROM subject WHERE classname = :classname AND studentname = :studentname LIMIT 10;";
+      $arguments['classname'] = $classname;
+      $arguments['studentname'] = $studentname;
+   
+
+      return $this->db->runSQL($sql, $arguments)->fetchAll();
+    }
+
 
 }
