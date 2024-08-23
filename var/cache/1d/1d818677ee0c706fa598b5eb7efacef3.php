@@ -80,16 +80,16 @@ class __TwigTemplate_cdf111911503b3ba71bd1c7e025f38c5 extends Template
             <li class=\"nav-item dropdown user-profile-dropdown  order-lg-0 order-1\">
                     ";
         // line 33
-        if ((CoreExtension::getAttribute($this->env, $this->source, ($context["session"] ?? null), "studentname", [], "any", false, false, false, 33) == 0)) {
+        if ((($context["studentname"] ?? null) == 0)) {
             // line 34
             yield "                    <a href=\"/\" >로그인</a>
                     ";
         } else {
             // line 36
-            yield "                  ";
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, ($context["session"] ?? null), "classname", [], "any", false, false, false, 36), "html", null, true);
-            yield "  /  ";
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, ($context["session"] ?? null), "studentname", [], "any", false, false, false, 36), "html", null, true);
+            yield "                   ";
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["studentnumber"] ?? null), "html", null, true);
+            yield "번 / ";
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["studentname"] ?? null), "html", null, true);
             yield "님, 환영합니다. 
                            
                </li>
@@ -214,7 +214,7 @@ class __TwigTemplate_cdf111911503b3ba71bd1c7e025f38c5 extends Template
                 <table>
         
                     <tr>
-                        <td>점검하는 학생</td>
+                        <td>점검하는 학생 --></td>
                         <td> </td>
                         <td>";
         // line 160
@@ -222,200 +222,226 @@ class __TwigTemplate_cdf111911503b3ba71bd1c7e025f38c5 extends Template
         yield "</td>
                     </tr>
                     <tr>
-                        <td>생성된 클래스명</td>
+                        <td>점검하는 학생 번호 --></td>
                         <td> </td>
                         <td>";
         // line 165
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["classname"] ?? null), "html", null, true);
-        yield "</td>
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["studentnumber"] ?? null), "html", null, true);
+        yield "번</td>
                     </tr>
 
                 </table>
                 <table>
         
-                    <tr>
-                        <td>검검 해야할 학생</td>
-                        <td> </td>
-                        ";
-        // line 174
-        $context['_parent'] = $context;
-        $context['_seq'] = CoreExtension::ensureTraversable(($context["next_student_info1s"] ?? null));
-        foreach ($context['_seq'] as $context["_key"] => $context["next_student_info1"]) {
-            // line 175
-            yield "                        <td>";
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["next_student_info1"], "studentname", [], "any", false, false, false, 175), "html", null, true);
-            yield "</td>
-                        ";
-        }
-        $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['next_student_info1'], $context['_parent'], $context['loop']);
-        $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 177
-        yield "                    </tr>
-                    <tr>
-                        <td>생성된 클래스명</td>
-                        <td> </td>
-                        <td>";
-        // line 181
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["classname"] ?? null), "html", null, true);
-        yield "</td>
-                    </tr>
-
-                    <tr>
-                        <td>검검 해야할 학생</td>
-                        <td> </td>
-                        <td>";
-        // line 187
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["next_sutdent_info2"] ?? null), "html", null, true);
-        yield "</td>
-                    </tr>
-                    <tr>
-                        <td>생성된 클래스명</td>
-                        <td> </td>
-                        <td>";
-        // line 192
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["classname"] ?? null), "html", null, true);
-        yield "</td>
-                    </tr>
-
+                    
                 </table>
              
              
             </div>
             <br>
             <br>
-        <div class=\"container text-center\">
+            <tr>   
+                 
+                   
+
+        <div class=\"container text-center table\">
           <div class=\"row\">
             <div class=\"col\">
-              <div class=\"row\">
-                <div class=\"col\">유형</div>
+              <div class=\"row \">
+                <div class=\"col\">점검 대상</div>
+                
                 <div class=\"col\">항목</div>
                 <div class=\"col\">점수1</div>
                 <div class=\"col\">점수2</div>
                 <div class=\"col\">생성일</div>
-              </div>
-            ";
-        // line 211
-        $context['_parent'] = $context;
-        $context['_seq'] = CoreExtension::ensureTraversable(($context["checklists"] ?? null));
-        foreach ($context['_seq'] as $context["_key"] => $context["checklist"]) {
-            // line 212
-            yield "            
-            <div class=\"row\">
-              <div class=\"col\">";
-            // line 214
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "subjectname", [], "any", false, false, false, 214), "html", null, true);
-            yield "</div>  
-              <div class=\"col\">";
-            // line 215
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "subjectname2", [], "any", false, false, false, 215), "html", null, true);
-            yield "</div> 
-              <div class=\"col\">
-                ";
-            // line 217
-            if ((CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "subjectname", [], "any", false, false, false, 217) == "Writing")) {
-                // line 218
-                yield "              ";
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "score", [], "any", false, false, false, 218), "html", null, true);
-                yield "
-              </div>
-               <div class=\"col\">";
-                // line 220
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "score2", [], "any", false, false, false, 220), "html", null, true);
-                yield "</div>  
-               <div class=\"col\">";
-                // line 221
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Twig\Extension\CoreExtension']->formatDate(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "created_at", [], "any", false, false, false, 221), "Y-m-d"), "html", null, true);
-                yield "</div>  
-            </div>
-             
-            <div class=\"row\">
-               <div class=\"col\">
-                ";
-            } elseif ((CoreExtension::getAttribute($this->env, $this->source,             // line 226
-$context["checklist"], "subjectname", [], "any", false, false, false, 226) == "5Check")) {
-                // line 227
-                yield "              ";
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "score", [], "any", false, false, false, 227), "html", null, true);
-                yield "
-               </div>  
-               <div class=\"col\">";
-                // line 229
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "score2", [], "any", false, false, false, 229), "html", null, true);
-                yield "</div>  
-               <div class=\"col\">";
-                // line 230
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Twig\Extension\CoreExtension']->formatDate(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "created_at", [], "any", false, false, false, 230), "Y-m-d"), "html", null, true);
-                yield "</div>
-              </div>
-              <div class=\"row\">
-               <div class=\"col\">
-                ";
-            } elseif ((CoreExtension::getAttribute($this->env, $this->source,             // line 234
-$context["checklist"], "subjectname", [], "any", false, false, false, 234) == "4Check")) {
-                // line 235
-                yield "              ";
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "score", [], "any", false, false, false, 235), "html", null, true);
-                yield "
-               </div>  
-               <div class=\"col\">";
-                // line 237
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "score2", [], "any", false, false, false, 237), "html", null, true);
-                yield "</div> 
-               <div class=\"col\"></div>";
-                // line 238
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Twig\Extension\CoreExtension']->formatDate(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "created_at", [], "any", false, false, false, 238), "Y-m-d"), "html", null, true);
-                yield "</td>
-              </div>
-              <div class=\"row\">
-               <div class=\"col\">";
-            } elseif ((CoreExtension::getAttribute($this->env, $this->source,             // line 241
-$context["checklist"], "subjectname", [], "any", false, false, false, 241) == "3Check")) {
-                // line 242
-                yield "              ";
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "score", [], "any", false, false, false, 242), "html", null, true);
-                yield "
-            </div> ";
-                // line 243
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "score2", [], "any", false, false, false, 243), "html", null, true);
-                yield " 
-            <div class=\"col\"></div> 
-            <div class=\"col\">";
-                // line 245
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Twig\Extension\CoreExtension']->formatDate(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "created_at", [], "any", false, false, false, 245), "Y-m-d"), "html", null, true);
-                yield "</div>
-              </div>
-              <div class=\"row\">
-               <div class=\"col\">
-                ";
-            } else {
-                // line 250
-                yield "              ";
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "score", [], "any", false, false, false, 250), "html", null, true);
-                yield "
-               </div> 
-               ";
-                // line 252
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "score2", [], "any", false, false, false, 252), "html", null, true);
-                yield " 
-               <div class=\"col\"></div>
-               <div class=\"col\">";
-                // line 254
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Twig\Extension\CoreExtension']->formatDate(CoreExtension::getAttribute($this->env, $this->source, $context["checklist"], "created_at", [], "any", false, false, false, 254), "Y-m-d"), "html", null, true);
-                yield "</div>
+                <div class=\"col\">입력</div>
               </div>
               ";
+        // line 194
+        $context['_parent'] = $context;
+        $context['_seq'] = CoreExtension::ensureTraversable(($context["next_student1s"] ?? null));
+        $context['loop'] = [
+          'parent' => $context['_parent'],
+          'index0' => 0,
+          'index'  => 1,
+          'first'  => true,
+        ];
+        if (is_array($context['_seq']) || (is_object($context['_seq']) && $context['_seq'] instanceof \Countable)) {
+            $length = count($context['_seq']);
+            $context['loop']['revindex0'] = $length - 1;
+            $context['loop']['revindex'] = $length;
+            $context['loop']['length'] = $length;
+            $context['loop']['last'] = 1 === $length;
+        }
+        foreach ($context['_seq'] as $context["_key"] => $context["next_student1"]) {
+            // line 195
+            yield "              <form action=\"/s-dashboard-check\" method=\"post\">
+              <div class=\"row \">
+                <div class=\"col\" >";
+            // line 197
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["next_student1"], "studentname", [], "any", false, false, false, 197), "html", null, true);
+            yield "</div>
+                <input type=\"hidden\" name=\"subjectname1\" value=\"";
+            // line 198
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["next_student1"], "subjectname", [], "any", false, false, false, 198), "html", null, true);
+            yield "\">
+                <div class=\"col\">";
+            // line 199
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["next_student1"], "subjectname2", [], "any", false, false, false, 199), "html", null, true);
+            yield "</div>
+                <div  class=\"col\" >
+                  ";
+            // line 201
+            if ((CoreExtension::getAttribute($this->env, $this->source, $context["next_student1"], "subjectname", [], "any", false, false, false, 201) == "CheckBox")) {
+                // line 202
+                yield "                  <input type=\"checkbox\" name=\"score1\" value=\"1\">
+                  ";
+            } elseif ((CoreExtension::getAttribute($this->env, $this->source,             // line 203
+$context["next_student1"], "subjectname", [], "any", false, false, false, 203) == "5CheckBox")) {
+                // line 204
+                yield "                  <input type=\"radio\" name=\"score1\" value=\"1\">&ensp;<input type=\"radio\" name=\"score1\" value=\"2\">&ensp;<input type=\"radio\" name=\"score1\" value=\"3\">&ensp;<input type=\"radio\" name=\"score1\" value=\"4\">&ensp;<input type=\"radio\" name=\"score1\" value=\"5\">
+                  ";
+            } elseif ((CoreExtension::getAttribute($this->env, $this->source,             // line 205
+$context["next_student1"], "subjectname", [], "any", false, false, false, 205) == "3CheckBox")) {
+                // line 206
+                yield "                  <input type=\"radio\" name=\"score1\" value=\"1\">&ensp;<input type=\"radio\" name=\"score1\" value=\"2\">&ensp;<input type=\"radio\" name=\"score1\" value=\"3\">
+                  ";
+            } elseif ((CoreExtension::getAttribute($this->env, $this->source,             // line 207
+$context["next_student1"], "subjectname", [], "any", false, false, false, 207) == "Writing")) {
+                // line 208
+                yield "                  <textarea class=\"form-control\"></textarea>
+                  ";
             }
-            // line 257
-            yield "            
-
-            ";
+            // line 210
+            yield "
+                </div>
+                <div class=\"col\" >점수2</div>
+                <div class=\"col\">";
+            // line 213
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Twig\Extension\CoreExtension']->formatDate(CoreExtension::getAttribute($this->env, $this->source, $context["next_student1"], "created_at", [], "any", false, false, false, 213), "Y/m/d"), "html", null, true);
+            yield "</div>
+                <div class=\"col\"><button class=\"btn btn-primary\" id=\"btn";
+            // line 214
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["loop"], "index", [], "any", false, false, false, 214), "html", null, true);
+            yield "\">입력하기</div>
+              </div>
+              </form>
+              ";
+            ++$context['loop']['index0'];
+            ++$context['loop']['index'];
+            $context['loop']['first'] = false;
+            if (isset($context['loop']['length'])) {
+                --$context['loop']['revindex0'];
+                --$context['loop']['revindex'];
+                $context['loop']['last'] = 0 === $context['loop']['revindex0'];
+            }
         }
         $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['checklist'], $context['_parent'], $context['loop']);
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['next_student1'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 260
-        yield "          </div>
+        // line 218
+        yield "              <br>
+              <br>
+
+
+              <div class=\"row\">
+                <div class=\"col\">점검 대상</div>
+               
+                <div class=\"col\">항목</div>
+                <div class=\"col\">점수1</div>
+                <div class=\"col\">점수2</div>
+                <div class=\"col\">생성일</div>
+                <div class=\"col\">입력</div>
+              </div>
+              ";
+        // line 231
+        $context['_parent'] = $context;
+        $context['_seq'] = CoreExtension::ensureTraversable(($context["next_student2s"] ?? null));
+        $context['loop'] = [
+          'parent' => $context['_parent'],
+          'index0' => 0,
+          'index'  => 1,
+          'first'  => true,
+        ];
+        if (is_array($context['_seq']) || (is_object($context['_seq']) && $context['_seq'] instanceof \Countable)) {
+            $length = count($context['_seq']);
+            $context['loop']['revindex0'] = $length - 1;
+            $context['loop']['revindex'] = $length;
+            $context['loop']['length'] = $length;
+            $context['loop']['last'] = 1 === $length;
+        }
+        foreach ($context['_seq'] as $context["_key"] => $context["next_student2"]) {
+            // line 232
+            yield "              <form action=\"/s-dashboard-check\" method=\"post\">
+              <div class=\"row\">
+                <div class=\"col\" >";
+            // line 234
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["next_student2"], "studentname", [], "any", false, false, false, 234), "html", null, true);
+            yield "</div>
+                
+                <div class=\"col\">";
+            // line 236
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["next_student2"], "subjectname2", [], "any", false, false, false, 236), "html", null, true);
+            yield "</div>
+                <div class=\"col\">점수1</div>
+                <div class=\"col\" >
+                <input type=\"hidden\" name=\"subjectname2\" value=\"";
+            // line 239
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["next_student2"], "subjectname", [], "any", false, false, false, 239), "html", null, true);
+            yield "\">
+                  ";
+            // line 240
+            if ((CoreExtension::getAttribute($this->env, $this->source, $context["next_student2"], "subjectname", [], "any", false, false, false, 240) == "CheckBox")) {
+                // line 241
+                yield "                  <input type=\"checkbox\"  name=\"score1\" value=\"1\">
+                  ";
+            } elseif ((CoreExtension::getAttribute($this->env, $this->source,             // line 242
+$context["next_student2"], "subjectname", [], "any", false, false, false, 242) == "5CheckBox")) {
+                // line 243
+                yield "                  <input type=\"radio\" name=\"score1\" value=\"1\">&ensp;<input type=\"radio\" name=\"score1\" value=\"2\">&ensp;<input type=\"radio\" name=\"score1\" value=\"3\">&ensp;<input type=\"radio\" name=\"score1\" value=\"4\">&ensp;<input type=\"radio\" name=\"score1\" value=\"5\">
+                  ";
+            } elseif ((CoreExtension::getAttribute($this->env, $this->source,             // line 244
+$context["next_student2"], "subjectname", [], "any", false, false, false, 244) == "3CheckBox")) {
+                // line 245
+                yield "                  <input type=\"radio\" name=\"score1\" value=\"1\">&ensp;<input type=\"radio\" name=\"score1\" value=\"2\">&ensp;<input type=\"radio\" name=\"score1\" value=\"3\">
+                  ";
+            } elseif ((CoreExtension::getAttribute($this->env, $this->source,             // line 246
+$context["next_student2"], "subjectname", [], "any", false, false, false, 246) == "Writing")) {
+                // line 247
+                yield "                  <textarea class=\"form-control\"></textarea>
+                  ";
+            }
+            // line 248
+            yield "</div>
+                <div class=\"col\">";
+            // line 249
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Twig\Extension\CoreExtension']->formatDate(CoreExtension::getAttribute($this->env, $this->source, $context["next_student2"], "created_at", [], "any", false, false, false, 249), "Y/m/d"), "html", null, true);
+            yield "</div>
+                <div class=\"col\"><button class=\"btn btn-primary\" id=\"btn";
+            // line 250
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["loop"], "index", [], "any", false, false, false, 250), "html", null, true);
+            yield "\">입력하기</div>
+              </div>
+              </form>
+              ";
+            ++$context['loop']['index0'];
+            ++$context['loop']['index'];
+            $context['loop']['first'] = false;
+            if (isset($context['loop']['length'])) {
+                --$context['loop']['revindex0'];
+                --$context['loop']['revindex'];
+                $context['loop']['last'] = 0 === $context['loop']['revindex0'];
+            }
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['next_student2'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 254
+        yield "              
+
+              <br>
+              <br>
+
             <!--  BEGIN FOOTER  -->
           <div>
             <div class=\"footer-wrapper\">
@@ -442,24 +468,70 @@ $context["checklist"], "subjectname", [], "any", false, false, false, 241) == "3
     <!-- END GLOBAL MANDATORY SCRIPTS -->
 
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
-    <script src=\"../src/plugins/src/apex/apexcharts.min.js\"></script>
-    <script src=\"../src/assets/js/dashboard/dash_1.js\"></script>
+   
+  
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
 
      <script>
-      var className = localStorage.getItem('className');
-      document.getElementById('className').value = className;
-    </script>
+      let subjectname1 = document.getElementsByName('subjectname1');
+      let subjectname2 = document.getElementsByName('subjectname2');
+      let score1 = document.getElementsByName('score1');
+      let score2 = document.getElementsByName('score2');
+      let score3 = document.getElementsByName('score3');
+      let score4 = document.getElementsByName('score4');
+      let content1 = '<input type=\"checkbox\" name=\"score1\" value=\"1\">';
+      let content2 = '<input type=\"checkbox\" name=\"score1\" value=\"1\">&ensp;<input type=\"checkbox\" name=\"score1\" value=\"2\">&ensp;<input type=\"checkbox\" name=\"score1\" value=\"3\">&ensp;<input type=\"checkbox\" name=\"score1\" value=\"4\">&ensp;<input type=\"checkbox\" name=\"score1\" value=\"5\">';
+      let content3 = '<input type=\"checkbox\" name=\"score1\" value=\"1\">';
+      let content4 = '<textarea></textarea>';
+      let btn1 = document.getElementById('btn1');
+      let btn2 = document.getElementById('btn2');
+      let btn3 = document.getElementById('btn3');
+      let btn4 = document.getElementById('btn4');
+      
+      console.log(score1);
 
-    <script>
-      localStorage.clear();
-      localStorage.setItem('className', '";
-        // line 298
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["className"] ?? null), "html", null, true);
-        yield "');
+         for (let i = 0; i < subjectname1.length; i++) {
+        if (subjectname1[i].innerText == 'CheckBox') {
+            //score1[i].appendChild(document.createElement('input'));
+            console.log(subjectname1[i].innerText);
+
+        } 
+      }
+
+     
+
+      for (let i = 0; i < subjectname1.length; i++) {
+        if (subjectname1[i].innerText == '5CheckBox') {
+            
+            console.log(subjectname1[i].innerText);
+         
+        } 
+      }
+
+
+      for (let i = 0; i < subjectname1.length; i++) {
+        if (subjectname1[i].innerText == '3CheckBox') {
+           
+            
+           console.log(subjectname1[i].innerText);
+        } 
+      }
+
+
+      for (let i = 0; i < subjectname1.length; i++) {
+        if (subjectname1[i].innerText == 'Writing') {
+            
+            console.log(subjectname1[i].innerText);
+        } 
+      }
+ 
+
+      
+
     </script>
 
    
+      
 
 
 
@@ -488,7 +560,7 @@ $context["checklist"], "subjectname", [], "any", false, false, false, 241) == "3
      */
     public function getDebugInfo()
     {
-        return array (  458 => 298,  418 => 260,  410 => 257,  404 => 254,  399 => 252,  393 => 250,  385 => 245,  380 => 243,  375 => 242,  373 => 241,  367 => 238,  363 => 237,  357 => 235,  355 => 234,  348 => 230,  344 => 229,  338 => 227,  336 => 226,  328 => 221,  324 => 220,  318 => 218,  316 => 217,  311 => 215,  307 => 214,  303 => 212,  299 => 211,  277 => 192,  269 => 187,  260 => 181,  254 => 177,  245 => 175,  241 => 174,  229 => 165,  221 => 160,  108 => 49,  89 => 36,  85 => 34,  83 => 33,  51 => 3,  47 => 2,  36 => 1,);
+        return array (  440 => 254,  422 => 250,  418 => 249,  415 => 248,  411 => 247,  409 => 246,  406 => 245,  404 => 244,  401 => 243,  399 => 242,  396 => 241,  394 => 240,  390 => 239,  384 => 236,  379 => 234,  375 => 232,  358 => 231,  343 => 218,  325 => 214,  321 => 213,  316 => 210,  312 => 208,  310 => 207,  307 => 206,  305 => 205,  302 => 204,  300 => 203,  297 => 202,  295 => 201,  290 => 199,  286 => 198,  282 => 197,  278 => 195,  261 => 194,  229 => 165,  221 => 160,  108 => 49,  89 => 36,  85 => 34,  83 => 33,  51 => 3,  47 => 2,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -525,10 +597,10 @@ $context["checklist"], "subjectname", [], "any", false, false, false, 241) == "3
             <ul class=\"navbar-item flex-row ms-lg-auto ms-0 action-area\"> 
 
             <li class=\"nav-item dropdown user-profile-dropdown  order-lg-0 order-1\">
-                    {% if session.studentname == 0%}
+                    {% if studentname == 0%}
                     <a href=\"/\" >로그인</a>
                     {% else %}
-                  {{ session.classname }}  /  {{ session.studentname }}님, 환영합니다. 
+                   {{ studentnumber }}번 / {{ studentname }}님, 환영합니다. 
                            
                </li>
 
@@ -650,109 +722,107 @@ $context["checklist"], "subjectname", [], "any", false, false, false, 241) == "3
                 <table>
         
                     <tr>
-                        <td>점검하는 학생</td>
+                        <td>점검하는 학생 --></td>
                         <td> </td>
                         <td>{{ studentname }}</td>
                     </tr>
                     <tr>
-                        <td>생성된 클래스명</td>
+                        <td>점검하는 학생 번호 --></td>
                         <td> </td>
-                        <td>{{ classname }}</td>
+                        <td>{{ studentnumber }}번</td>
                     </tr>
 
                 </table>
                 <table>
         
-                    <tr>
-                        <td>검검 해야할 학생</td>
-                        <td> </td>
-                        {% for next_student_info1 in next_student_info1s %}
-                        <td>{{ next_student_info1.studentname}}</td>
-                        {% endfor %}
-                    </tr>
-                    <tr>
-                        <td>생성된 클래스명</td>
-                        <td> </td>
-                        <td>{{ classname }}</td>
-                    </tr>
-
-                    <tr>
-                        <td>검검 해야할 학생</td>
-                        <td> </td>
-                        <td>{{ next_sutdent_info2 }}</td>
-                    </tr>
-                    <tr>
-                        <td>생성된 클래스명</td>
-                        <td> </td>
-                        <td>{{ classname }}</td>
-                    </tr>
-
+                    
                 </table>
              
              
             </div>
             <br>
             <br>
-        <div class=\"container text-center\">
+            <tr>   
+                 
+                   
+
+        <div class=\"container text-center table\">
           <div class=\"row\">
             <div class=\"col\">
-              <div class=\"row\">
-                <div class=\"col\">유형</div>
+              <div class=\"row \">
+                <div class=\"col\">점검 대상</div>
+                
                 <div class=\"col\">항목</div>
                 <div class=\"col\">점수1</div>
                 <div class=\"col\">점수2</div>
                 <div class=\"col\">생성일</div>
+                <div class=\"col\">입력</div>
               </div>
-            {% for checklist in checklists %}
-            
-            <div class=\"row\">
-              <div class=\"col\">{{ checklist.subjectname }}</div>  
-              <div class=\"col\">{{ checklist.subjectname2 }}</div> 
-              <div class=\"col\">
-                {% if checklist.subjectname == \"Writing\" %}
-              {{ checklist.score }}
-              </div>
-               <div class=\"col\">{{ checklist.score2 }}</div>  
-               <div class=\"col\">{{ checklist.created_at|date('Y-m-d') }}</div>  
-            </div>
-             
-            <div class=\"row\">
-               <div class=\"col\">
-                {% elseif checklist.subjectname== \"5Check\"%}
-              {{ checklist.score }}
-               </div>  
-               <div class=\"col\">{{ checklist.score2 }}</div>  
-               <div class=\"col\">{{ checklist.created_at|date('Y-m-d') }}</div>
-              </div>
-              <div class=\"row\">
-               <div class=\"col\">
-                {% elseif checklist.subjectname == \"4Check\" %}
-              {{ checklist.score }}
-               </div>  
-               <div class=\"col\">{{ checklist.score2 }}</div> 
-               <div class=\"col\"></div>{{ checklist.created_at|date('Y-m-d') }}</td>
-              </div>
-              <div class=\"row\">
-               <div class=\"col\">{% elseif checklist.subjectname == \"3Check\" %}
-              {{ checklist.score }}
-            </div> {{ checklist.score2 }} 
-            <div class=\"col\"></div> 
-            <div class=\"col\">{{ checklist.created_at|date('Y-m-d') }}</div>
-              </div>
-              <div class=\"row\">
-               <div class=\"col\">
-                {% else %}
-              {{ checklist.score }}
-               </div> 
-               {{ checklist.score2 }} 
-               <div class=\"col\"></div>
-               <div class=\"col\">{{ checklist.created_at|date('Y-m-d') }}</div>
-              </div>
-              {% endif %}
-            
+              {% for next_student1 in next_student1s%}
+              <form action=\"/s-dashboard-check\" method=\"post\">
+              <div class=\"row \">
+                <div class=\"col\" >{{ next_student1.studentname }}</div>
+                <input type=\"hidden\" name=\"subjectname1\" value=\"{{ next_student1.subjectname }}\">
+                <div class=\"col\">{{ next_student1.subjectname2 }}</div>
+                <div  class=\"col\" >
+                  {% if next_student1.subjectname == \"CheckBox\" %}
+                  <input type=\"checkbox\" name=\"score1\" value=\"1\">
+                  {% elseif next_student1.subjectname == \"5CheckBox\" %}
+                  <input type=\"radio\" name=\"score1\" value=\"1\">&ensp;<input type=\"radio\" name=\"score1\" value=\"2\">&ensp;<input type=\"radio\" name=\"score1\" value=\"3\">&ensp;<input type=\"radio\" name=\"score1\" value=\"4\">&ensp;<input type=\"radio\" name=\"score1\" value=\"5\">
+                  {% elseif next_student1.subjectname == \"3CheckBox\" %}
+                  <input type=\"radio\" name=\"score1\" value=\"1\">&ensp;<input type=\"radio\" name=\"score1\" value=\"2\">&ensp;<input type=\"radio\" name=\"score1\" value=\"3\">
+                  {% elseif next_student1.subjectname == \"Writing\" %}
+                  <textarea class=\"form-control\"></textarea>
+                  {% endif %}
 
-            {% endfor %}
-          </div>
+                </div>
+                <div class=\"col\" >점수2</div>
+                <div class=\"col\">{{ next_student1.created_at|date(\"Y/m/d\") }}</div>
+                <div class=\"col\"><button class=\"btn btn-primary\" id=\"btn{{ loop.index }}\">입력하기</div>
+              </div>
+              </form>
+              {% endfor %}
+              <br>
+              <br>
+
+
+              <div class=\"row\">
+                <div class=\"col\">점검 대상</div>
+               
+                <div class=\"col\">항목</div>
+                <div class=\"col\">점수1</div>
+                <div class=\"col\">점수2</div>
+                <div class=\"col\">생성일</div>
+                <div class=\"col\">입력</div>
+              </div>
+              {% for next_student2 in next_student2s%}
+              <form action=\"/s-dashboard-check\" method=\"post\">
+              <div class=\"row\">
+                <div class=\"col\" >{{ next_student2.studentname }}</div>
+                
+                <div class=\"col\">{{ next_student2.subjectname2 }}</div>
+                <div class=\"col\">점수1</div>
+                <div class=\"col\" >
+                <input type=\"hidden\" name=\"subjectname2\" value=\"{{ next_student2.subjectname }}\">
+                  {% if next_student2.subjectname == \"CheckBox\" %}
+                  <input type=\"checkbox\"  name=\"score1\" value=\"1\">
+                  {% elseif next_student2.subjectname == \"5CheckBox\" %}
+                  <input type=\"radio\" name=\"score1\" value=\"1\">&ensp;<input type=\"radio\" name=\"score1\" value=\"2\">&ensp;<input type=\"radio\" name=\"score1\" value=\"3\">&ensp;<input type=\"radio\" name=\"score1\" value=\"4\">&ensp;<input type=\"radio\" name=\"score1\" value=\"5\">
+                  {% elseif next_student2.subjectname == \"3CheckBox\" %}
+                  <input type=\"radio\" name=\"score1\" value=\"1\">&ensp;<input type=\"radio\" name=\"score1\" value=\"2\">&ensp;<input type=\"radio\" name=\"score1\" value=\"3\">
+                  {% elseif next_student2.subjectname == \"Writing\" %}
+                  <textarea class=\"form-control\"></textarea>
+                  {% endif %}</div>
+                <div class=\"col\">{{ next_student2.created_at|date(\"Y/m/d\") }}</div>
+                <div class=\"col\"><button class=\"btn btn-primary\" id=\"btn{{ loop.index }}\">입력하기</div>
+              </div>
+              </form>
+              {% endfor %}
+              
+
+              <br>
+              <br>
+
             <!--  BEGIN FOOTER  -->
           <div>
             <div class=\"footer-wrapper\">
@@ -779,21 +849,70 @@ $context["checklist"], "subjectname", [], "any", false, false, false, 241) == "3
     <!-- END GLOBAL MANDATORY SCRIPTS -->
 
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
-    <script src=\"../src/plugins/src/apex/apexcharts.min.js\"></script>
-    <script src=\"../src/assets/js/dashboard/dash_1.js\"></script>
+   
+  
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
 
      <script>
-      var className = localStorage.getItem('className');
-      document.getElementById('className').value = className;
-    </script>
+      let subjectname1 = document.getElementsByName('subjectname1');
+      let subjectname2 = document.getElementsByName('subjectname2');
+      let score1 = document.getElementsByName('score1');
+      let score2 = document.getElementsByName('score2');
+      let score3 = document.getElementsByName('score3');
+      let score4 = document.getElementsByName('score4');
+      let content1 = '<input type=\"checkbox\" name=\"score1\" value=\"1\">';
+      let content2 = '<input type=\"checkbox\" name=\"score1\" value=\"1\">&ensp;<input type=\"checkbox\" name=\"score1\" value=\"2\">&ensp;<input type=\"checkbox\" name=\"score1\" value=\"3\">&ensp;<input type=\"checkbox\" name=\"score1\" value=\"4\">&ensp;<input type=\"checkbox\" name=\"score1\" value=\"5\">';
+      let content3 = '<input type=\"checkbox\" name=\"score1\" value=\"1\">';
+      let content4 = '<textarea></textarea>';
+      let btn1 = document.getElementById('btn1');
+      let btn2 = document.getElementById('btn2');
+      let btn3 = document.getElementById('btn3');
+      let btn4 = document.getElementById('btn4');
+      
+      console.log(score1);
 
-    <script>
-      localStorage.clear();
-      localStorage.setItem('className', '{{ className }}');
+         for (let i = 0; i < subjectname1.length; i++) {
+        if (subjectname1[i].innerText == 'CheckBox') {
+            //score1[i].appendChild(document.createElement('input'));
+            console.log(subjectname1[i].innerText);
+
+        } 
+      }
+
+     
+
+      for (let i = 0; i < subjectname1.length; i++) {
+        if (subjectname1[i].innerText == '5CheckBox') {
+            
+            console.log(subjectname1[i].innerText);
+         
+        } 
+      }
+
+
+      for (let i = 0; i < subjectname1.length; i++) {
+        if (subjectname1[i].innerText == '3CheckBox') {
+           
+            
+           console.log(subjectname1[i].innerText);
+        } 
+      }
+
+
+      for (let i = 0; i < subjectname1.length; i++) {
+        if (subjectname1[i].innerText == 'Writing') {
+            
+            console.log(subjectname1[i].innerText);
+        } 
+      }
+ 
+
+      
+
     </script>
 
    
+      
 
 
 

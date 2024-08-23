@@ -187,7 +187,7 @@ class Fcb
 
     public function getCheckList( $classname, string $studentname)
     {
-      $sql = "SELECT subjectname,subjectname2, score, score2, created_at FROM subject WHERE classname = :classname AND studentname = :studentname LIMIT 10;";
+      $sql = "SELECT subjectname,subjectname2, score, score2, created_at FROM subject WHERE classname = :classname AND studentname = :studentname  ORDER BY created_at DESC LIMIT 10 ; ";
       $arguments['classname'] = $classname;
       $arguments['studentname'] = $studentname;
    
@@ -195,51 +195,28 @@ class Fcb
       return $this->db->runSQL($sql, $arguments)->fetchAll();
     }
 
-    public function getStudentNumber( $classname, string $studentname)
-    {
-      $sql = "SELECT studentnumber FROM student WHERE classname = :classname AND studentname = :studentname;";
-      $arguments['classname'] = $classname;
-      $arguments['studentname'] = $studentname;
+      public function getSubjectInfo( $classname, $studentnumber, $today)
+      {
+        $sql = "SELECT * FROM subject WHERE classname = :classname AND studentnumber = :studentnumber AND created_at > :today;";
+        $arguments['classname'] = $classname;
+        $arguments['studentnumber'] = $studentnumber;
+        $arguments['today'] = $today;
+  
+        return $this->db->runSQL($sql, $arguments)->fetchAll();
+      }
+      
+      public function setSubjectCheckBox(string $subjectname1, $studentnumber, $studentname, $created_at)
+      {
+        $sql = "UPDATE subject SET score = :subjectname1 WHERE studentnumber = :studentnumber AND studentname = :studentname AND created_at = :created_at;";
+        $arguments['subjectname1'] = $subjectname1;
+        $arguments['studentnumber'] = $studentnumber;
+        $arguments['studentname'] = $studentname;
+        $arguments['created_at'] = $created_at;
+  
+        return $this->db->runSQL($sql, $arguments)->fetch();
+      }
 
-      return $this->db->runSQL($sql, $arguments)->fetch();
-    }
-
-    public function getNextStudent1( $classname, $studentnumber)
-    {
-      $sql = "SELECT studentname FROM student WHERE classname = :classname AND studentnumber = :studentnumber;";
-      $arguments['classname'] = $classname;
-      $arguments['studentnumber'] = $studentnumber;
-
-      return $this->db->runSQL($sql, $arguments)->fetch();
-    }
-
-    public function getNextStudent2( $classname, $studentnumber)
-    {
-      $sql = "SELECT studentname FROM student WHERE classname = :classname AND studentnumber = :studentnumber;";
-      $arguments['classname'] = $classname;
-      $arguments['studentnumber'] = $studentnumber;
-
-      return $this->db->runSQL($sql, $arguments)->fetch();
-    }
     
-    public function getNextStudentName1($classname, $studentname)
-    {
-      $sql = "SELECT * FROM student WHERE classname = :classname AND studentname = :studentname;";
-      $arguments['classname'] = $classname;
-      $arguments['studentname'] = $studentname;
-
-      return $this->db->runSQL($sql, $arguments)->fetch();
-    }
-
-    public function getNextStudentName2($classname, $studentname)
-    {
-      $sql = "SELECT * FROM student WHERE classname = :classname AND studentname = :studentname;";
-      $arguments['classname'] = $classname;
-      $arguments['studentname'] = $studentname;
-
-      return $this->db->runSQL($sql, $arguments)->fetch();
-    }
-
 
 
 

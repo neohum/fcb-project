@@ -6,31 +6,25 @@ $data = [];
 
 $data['studentname'] = $_SESSION['studentname'];
 $data['classname'] = $_SESSION['classname'];
+$data['studentnumber'] =$_SESSION['studentnumber'];
+$data['next_student1'] = (int)$_SESSION['studentnumber'] + 1;
+$data['next_student2'] = (int)$_SESSION['studentnumber'] + 2;
+
 
 $data['checklists'] = $cms->getFcb()->getCheckList($data['classname'], $data['studentname']);
 $data['class_total'] = $cms->getFcb()->getClassTotal($data['classname']);
-$data['studentnumber'] = $cms->getFcb()->getStudentNumber($data['classname'], $data['studentname']);
-//$data['end_number1'] = $cms->getFcb()->getEndNumber1($data['classname'], $data['studentnumber']);
-//$data['end_number2'] = $cms->getFcb()->getEndNumber2($data['classname'], $data['studentnumber']);
-if ($data['studentnumber'] == $data['end_number1'] - 1) {
-  $data['next_student1'] = $cms->getFcb()->getNextStudent1($data['classname'], $data['studentname']);
-//  $data['next_student2'] = $cms->getFcb()->getFirstStudent($data['classname'], $data['studentname']);
-} else if ($data['studentnumber'] == $data['class_total']) {
-//  $data['next_student1'] = $cms->getFcb()->getFirstStudent($data['classname'], $data['studentname']);
- // $data['next_student2'] = $cms->getFcb()->getSecondStudent($data['classname'], $data['studentname']);
-} else {
-  $data['next_student1'] = implode(",", $cms->getFcb()->getNextStudent1($data['classname'], 3));
 
-  $data['next_student2'] = implode(",", $cms->getFcb()->getNextStudent2($data['classname'], 4));
- 
+$data['next_student1s'] = $cms->getFcb()->getSubjectInfo($data['classname'], $data['next_student1'], date("Y-m-d"));
+$data['next_student2s'] = $cms->getFcb()->getSubjectInfo($data['classname'], $data['next_student2'], date("Y-m-d"));
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+  $data['subjectname1'] = $_POST['score1'];
+  $data['studentnumber'] = $_POST['studentnumber'];
+  $data['studentname'] = $_POST['studentname'];
+  $data['created_at'] = $_POST['created_at'];
+
+  $cms -> getFcb() -> setSubjectCheckBox($data['subjectname1'], $data['studentnumber'], $data['studentname'], $data['created_at']);
 }
-
-$data['next_student_info1s'] = $cms->getFcb()->getNextStudentName1($data['classname'], "홍삼동");
-
-
-$data['next_student_info2s'] = $cms->getFcb()->getNextStudentName2($data['classname'], "홍사동");
-
-
 
 
 echo $twig->render('s-dashboard-check.html', $data);
