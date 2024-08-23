@@ -6,6 +6,7 @@ $data = [];
 
 $data['studentname'] = $_SESSION['studentname'];
 $data['classname'] = $_SESSION['classname'];
+$data['studentnumber'] = $_SESSION['studentnumber'];
 
 $data['checklists'] = $cms->getFcb()->getCheckList($data['classname'], $data['studentname']);
 

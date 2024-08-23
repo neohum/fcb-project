@@ -10,6 +10,8 @@ class Session
 
   public $classname;
 
+  public $studentnumber;
+
   public function __construct()
   {
     session_start();
@@ -17,6 +19,7 @@ class Session
     $this->userPw = $_SESSION['userPw'] ?? null;
     $this->studentname = $_SESSION['studentname'] ?? null;
     $this->classname = $_SESSION['classname'] ?? null;
+    $this->studentnumber = $_SESSION['studentnumber'] ?? null;
   }
 
   public function create($member)
@@ -32,6 +35,7 @@ class Session
     session_regenerate_id(true);
     $_SESSION['studentname'] = $member['studentname'];
     $_SESSION['classname'] = $member['classname'];
+    $_SESSION['studentnumber'] = $member['studentnumber'];
     
   }
 

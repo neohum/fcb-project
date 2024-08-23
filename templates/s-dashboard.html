@@ -30,10 +30,10 @@
             <ul class="navbar-item flex-row ms-lg-auto ms-0 action-area"> 
 
             <li class="nav-item dropdown user-profile-dropdown  order-lg-0 order-1">
-                    {% if session.studentname == 0%}
+                    {% if studentname == 0%}
                     <a href="/" >로그인</a>
                     {% else %}
-                  {{ session.classname }}  /  {{ session.studentname }}님, 환영합니다. 
+                  {{ classname }}  / {{ studentnumber }}번 / {{ studentname }}님, 환영합니다. 
                            
                </li>
 
@@ -159,6 +159,11 @@
                         <td> </td>
                         <td>{{ studentname }}</td>
                     </tr>
+                     <tr>
+                        <td>번호</td>
+                        <td> </td>
+                        <td>{{ studentnumber }}</td>
+                    </tr>
                     <tr>
                         <td>생성된 클래스명</td>
                         <td> </td>
@@ -222,20 +227,20 @@
             
                
                 {% elseif checklist.subjectname== "5CheckBox"%}
-                <td id="checkbox5_score">
+                <td id="checkbox5_score" name="checkbox5">
                   {{ checklist.score }}
                </td>  
-               <td id="checkbox5_score2">{{ checklist.score2 }}</td>  
+               <td id="checkbox5_score2" name="checkbox5">{{ checklist.score2 }}</td>  
                <td>{{ checklist.created_at|date('Y-m-d') }}</td>
               
 
             
                
                 {% elseif checklist.subjectname == "3CheckBox" %}
-                <td id="checkbox3_score">
+                <td id="checkbox3_score" name="checkbox3">
                   {{ checklist.score }}
                 </td> 
-                <td id="checkbox3_score2">{{ checklist.score2 }} </td> 
+                <td id="checkbox3_score2" name="checkbox3">{{ checklist.score2 }} </td> 
                 <td>{{ checklist.created_at|date('Y-m-d') }}</td>
             
 
@@ -292,7 +297,7 @@
     
 
     <script>
-      let writing_score = document.getElementById('writing_score');
+      let writing_score = document.querySelector('#writing_score');
       let writing_score2 = document.getElementById('writing_score2');
       let checkbox_score = document.getElementById('checkbox_score');
       let checkbox_score2 = document.getElementById('checkbox_score2');
