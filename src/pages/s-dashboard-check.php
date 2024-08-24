@@ -1,6 +1,7 @@
 <?php 
 declare(strict_types=1);
 error_reporting(E_ALL&~E_WARNING);
+date_default_timezone_set('Asia/Seoul');
 
 $data = [];
 
@@ -17,14 +18,7 @@ $data['class_total'] = $cms->getFcb()->getClassTotal($data['classname']);
 $data['next_student1s'] = $cms->getFcb()->getSubjectInfo($data['classname'], $data['next_student1'], date("Y-m-d"));
 $data['next_student2s'] = $cms->getFcb()->getSubjectInfo($data['classname'], $data['next_student2'], date("Y-m-d"));
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-  $data['subjectname1'] = $_POST['score1'];
-  $data['studentnumber'] = $_POST['studentnumber'];
-  $data['studentname'] = $_POST['studentname'];
-  $data['created_at'] = $_POST['created_at'];
 
-  $cms -> getFcb() -> setSubjectCheckBox($data['subjectname1'], $data['studentnumber'], $data['studentname'], $data['created_at']);
-}
 
 
 echo $twig->render('s-dashboard-check.html', $data);
