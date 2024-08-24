@@ -16,7 +16,6 @@ $classTotal = $cms->getFcb()->getClassTotal($_SESSION['classname']);
 
 $value = 0;
 foreach ($classTotal as $key => $value) {
-
   $value;
 }
 

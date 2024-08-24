@@ -204,8 +204,18 @@ class Fcb
   
         return $this->db->runSQL($sql, $arguments)->fetchAll();
       }
+
+      public function getSubjectInfo2( $classname, $studentnumber, $today)
+      {
+        $sql = "SELECT * FROM subject WHERE classname = :classname AND studentnumber = :studentnumber AND created_at > :today;";
+        $arguments['classname'] = $classname;
+        $arguments['studentnumber'] = $studentnumber;
+        $arguments['today'] = date("Y-m-d");
+  
+        return $this->db->runSQL($sql, $arguments)->fetchAll();
+      }
       
-      public function setSubjectCheckBox(string $score, $studentnumber, $studentname, $created_at)
+      public function setSubjectCheckBox($score, $studentnumber, $studentname, $created_at)
       {
         $sql = "UPDATE subject SET score = :score WHERE studentnumber = :studentnumber AND studentname = :studentname AND created_at = :created_at;";
         $arguments['score'] = $score;
@@ -216,10 +226,11 @@ class Fcb
         return $this->db->runSQL($sql, $arguments)->fetch();
       }
 
-          public function setSubjectCheckBox2(string $score, $studentnumber, $studentname, $created_at)
+          public function setSubjectCheckBox2($score2, $studentnumber, $studentname, $created_at)
       {
-        $sql = "UPDATE subject SET score = :score WHERE studentnumber = :studentnumber AND studentname = :studentname AND created_at = :created_at;";
-        $arguments['score2'] = $score;
+      
+        $sql = "UPDATE subject SET score2 = :score2 WHERE studentnumber = :studentnumber AND studentname = :studentname AND created_at = :created_at;";
+        $arguments['score2'] = $score2;
         $arguments['studentnumber'] = $studentnumber;
         $arguments['studentname'] = $studentname;
         $arguments['created_at'] = $created_at;

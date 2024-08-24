@@ -245,19 +245,20 @@ class __TwigTemplate_cdf111911503b3ba71bd1c7e025f38c5 extends Template
                    
 
         <div class=\"container text-center table\">
-          <div class=\"row\">
-            <div class=\"col\">
+          
               <div class=\"row \">
-                <div class=\"col\">점검 대상</div>
-                
-                <div class=\"col\">항목</div>
-                <div class=\"col\">점수1</div>
-                <div class=\"col\">점수2</div>
-                <div class=\"col\">생성일</div>
-                <div class=\"col\">입력</div>
+               
+                  <div class=\"col\">점검 대상</div>
+                  <div class=\"col\">항목</div>
+                  <div class=\"col\">점수1</div>
+                  <div class=\"col\">점수2</div>
+                  <div class=\"col\">생성일</div>
+                  <div class=\"col\">입력</div>
+               
               </div>
+              
               ";
-        // line 194
+        // line 195
         $context['_parent'] = $context;
         $context['_seq'] = CoreExtension::ensureTraversable(($context["next_student1s"] ?? null));
         $context['loop'] = [
@@ -274,145 +275,145 @@ class __TwigTemplate_cdf111911503b3ba71bd1c7e025f38c5 extends Template
             $context['loop']['last'] = 1 === $length;
         }
         foreach ($context['_seq'] as $context["_key"] => $context["next_student1"]) {
-            // line 195
+            // line 196
             yield "              <form action=\"";
             yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["doc_root"] ?? null), "html", null, true);
             yield "s-dashboard-checkbox\" method=\"post\">
               <div class=\"row \">
                 <div class=\"col\" >";
-            // line 197
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["next_student1"], "studentname", [], "any", false, false, false, 197), "html", null, true);
+            // line 198
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["next_student1"], "studentname", [], "any", false, false, false, 198), "html", null, true);
             yield "</div>
                 
                 <div class=\"col\">";
-            // line 199
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["next_student1"], "subjectname2", [], "any", false, false, false, 199), "html", null, true);
+            // line 200
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["next_student1"], "subjectname2", [], "any", false, false, false, 200), "html", null, true);
             yield "</div>
                 <div  class=\"col\" >
                   ";
-            // line 201
-            if ((CoreExtension::getAttribute($this->env, $this->source, $context["next_student1"], "subjectname", [], "any", false, false, false, 201) == "CheckBox")) {
-                // line 202
+            // line 202
+            if ((CoreExtension::getAttribute($this->env, $this->source, $context["next_student1"], "subjectname", [], "any", false, false, false, 202) == "CheckBox")) {
+                // line 203
                 yield "                     ";
-                if ((CoreExtension::getAttribute($this->env, $this->source, $context["next_student1"], "score", [], "any", false, false, false, 202) == 1)) {
-                    // line 203
-                    yield "                        <input type=\"checkbox\" checked name=\"score1\" checked value=1>
+                if ((CoreExtension::getAttribute($this->env, $this->source, $context["next_student1"], "score", [], "any", false, false, false, 203) == 1)) {
+                    // line 204
+                    yield "                        <input type=\"checkbox\" checked name=\"score1\" value=1>
                       ";
                 } else {
-                    // line 205
-                    yield "                        <input type=\"checkbox\" name=\"score1\" value=1>
+                    // line 206
+                    yield "                        <input type=\"checkbox\" name=\"score1\" value=\"1\">
                       ";
                 }
-                // line 207
-                yield "                  ";
-            } elseif ((CoreExtension::getAttribute($this->env, $this->source, $context["next_student1"], "subjectname", [], "any", false, false, false, 207) == "5CheckBox")) {
                 // line 208
+                yield "                  ";
+            } elseif ((CoreExtension::getAttribute($this->env, $this->source, $context["next_student1"], "subjectname", [], "any", false, false, false, 208) == "5CheckBox")) {
+                // line 209
                 yield "                     ";
-                if ((CoreExtension::getAttribute($this->env, $this->source, $context["next_student1"], "score", [], "any", false, false, false, 208) == 1)) {
-                    // line 209
+                if ((CoreExtension::getAttribute($this->env, $this->source, $context["next_student1"], "score", [], "any", false, false, false, 209) == 1)) {
+                    // line 210
                     yield "                          <input type=\"radio\" name=\"score1\" value=\"1\" checked>&ensp;<input type=\"radio\" name=\"score1\" value=\"2\">&ensp;<input type=\"radio\" name=\"score1\" value=\"3\">&ensp;<input type=\"radio\" name=\"score1\" value=\"4\">&ensp;<input type=\"radio\" name=\"score1\" value=\"5\">
                       ";
-                } elseif ((CoreExtension::getAttribute($this->env, $this->source,                 // line 210
-$context["next_student1"], "score", [], "any", false, false, false, 210) == 2)) {
-                    // line 211
+                } elseif ((CoreExtension::getAttribute($this->env, $this->source,                 // line 211
+$context["next_student1"], "score", [], "any", false, false, false, 211) == 2)) {
+                    // line 212
                     yield "                          <input type=\"radio\" name=\"score1\" value=\"1\">&ensp;<input type=\"radio\" name=\"score1\" value=\"2\" checked>&ensp;<input type=\"radio\" name=\"score1\" value=\"3\">&ensp;<input type=\"radio\" name=\"score1\" value=\"4\">&ensp;<input type=\"radio\" name=\"score1\" value=\"5\">
                       ";
-                } elseif ((CoreExtension::getAttribute($this->env, $this->source,                 // line 212
-$context["next_student1"], "score", [], "any", false, false, false, 212) == 3)) {
-                    // line 213
+                } elseif ((CoreExtension::getAttribute($this->env, $this->source,                 // line 213
+$context["next_student1"], "score", [], "any", false, false, false, 213) == 3)) {
+                    // line 214
                     yield "                          <input type=\"radio\" name=\"score1\" value=\"1\">&ensp;<input type=\"radio\" name=\"score1\" value=\"2\">&ensp;<input type=\"radio\" name=\"score1\" value=\"3\" checked>&ensp;<input type=\"radio\" name=\"score1\" value=\"4\">&ensp;<input type=\"radio\" name=\"score1\" value=\"5\">
                       ";
-                } elseif ((CoreExtension::getAttribute($this->env, $this->source,                 // line 214
-$context["next_student1"], "score", [], "any", false, false, false, 214) == 4)) {
-                    // line 215
+                } elseif ((CoreExtension::getAttribute($this->env, $this->source,                 // line 215
+$context["next_student1"], "score", [], "any", false, false, false, 215) == 4)) {
+                    // line 216
                     yield "                          <input type=\"radio\" name=\"score1\" value=\"1\">&ensp;<input type=\"radio\" name=\"score1\" value=\"2\">&ensp;<input type=\"radio\" name=\"score1\" value=\"3\">&ensp;<input type=\"radio\" name=\"score1\" value=\"4\" checked>&ensp;<input type=\"radio\" name=\"score1\" value=\"5\">
                       ";
-                } elseif ((CoreExtension::getAttribute($this->env, $this->source,                 // line 216
-$context["next_student1"], "score", [], "any", false, false, false, 216) == 5)) {
-                    // line 217
+                } elseif ((CoreExtension::getAttribute($this->env, $this->source,                 // line 217
+$context["next_student1"], "score", [], "any", false, false, false, 217) == 5)) {
+                    // line 218
                     yield "                          <input type=\"radio\" name=\"score1\" value=\"1\">&ensp;<input type=\"radio\" name=\"score1\" value=\"2\">&ensp;<input type=\"radio\" name=\"score1\" value=\"3\">&ensp;<input type=\"radio\" name=\"score1\" value=\"4\">&ensp;<input type=\"radio\" name=\"score1\" value=\"5\" checked>
                       ";
                 } else {
-                    // line 219
+                    // line 220
                     yield "                          <input type=\"radio\" name=\"score1\" value=\"1\">&ensp;<input type=\"radio\" name=\"score1\" value=\"2\">&ensp;<input type=\"radio\" name=\"score1\" value=\"3\">&ensp;<input type=\"radio\" name=\"score1\" value=\"4\">&ensp;<input type=\"radio\" name=\"score1\" value=\"5\">
                       ";
                 }
-                // line 221
-                yield "                  ";
-            } elseif ((CoreExtension::getAttribute($this->env, $this->source, $context["next_student1"], "subjectname", [], "any", false, false, false, 221) == "3CheckBox")) {
                 // line 222
+                yield "                  ";
+            } elseif ((CoreExtension::getAttribute($this->env, $this->source, $context["next_student1"], "subjectname", [], "any", false, false, false, 222) == "3CheckBox")) {
+                // line 223
                 yield "                      ";
-                if ((CoreExtension::getAttribute($this->env, $this->source, $context["next_student1"], "score", [], "any", false, false, false, 222) == 1)) {
-                    // line 223
+                if ((CoreExtension::getAttribute($this->env, $this->source, $context["next_student1"], "score", [], "any", false, false, false, 223) == 1)) {
+                    // line 224
                     yield "                          <input type=\"radio\" name=\"score1\" value=\"1\" checked>&ensp;<input type=\"radio\" name=\"score1\" value=\"2\">&ensp;<input type=\"radio\" name=\"score1\" value=\"3\">
                       ";
-                } elseif ((CoreExtension::getAttribute($this->env, $this->source,                 // line 224
-$context["next_student1"], "score", [], "any", false, false, false, 224) == 2)) {
-                    // line 225
+                } elseif ((CoreExtension::getAttribute($this->env, $this->source,                 // line 225
+$context["next_student1"], "score", [], "any", false, false, false, 225) == 2)) {
+                    // line 226
                     yield "                          <input type=\"radio\" name=\"score1\" value=\"1\">&ensp;<input type=\"radio\" name=\"score1\" value=\"2\" checked>&ensp;<input type=\"radio\" name=\"score1\" value=\"3\">
                       ";
-                } elseif ((CoreExtension::getAttribute($this->env, $this->source,                 // line 226
-$context["next_student1"], "score", [], "any", false, false, false, 226) == 3)) {
-                    // line 227
+                } elseif ((CoreExtension::getAttribute($this->env, $this->source,                 // line 227
+$context["next_student1"], "score", [], "any", false, false, false, 227) == 3)) {
+                    // line 228
                     yield "                          <input type=\"radio\" name=\"score1\" value=\"1\">&ensp;<input type=\"radio\" name=\"score1\" value=\"2\">&ensp;<input type=\"radio\" name=\"score1\" value=\"3\" checked>
                       ";
                 } else {
-                    // line 229
+                    // line 230
                     yield "                           <input type=\"radio\" name=\"score1\" value=\"1\">&ensp;<input type=\"radio\" name=\"score1\" value=\"2\">&ensp;<input type=\"radio\" name=\"score1\" value=\"3\">
                       ";
                 }
-                // line 231
-                yield "                           ";
-            } elseif ((CoreExtension::getAttribute($this->env, $this->source, $context["next_student1"], "subjectname", [], "any", false, false, false, 231) == "Writing")) {
                 // line 232
+                yield "                           ";
+            } elseif ((CoreExtension::getAttribute($this->env, $this->source, $context["next_student1"], "subjectname", [], "any", false, false, false, 232) == "Writing")) {
+                // line 233
                 yield "                              ";
-                if ((CoreExtension::getAttribute($this->env, $this->source, $context["next_student1"], "score", [], "any", false, false, false, 232) != null)) {
-                    // line 233
+                if ((CoreExtension::getAttribute($this->env, $this->source, $context["next_student1"], "score", [], "any", false, false, false, 233) != null)) {
+                    // line 234
                     yield "                              <textarea class=\"form-control\" name=\"score1\">";
-                    yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["next_student1"], "score", [], "any", false, false, false, 233), "html", null, true);
+                    yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["next_student1"], "score", [], "any", false, false, false, 234), "html", null, true);
                     yield "</textarea>
                               ";
                 } else {
-                    // line 235
+                    // line 236
                     yield "                              <textarea class=\"form-control\" name=\"score1\"></textarea>
                               ";
                 }
-                // line 237
+                // line 238
                 yield "                  ";
             }
-            // line 238
+            // line 239
             yield "                  
 
                   <input type=\"hidden\" name=\"subjectname1\" value=\"";
-            // line 240
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["next_student1"], "subjectname", [], "any", false, false, false, 240), "html", null, true);
+            // line 241
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["next_student1"], "subjectname", [], "any", false, false, false, 241), "html", null, true);
             yield "\">
                   <input type=\"hidden\" name=\"score\" value=\"";
-            // line 241
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["next_student1"], "score", [], "any", false, false, false, 241), "html", null, true);
+            // line 242
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["next_student1"], "score", [], "any", false, false, false, 242), "html", null, true);
             yield "\">
                   <input type=\"hidden\" name=\"studentname\" value=\"";
-            // line 242
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["next_student1"], "studentname", [], "any", false, false, false, 242), "html", null, true);
+            // line 243
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["next_student1"], "studentname", [], "any", false, false, false, 243), "html", null, true);
             yield "\">
                   <input type=\"hidden\" name=\"studentnumber\" value=\"";
-            // line 243
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["next_student1"], "studentnumber", [], "any", false, false, false, 243), "html", null, true);
+            // line 244
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["next_student1"], "studentnumber", [], "any", false, false, false, 244), "html", null, true);
             yield "\">
                   <input type=\"hidden\" name=\"created_at\" value=\"";
-            // line 244
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["next_student1"], "created_at", [], "any", false, false, false, 244), "html", null, true);
+            // line 245
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["next_student1"], "created_at", [], "any", false, false, false, 245), "html", null, true);
             yield "\">
-
+                 
                 </div>
                 <div class=\"col\" >점수2</div>
                 <div class=\"col\">";
-            // line 248
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Twig\Extension\CoreExtension']->formatDate(CoreExtension::getAttribute($this->env, $this->source, $context["next_student1"], "created_at", [], "any", false, false, false, 248), "Y/m/d"), "html", null, true);
+            // line 249
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Twig\Extension\CoreExtension']->formatDate(CoreExtension::getAttribute($this->env, $this->source, $context["next_student1"], "created_at", [], "any", false, false, false, 249), "Y/m/d"), "html", null, true);
             yield "</div>
                 <div class=\"col\"><button class=\"btn btn-primary\" id=\"btn";
-            // line 249
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["loop"], "index", [], "any", false, false, false, 249), "html", null, true);
+            // line 250
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["loop"], "index", [], "any", false, false, false, 250), "html", null, true);
             yield "\">입력하기</div>
               </div>
               </form>
@@ -429,7 +430,7 @@ $context["next_student1"], "score", [], "any", false, false, false, 226) == 3)) 
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['next_student1'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 253
+        // line 254
         yield "              <br>
               <br>
 
@@ -444,7 +445,7 @@ $context["next_student1"], "score", [], "any", false, false, false, 226) == 3)) 
                 <div class=\"col\">입력</div>
               </div>
               ";
-        // line 266
+        // line 267
         $context['_parent'] = $context;
         $context['_seq'] = CoreExtension::ensureTraversable(($context["next_student2s"] ?? null));
         $context['loop'] = [
@@ -461,146 +462,146 @@ $context["next_student1"], "score", [], "any", false, false, false, 226) == 3)) 
             $context['loop']['last'] = 1 === $length;
         }
         foreach ($context['_seq'] as $context["_key"] => $context["next_student2"]) {
-            // line 267
+            // line 268
             yield "              <form action=\"";
             yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["doc_root"] ?? null), "html", null, true);
-            yield "s-dashboard-checkbox\" method=\"post\">
+            yield "s-dashboard-checkbox2\" method=\"post\">
               <div class=\"row \">
                 <div class=\"col\" >";
-            // line 269
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["next_student2"], "studentname", [], "any", false, false, false, 269), "html", null, true);
+            // line 270
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["next_student2"], "studentname", [], "any", false, false, false, 270), "html", null, true);
             yield "</div>
                 
                 <div class=\"col\">";
-            // line 271
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["next_student2"], "subjectname2", [], "any", false, false, false, 271), "html", null, true);
+            // line 272
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["next_student2"], "subjectname2", [], "any", false, false, false, 272), "html", null, true);
             yield "</div>
                 <div class=\"col\" >점수1</div>
                 <div  class=\"col\" >
                   ";
-            // line 274
-            if ((CoreExtension::getAttribute($this->env, $this->source, $context["next_student2"], "subjectname", [], "any", false, false, false, 274) == "CheckBox")) {
-                // line 275
+            // line 275
+            if ((CoreExtension::getAttribute($this->env, $this->source, $context["next_student2"], "subjectname", [], "any", false, false, false, 275) == "CheckBox")) {
+                // line 276
                 yield "                     ";
-                if ((CoreExtension::getAttribute($this->env, $this->source, $context["next_student2"], "score2", [], "any", false, false, false, 275) == 1)) {
-                    // line 276
-                    yield "                        <input type=\"checkbox\" checked name=\"score2\" checked value=1>
+                if ((CoreExtension::getAttribute($this->env, $this->source, $context["next_student2"], "score2", [], "any", false, false, false, 276) == 1)) {
+                    // line 277
+                    yield "                        <input type=\"checkbox\" checked name=\"score1\" value=1>
                       ";
                 } else {
-                    // line 278
-                    yield "                        <input type=\"checkbox\" name=\"score2\">
+                    // line 279
+                    yield "                        <input type=\"checkbox\" name=\"score1\" value=\"1\">
                       ";
                 }
-                // line 280
-                yield "                  ";
-            } elseif ((CoreExtension::getAttribute($this->env, $this->source, $context["next_student2"], "subjectname", [], "any", false, false, false, 280) == "5CheckBox")) {
                 // line 281
-                yield "                     ";
-                if ((CoreExtension::getAttribute($this->env, $this->source, $context["next_student2"], "score2", [], "any", false, false, false, 281) == 1)) {
-                    // line 282
-                    yield "                          <input type=\"radio\" name=\"score2\" value=\"1\" checked>&ensp;<input type=\"radio\" name=\"score2\" value=\"2\">&ensp;<input type=\"radio\" name=\"score2\" value=\"3\">&ensp;<input type=\"radio\" name=\"score2\" value=\"4\">&ensp;<input type=\"radio\" name=\"score2\" value=\"5\">
-                      ";
-                } elseif ((CoreExtension::getAttribute($this->env, $this->source,                 // line 283
-$context["next_student2"], "score2", [], "any", false, false, false, 283) == 2)) {
-                    // line 284
-                    yield "                          <input type=\"radio\" name=\"score2\" value=\"1\">&ensp;<input type=\"radio\" name=\"score2\" value=\"2\" checked>&ensp;<input type=\"radio\" name=\"score2\" value=\"3\">&ensp;<input type=\"radio\" name=\"score2\" value=\"4\">&ensp;<input type=\"radio\" name=\"score2\" value=\"5\">
-                      ";
-                } elseif ((CoreExtension::getAttribute($this->env, $this->source,                 // line 285
-$context["next_student2"], "score2", [], "any", false, false, false, 285) == 3)) {
-                    // line 286
-                    yield "                          <input type=\"radio\" name=\"score2\" value=\"1\">&ensp;<input type=\"radio\" name=\"score2\" value=\"2\">&ensp;<input type=\"radio\" name=\"score2\" value=\"3\" checked>&ensp;<input type=\"radio\" name=\"score2\" value=\"4\">&ensp;<input type=\"radio\" name=\"score2\" value=\"5\">
-                      ";
-                } elseif ((CoreExtension::getAttribute($this->env, $this->source,                 // line 287
-$context["next_student2"], "score2", [], "any", false, false, false, 287) == 4)) {
-                    // line 288
-                    yield "                          <input type=\"radio\" name=\"score2\" value=\"1\">&ensp;<input type=\"radio\" name=\"score2\" value=\"2\">&ensp;<input type=\"radio\" name=\"score2\" value=\"3\">&ensp;<input type=\"radio\" name=\"score2\" value=\"4\" checked>&ensp;<input type=\"radio\" name=\"score2\" value=\"5\">
-                      ";
-                } elseif ((CoreExtension::getAttribute($this->env, $this->source,                 // line 289
-$context["next_student2"], "score2", [], "any", false, false, false, 289) == 5)) {
-                    // line 290
-                    yield "                          <input type=\"radio\" name=\"score2\" value=\"1\">&ensp;<input type=\"radio\" name=\"score2\" value=\"2\">&ensp;<input type=\"radio\" name=\"score2\" value=\"3\">&ensp;<input type=\"radio\" name=\"score2\" value=\"4\">&ensp;<input type=\"radio\" name=\"score2\" value=\"5\" checked>
-                      ";
-                } else {
-                    // line 292
-                    yield "                          <input type=\"radio\" name=\"score2\" value=\"1\">&ensp;<input type=\"radio\" name=\"score2\" value=\"2\">&ensp;<input type=\"radio\" name=\"score2\" value=\"3\">&ensp;<input type=\"radio\" name=\"score2\" value=\"4\">&ensp;<input type=\"radio\" name=\"score2\" value=\"5\">
-                      ";
-                }
-                // line 294
                 yield "                  ";
-            } elseif ((CoreExtension::getAttribute($this->env, $this->source, $context["next_student2"], "subjectname", [], "any", false, false, false, 294) == "3CheckBox")) {
-                // line 295
-                yield "                      ";
-                if ((CoreExtension::getAttribute($this->env, $this->source, $context["next_student2"], "score2", [], "any", false, false, false, 295) == 1)) {
-                    // line 296
-                    yield "                          <input type=\"radio\" name=\"score2\" value=\"1\" checked>&ensp;<input type=\"radio\" name=\"score2\" value=\"2\">&ensp;<input type=\"radio\" name=\"score2\" value=\"3\">
+            } elseif ((CoreExtension::getAttribute($this->env, $this->source, $context["next_student2"], "subjectname", [], "any", false, false, false, 281) == "5CheckBox")) {
+                // line 282
+                yield "                     ";
+                if ((CoreExtension::getAttribute($this->env, $this->source, $context["next_student2"], "score2", [], "any", false, false, false, 282) == 1)) {
+                    // line 283
+                    yield "                          <input type=\"radio\" name=\"score1\" value=\"1\" checked>&ensp;<input type=\"radio\" name=\"score1\" value=\"2\">&ensp;<input type=\"radio\" name=\"score1\" value=\"3\">&ensp;<input type=\"radio\" name=\"score1\" value=\"4\">&ensp;<input type=\"radio\" name=\"score1\" value=\"5\">
                       ";
-                } elseif ((CoreExtension::getAttribute($this->env, $this->source,                 // line 297
-$context["next_student2"], "score2", [], "any", false, false, false, 297) == 2)) {
-                    // line 298
-                    yield "                          <input type=\"radio\" name=\"score2\" value=\"1\">&ensp;<input type=\"radio\" name=\"score2\" value=\"2\" checked>&ensp;<input type=\"radio\" name=\"score2\" value=\"3\">
+                } elseif ((CoreExtension::getAttribute($this->env, $this->source,                 // line 284
+$context["next_student2"], "score2", [], "any", false, false, false, 284) == 2)) {
+                    // line 285
+                    yield "                          <input type=\"radio\" name=\"score1\" value=\"1\">&ensp;<input type=\"radio\" name=\"score1\" value=\"2\" checked>&ensp;<input type=\"radio\" name=\"score1\" value=\"3\">&ensp;<input type=\"radio\" name=\"score1\" value=\"4\">&ensp;<input type=\"radio\" name=\"score1\" value=\"5\">
                       ";
-                } elseif ((CoreExtension::getAttribute($this->env, $this->source,                 // line 299
-$context["next_student2"], "score2", [], "any", false, false, false, 299) == 3)) {
-                    // line 300
-                    yield "                          <input type=\"radio\" name=\"score2\" value=\"1\">&ensp;<input type=\"radio\" name=\"score2\" value=\"2\">&ensp;<input type=\"radio\" name=\"score2\" value=\"3\" checked>
+                } elseif ((CoreExtension::getAttribute($this->env, $this->source,                 // line 286
+$context["next_student2"], "score2", [], "any", false, false, false, 286) == 3)) {
+                    // line 287
+                    yield "                          <input type=\"radio\" name=\"score1\" value=\"1\">&ensp;<input type=\"radio\" name=\"score1\" value=\"2\">&ensp;<input type=\"radio\" name=\"score1\" value=\"3\" checked>&ensp;<input type=\"radio\" name=\"score1\" value=\"4\">&ensp;<input type=\"radio\" name=\"score1\" value=\"5\">
+                      ";
+                } elseif ((CoreExtension::getAttribute($this->env, $this->source,                 // line 288
+$context["next_student2"], "score2", [], "any", false, false, false, 288) == 4)) {
+                    // line 289
+                    yield "                          <input type=\"radio\" name=\"score1\" value=\"1\">&ensp;<input type=\"radio\" name=\"score1\" value=\"2\">&ensp;<input type=\"radio\" name=\"score1\" value=\"3\">&ensp;<input type=\"radio\" name=\"score1\" value=\"4\" checked>&ensp;<input type=\"radio\" name=\"score1\" value=\"5\">
+                      ";
+                } elseif ((CoreExtension::getAttribute($this->env, $this->source,                 // line 290
+$context["next_student2"], "score2", [], "any", false, false, false, 290) == 5)) {
+                    // line 291
+                    yield "                          <input type=\"radio\" name=\"score1\" value=\"1\">&ensp;<input type=\"radio\" name=\"score1\" value=\"2\">&ensp;<input type=\"radio\" name=\"score1\" value=\"3\">&ensp;<input type=\"radio\" name=\"score1\" value=\"4\">&ensp;<input type=\"radio\" name=\"score1\" value=\"5\" checked>
                       ";
                 } else {
-                    // line 302
-                    yield "                           <input type=\"radio\" name=\"score2\" value=\"1\">&ensp;<input type=\"radio\" name=\"score2\" value=\"2\">&ensp;<input type=\"radio\" name=\"score2\" value=\"3\">
+                    // line 293
+                    yield "                          <input type=\"radio\" name=\"score1\" value=\"1\">&ensp;<input type=\"radio\" name=\"score1\" value=\"2\">&ensp;<input type=\"radio\" name=\"score1\" value=\"3\">&ensp;<input type=\"radio\" name=\"score1\" value=\"4\">&ensp;<input type=\"radio\" name=\"score1\" value=\"5\">
                       ";
                 }
-                // line 304
-                yield "                           ";
-            } elseif ((CoreExtension::getAttribute($this->env, $this->source, $context["next_student2"], "subjectname", [], "any", false, false, false, 304) == "Writing")) {
+                // line 295
+                yield "                  ";
+            } elseif ((CoreExtension::getAttribute($this->env, $this->source, $context["next_student2"], "subjectname", [], "any", false, false, false, 295) == "3CheckBox")) {
+                // line 296
+                yield "                      ";
+                if ((CoreExtension::getAttribute($this->env, $this->source, $context["next_student2"], "score2", [], "any", false, false, false, 296) == 1)) {
+                    // line 297
+                    yield "                          <input type=\"radio\" name=\"score1\" value=\"1\" checked>&ensp;<input type=\"radio\" name=\"score1\" value=\"2\">&ensp;<input type=\"radio\" name=\"score1\" value=\"3\">
+                      ";
+                } elseif ((CoreExtension::getAttribute($this->env, $this->source,                 // line 298
+$context["next_student2"], "score2", [], "any", false, false, false, 298) == 2)) {
+                    // line 299
+                    yield "                          <input type=\"radio\" name=\"score1\" value=\"1\">&ensp;<input type=\"radio\" name=\"score1\" value=\"2\" checked>&ensp;<input type=\"radio\" name=\"score1\" value=\"3\">
+                      ";
+                } elseif ((CoreExtension::getAttribute($this->env, $this->source,                 // line 300
+$context["next_student2"], "score2", [], "any", false, false, false, 300) == 3)) {
+                    // line 301
+                    yield "                          <input type=\"radio\" name=\"score1\" value=\"1\">&ensp;<input type=\"radio\" name=\"score1\" value=\"2\">&ensp;<input type=\"radio\" name=\"score1\" value=\"3\" checked>
+                      ";
+                } else {
+                    // line 303
+                    yield "                           <input type=\"radio\" name=\"score1\" value=\"1\">&ensp;<input type=\"radio\" name=\"score1\" value=\"2\">&ensp;<input type=\"radio\" name=\"score1\" value=\"3\">
+                      ";
+                }
                 // line 305
+                yield "                           ";
+            } elseif ((CoreExtension::getAttribute($this->env, $this->source, $context["next_student2"], "subjectname", [], "any", false, false, false, 305) == "Writing")) {
+                // line 306
                 yield "                              ";
-                if ((CoreExtension::getAttribute($this->env, $this->source, $context["next_student2"], "score2", [], "any", false, false, false, 305) != null)) {
-                    // line 306
-                    yield "                              <textarea class=\"form-control\" name=\"score2\">";
-                    yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["next_student2"], "score2", [], "any", false, false, false, 306), "html", null, true);
+                if ((CoreExtension::getAttribute($this->env, $this->source, $context["next_student2"], "score2", [], "any", false, false, false, 306) != null)) {
+                    // line 307
+                    yield "                              <textarea class=\"form-control\" name=\"score1\">";
+                    yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["next_student2"], "score2", [], "any", false, false, false, 307), "html", null, true);
                     yield "</textarea>
                               ";
                 } else {
-                    // line 308
-                    yield "                              <textarea class=\"form-control\" name=\"score2\"></textarea>
+                    // line 309
+                    yield "                              <textarea class=\"form-control\" name=\"score1\"></textarea>
                               ";
                 }
-                // line 310
+                // line 311
                 yield "                  ";
             }
-            // line 311
+            // line 312
             yield "                  
-
+                  
                   <input type=\"hidden\" name=\"subjectname1\" value=\"";
-            // line 313
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["next_student2"], "subjectname", [], "any", false, false, false, 313), "html", null, true);
-            yield "\">
-                  <input type=\"hidden\" name=\"score2\" value=\"";
             // line 314
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["next_student2"], "score2", [], "any", false, false, false, 314), "html", null, true);
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["next_student2"], "subjectname", [], "any", false, false, false, 314), "html", null, true);
+            yield "\">
+                  <input type=\"hidden\" name=\"score\" value=\"";
+            // line 315
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["next_student2"], "score2", [], "any", false, false, false, 315), "html", null, true);
             yield "\">
                   <input type=\"hidden\" name=\"studentname\" value=\"";
-            // line 315
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["next_student2"], "studentname", [], "any", false, false, false, 315), "html", null, true);
+            // line 316
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["next_student2"], "studentname", [], "any", false, false, false, 316), "html", null, true);
             yield "\">
                   <input type=\"hidden\" name=\"studentnumber\" value=\"";
-            // line 316
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["next_student2"], "studentnumber", [], "any", false, false, false, 316), "html", null, true);
+            // line 317
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["next_student2"], "studentnumber", [], "any", false, false, false, 317), "html", null, true);
             yield "\">
                   <input type=\"hidden\" name=\"created_at\" value=\"";
-            // line 317
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["next_student2"], "created_at", [], "any", false, false, false, 317), "html", null, true);
+            // line 318
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["next_student2"], "created_at", [], "any", false, false, false, 318), "html", null, true);
             yield "\">
-
+                 
                 </div>
                 
                 <div class=\"col\">";
-            // line 321
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Twig\Extension\CoreExtension']->formatDate(CoreExtension::getAttribute($this->env, $this->source, $context["next_student2"], "created_at", [], "any", false, false, false, 321), "Y/m/d"), "html", null, true);
+            // line 322
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Twig\Extension\CoreExtension']->formatDate(CoreExtension::getAttribute($this->env, $this->source, $context["next_student2"], "created_at", [], "any", false, false, false, 322), "Y/m/d"), "html", null, true);
             yield "</div>
                 <div class=\"col\"><button class=\"btn btn-primary\" id=\"btn";
-            // line 322
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["loop"], "index", [], "any", false, false, false, 322), "html", null, true);
+            // line 323
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["loop"], "index", [], "any", false, false, false, 323), "html", null, true);
             yield "\">입력하기</div>
               </div>
               </form>
@@ -617,8 +618,12 @@ $context["next_student2"], "score2", [], "any", false, false, false, 299) == 3))
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['next_student2'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 326
-        yield "              
+        // line 327
+        yield "           
+            </div>
+          </div>
+        </div>
+
 
               <br>
               <br>
@@ -653,67 +658,8 @@ $context["next_student2"], "score2", [], "any", false, false, false, 299) == 3))
   
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
 
-     <script>
-      let subjectname1 = document.getElementsByName('subjectname1');
-      let subjectname2 = document.getElementsByName('subjectname2');
-      let score1 = document.getElementsByName('score1');
-      let score2 = document.getElementsByName('score2');
-      let score3 = document.getElementsByName('score3');
-      let score4 = document.getElementsByName('score4');
-      let content1 = '<input type=\"checkbox\" name=\"score1\" value=\"1\">';
-      let content2 = '<input type=\"checkbox\" name=\"score1\" value=\"1\">&ensp;<input type=\"checkbox\" name=\"score1\" value=\"2\">&ensp;<input type=\"checkbox\" name=\"score1\" value=\"3\">&ensp;<input type=\"checkbox\" name=\"score1\" value=\"4\">&ensp;<input type=\"checkbox\" name=\"score1\" value=\"5\">';
-      let content3 = '<input type=\"checkbox\" name=\"score1\" value=\"1\">';
-      let content4 = '<textarea></textarea>';
-      let btn1 = document.getElementById('btn1');
-      let btn2 = document.getElementById('btn2');
-      let btn3 = document.getElementById('btn3');
-      let btn4 = document.getElementById('btn4');
+  
       
-      console.log(score1);
-
-         for (let i = 0; i < subjectname1.length; i++) {
-        if (subjectname1[i].innerText == 'CheckBox') {
-            //score1[i].appendChild(document.createElement('input'));
-            console.log(subjectname1[i].innerText);
-
-        } 
-      }
-
-     
-
-      for (let i = 0; i < subjectname1.length; i++) {
-        if (subjectname1[i].innerText == '5CheckBox') {
-            
-            console.log(subjectname1[i].innerText);
-         
-        } 
-      }
-
-
-      for (let i = 0; i < subjectname1.length; i++) {
-        if (subjectname1[i].innerText == '3CheckBox') {
-           
-            
-           console.log(subjectname1[i].innerText);
-        } 
-      }
-
-
-      for (let i = 0; i < subjectname1.length; i++) {
-        if (subjectname1[i].innerText == 'Writing') {
-            
-            console.log(subjectname1[i].innerText);
-        } 
-      }
- 
-
-      
-
-    </script>
-
-   
-      
-
 
 
 ";
@@ -741,7 +687,7 @@ $context["next_student2"], "score2", [], "any", false, false, false, 299) == 3))
      */
     public function getDebugInfo()
     {
-        return array (  621 => 326,  603 => 322,  599 => 321,  592 => 317,  588 => 316,  584 => 315,  580 => 314,  576 => 313,  572 => 311,  569 => 310,  565 => 308,  559 => 306,  556 => 305,  553 => 304,  549 => 302,  545 => 300,  543 => 299,  540 => 298,  538 => 297,  535 => 296,  532 => 295,  529 => 294,  525 => 292,  521 => 290,  519 => 289,  516 => 288,  514 => 287,  511 => 286,  509 => 285,  506 => 284,  504 => 283,  501 => 282,  498 => 281,  495 => 280,  491 => 278,  487 => 276,  484 => 275,  482 => 274,  476 => 271,  471 => 269,  465 => 267,  448 => 266,  433 => 253,  415 => 249,  411 => 248,  404 => 244,  400 => 243,  396 => 242,  392 => 241,  388 => 240,  384 => 238,  381 => 237,  377 => 235,  371 => 233,  368 => 232,  365 => 231,  361 => 229,  357 => 227,  355 => 226,  352 => 225,  350 => 224,  347 => 223,  344 => 222,  341 => 221,  337 => 219,  333 => 217,  331 => 216,  328 => 215,  326 => 214,  323 => 213,  321 => 212,  318 => 211,  316 => 210,  313 => 209,  310 => 208,  307 => 207,  303 => 205,  299 => 203,  296 => 202,  294 => 201,  289 => 199,  284 => 197,  278 => 195,  261 => 194,  229 => 165,  221 => 160,  108 => 49,  89 => 36,  85 => 34,  83 => 33,  51 => 3,  47 => 2,  36 => 1,);
+        return array (  622 => 327,  604 => 323,  600 => 322,  593 => 318,  589 => 317,  585 => 316,  581 => 315,  577 => 314,  573 => 312,  570 => 311,  566 => 309,  560 => 307,  557 => 306,  554 => 305,  550 => 303,  546 => 301,  544 => 300,  541 => 299,  539 => 298,  536 => 297,  533 => 296,  530 => 295,  526 => 293,  522 => 291,  520 => 290,  517 => 289,  515 => 288,  512 => 287,  510 => 286,  507 => 285,  505 => 284,  502 => 283,  499 => 282,  496 => 281,  492 => 279,  488 => 277,  485 => 276,  483 => 275,  477 => 272,  472 => 270,  466 => 268,  449 => 267,  434 => 254,  416 => 250,  412 => 249,  405 => 245,  401 => 244,  397 => 243,  393 => 242,  389 => 241,  385 => 239,  382 => 238,  378 => 236,  372 => 234,  369 => 233,  366 => 232,  362 => 230,  358 => 228,  356 => 227,  353 => 226,  351 => 225,  348 => 224,  345 => 223,  342 => 222,  338 => 220,  334 => 218,  332 => 217,  329 => 216,  327 => 215,  324 => 214,  322 => 213,  319 => 212,  317 => 211,  314 => 210,  311 => 209,  308 => 208,  304 => 206,  300 => 204,  297 => 203,  295 => 202,  290 => 200,  285 => 198,  279 => 196,  262 => 195,  229 => 165,  221 => 160,  108 => 49,  89 => 36,  85 => 34,  83 => 33,  51 => 3,  47 => 2,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -928,17 +874,18 @@ $context["next_student2"], "score2", [], "any", false, false, false, 299) == 3))
                    
 
         <div class=\"container text-center table\">
-          <div class=\"row\">
-            <div class=\"col\">
+          
               <div class=\"row \">
-                <div class=\"col\">점검 대상</div>
-                
-                <div class=\"col\">항목</div>
-                <div class=\"col\">점수1</div>
-                <div class=\"col\">점수2</div>
-                <div class=\"col\">생성일</div>
-                <div class=\"col\">입력</div>
+               
+                  <div class=\"col\">점검 대상</div>
+                  <div class=\"col\">항목</div>
+                  <div class=\"col\">점수1</div>
+                  <div class=\"col\">점수2</div>
+                  <div class=\"col\">생성일</div>
+                  <div class=\"col\">입력</div>
+               
               </div>
+              
               {% for next_student1 in next_student1s%}
               <form action=\"{{doc_root}}s-dashboard-checkbox\" method=\"post\">
               <div class=\"row \">
@@ -948,9 +895,9 @@ $context["next_student2"], "score2", [], "any", false, false, false, 299) == 3))
                 <div  class=\"col\" >
                   {% if next_student1.subjectname == \"CheckBox\" %}
                      {%  if next_student1.score == 1 %}
-                        <input type=\"checkbox\" checked name=\"score1\" checked value=1>
+                        <input type=\"checkbox\" checked name=\"score1\" value=1>
                       {% else %}
-                        <input type=\"checkbox\" name=\"score1\" value=1>
+                        <input type=\"checkbox\" name=\"score1\" value=\"1\">
                       {% endif %}
                   {% elseif next_student1.subjectname == \"5CheckBox\" %}
                      {% if next_student1.score == 1%}
@@ -990,7 +937,7 @@ $context["next_student2"], "score2", [], "any", false, false, false, 299) == 3))
                   <input type=\"hidden\" name=\"studentname\" value=\"{{ next_student1.studentname }}\">
                   <input type=\"hidden\" name=\"studentnumber\" value=\"{{ next_student1.studentnumber }}\">
                   <input type=\"hidden\" name=\"created_at\" value=\"{{ next_student1.created_at }}\">
-
+                 
                 </div>
                 <div class=\"col\" >점수2</div>
                 <div class=\"col\">{{ next_student1.created_at|date(\"Y/m/d\") }}</div>
@@ -1012,7 +959,7 @@ $context["next_student2"], "score2", [], "any", false, false, false, 299) == 3))
                 <div class=\"col\">입력</div>
               </div>
               {% for next_student2 in next_student2s%}
-              <form action=\"{{doc_root}}s-dashboard-checkbox\" method=\"post\">
+              <form action=\"{{doc_root}}s-dashboard-checkbox2\" method=\"post\">
               <div class=\"row \">
                 <div class=\"col\" >{{ next_student2.studentname }}</div>
                 
@@ -1021,49 +968,49 @@ $context["next_student2"], "score2", [], "any", false, false, false, 299) == 3))
                 <div  class=\"col\" >
                   {% if next_student2.subjectname == \"CheckBox\" %}
                      {%  if next_student2.score2 == 1 %}
-                        <input type=\"checkbox\" checked name=\"score2\" checked value=1>
+                        <input type=\"checkbox\" checked name=\"score1\" value=1>
                       {% else %}
-                        <input type=\"checkbox\" name=\"score2\">
+                        <input type=\"checkbox\" name=\"score1\" value=\"1\">
                       {% endif %}
                   {% elseif next_student2.subjectname == \"5CheckBox\" %}
                      {% if next_student2.score2 == 1%}
-                          <input type=\"radio\" name=\"score2\" value=\"1\" checked>&ensp;<input type=\"radio\" name=\"score2\" value=\"2\">&ensp;<input type=\"radio\" name=\"score2\" value=\"3\">&ensp;<input type=\"radio\" name=\"score2\" value=\"4\">&ensp;<input type=\"radio\" name=\"score2\" value=\"5\">
+                          <input type=\"radio\" name=\"score1\" value=\"1\" checked>&ensp;<input type=\"radio\" name=\"score1\" value=\"2\">&ensp;<input type=\"radio\" name=\"score1\" value=\"3\">&ensp;<input type=\"radio\" name=\"score1\" value=\"4\">&ensp;<input type=\"radio\" name=\"score1\" value=\"5\">
                       {% elseif next_student2.score2 == 2%}
-                          <input type=\"radio\" name=\"score2\" value=\"1\">&ensp;<input type=\"radio\" name=\"score2\" value=\"2\" checked>&ensp;<input type=\"radio\" name=\"score2\" value=\"3\">&ensp;<input type=\"radio\" name=\"score2\" value=\"4\">&ensp;<input type=\"radio\" name=\"score2\" value=\"5\">
+                          <input type=\"radio\" name=\"score1\" value=\"1\">&ensp;<input type=\"radio\" name=\"score1\" value=\"2\" checked>&ensp;<input type=\"radio\" name=\"score1\" value=\"3\">&ensp;<input type=\"radio\" name=\"score1\" value=\"4\">&ensp;<input type=\"radio\" name=\"score1\" value=\"5\">
                       {% elseif next_student2.score2 == 3%}
-                          <input type=\"radio\" name=\"score2\" value=\"1\">&ensp;<input type=\"radio\" name=\"score2\" value=\"2\">&ensp;<input type=\"radio\" name=\"score2\" value=\"3\" checked>&ensp;<input type=\"radio\" name=\"score2\" value=\"4\">&ensp;<input type=\"radio\" name=\"score2\" value=\"5\">
+                          <input type=\"radio\" name=\"score1\" value=\"1\">&ensp;<input type=\"radio\" name=\"score1\" value=\"2\">&ensp;<input type=\"radio\" name=\"score1\" value=\"3\" checked>&ensp;<input type=\"radio\" name=\"score1\" value=\"4\">&ensp;<input type=\"radio\" name=\"score1\" value=\"5\">
                       {% elseif next_student2.score2 == 4%}
-                          <input type=\"radio\" name=\"score2\" value=\"1\">&ensp;<input type=\"radio\" name=\"score2\" value=\"2\">&ensp;<input type=\"radio\" name=\"score2\" value=\"3\">&ensp;<input type=\"radio\" name=\"score2\" value=\"4\" checked>&ensp;<input type=\"radio\" name=\"score2\" value=\"5\">
+                          <input type=\"radio\" name=\"score1\" value=\"1\">&ensp;<input type=\"radio\" name=\"score1\" value=\"2\">&ensp;<input type=\"radio\" name=\"score1\" value=\"3\">&ensp;<input type=\"radio\" name=\"score1\" value=\"4\" checked>&ensp;<input type=\"radio\" name=\"score1\" value=\"5\">
                       {% elseif next_student2.score2 == 5%}
-                          <input type=\"radio\" name=\"score2\" value=\"1\">&ensp;<input type=\"radio\" name=\"score2\" value=\"2\">&ensp;<input type=\"radio\" name=\"score2\" value=\"3\">&ensp;<input type=\"radio\" name=\"score2\" value=\"4\">&ensp;<input type=\"radio\" name=\"score2\" value=\"5\" checked>
+                          <input type=\"radio\" name=\"score1\" value=\"1\">&ensp;<input type=\"radio\" name=\"score1\" value=\"2\">&ensp;<input type=\"radio\" name=\"score1\" value=\"3\">&ensp;<input type=\"radio\" name=\"score1\" value=\"4\">&ensp;<input type=\"radio\" name=\"score1\" value=\"5\" checked>
                       {% else %}
-                          <input type=\"radio\" name=\"score2\" value=\"1\">&ensp;<input type=\"radio\" name=\"score2\" value=\"2\">&ensp;<input type=\"radio\" name=\"score2\" value=\"3\">&ensp;<input type=\"radio\" name=\"score2\" value=\"4\">&ensp;<input type=\"radio\" name=\"score2\" value=\"5\">
+                          <input type=\"radio\" name=\"score1\" value=\"1\">&ensp;<input type=\"radio\" name=\"score1\" value=\"2\">&ensp;<input type=\"radio\" name=\"score1\" value=\"3\">&ensp;<input type=\"radio\" name=\"score1\" value=\"4\">&ensp;<input type=\"radio\" name=\"score1\" value=\"5\">
                       {% endif %}
                   {% elseif next_student2.subjectname == \"3CheckBox\" %}
                       {% if next_student2.score2 == 1%}
-                          <input type=\"radio\" name=\"score2\" value=\"1\" checked>&ensp;<input type=\"radio\" name=\"score2\" value=\"2\">&ensp;<input type=\"radio\" name=\"score2\" value=\"3\">
+                          <input type=\"radio\" name=\"score1\" value=\"1\" checked>&ensp;<input type=\"radio\" name=\"score1\" value=\"2\">&ensp;<input type=\"radio\" name=\"score1\" value=\"3\">
                       {% elseif next_student2.score2 == 2%}
-                          <input type=\"radio\" name=\"score2\" value=\"1\">&ensp;<input type=\"radio\" name=\"score2\" value=\"2\" checked>&ensp;<input type=\"radio\" name=\"score2\" value=\"3\">
+                          <input type=\"radio\" name=\"score1\" value=\"1\">&ensp;<input type=\"radio\" name=\"score1\" value=\"2\" checked>&ensp;<input type=\"radio\" name=\"score1\" value=\"3\">
                       {% elseif next_student2.score2 == 3%}
-                          <input type=\"radio\" name=\"score2\" value=\"1\">&ensp;<input type=\"radio\" name=\"score2\" value=\"2\">&ensp;<input type=\"radio\" name=\"score2\" value=\"3\" checked>
+                          <input type=\"radio\" name=\"score1\" value=\"1\">&ensp;<input type=\"radio\" name=\"score1\" value=\"2\">&ensp;<input type=\"radio\" name=\"score1\" value=\"3\" checked>
                       {% else %}
-                           <input type=\"radio\" name=\"score2\" value=\"1\">&ensp;<input type=\"radio\" name=\"score2\" value=\"2\">&ensp;<input type=\"radio\" name=\"score2\" value=\"3\">
+                           <input type=\"radio\" name=\"score1\" value=\"1\">&ensp;<input type=\"radio\" name=\"score1\" value=\"2\">&ensp;<input type=\"radio\" name=\"score1\" value=\"3\">
                       {% endif %}
                            {% elseif next_student2.subjectname == \"Writing\" %}
                               {% if next_student2.score2 != null %}
-                              <textarea class=\"form-control\" name=\"score2\">{{ next_student2.score2 }}</textarea>
+                              <textarea class=\"form-control\" name=\"score1\">{{ next_student2.score2 }}</textarea>
                               {% else %}
-                              <textarea class=\"form-control\" name=\"score2\"></textarea>
+                              <textarea class=\"form-control\" name=\"score1\"></textarea>
                               {% endif %}
                   {% endif %}
                   
-
+                  
                   <input type=\"hidden\" name=\"subjectname1\" value=\"{{ next_student2.subjectname }}\">
-                  <input type=\"hidden\" name=\"score2\" value=\"{{ next_student2.score2 }}\">
+                  <input type=\"hidden\" name=\"score\" value=\"{{ next_student2.score2 }}\">
                   <input type=\"hidden\" name=\"studentname\" value=\"{{ next_student2.studentname }}\">
                   <input type=\"hidden\" name=\"studentnumber\" value=\"{{ next_student2.studentnumber }}\">
                   <input type=\"hidden\" name=\"created_at\" value=\"{{ next_student2.created_at }}\">
-
+                 
                 </div>
                 
                 <div class=\"col\">{{ next_student2.created_at|date(\"Y/m/d\") }}</div>
@@ -1071,7 +1018,11 @@ $context["next_student2"], "score2", [], "any", false, false, false, 299) == 3))
               </div>
               </form>
               {% endfor %}
-              
+           
+            </div>
+          </div>
+        </div>
+
 
               <br>
               <br>
@@ -1106,67 +1057,8 @@ $context["next_student2"], "score2", [], "any", false, false, false, 299) == 3))
   
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
 
-     <script>
-      let subjectname1 = document.getElementsByName('subjectname1');
-      let subjectname2 = document.getElementsByName('subjectname2');
-      let score1 = document.getElementsByName('score1');
-      let score2 = document.getElementsByName('score2');
-      let score3 = document.getElementsByName('score3');
-      let score4 = document.getElementsByName('score4');
-      let content1 = '<input type=\"checkbox\" name=\"score1\" value=\"1\">';
-      let content2 = '<input type=\"checkbox\" name=\"score1\" value=\"1\">&ensp;<input type=\"checkbox\" name=\"score1\" value=\"2\">&ensp;<input type=\"checkbox\" name=\"score1\" value=\"3\">&ensp;<input type=\"checkbox\" name=\"score1\" value=\"4\">&ensp;<input type=\"checkbox\" name=\"score1\" value=\"5\">';
-      let content3 = '<input type=\"checkbox\" name=\"score1\" value=\"1\">';
-      let content4 = '<textarea></textarea>';
-      let btn1 = document.getElementById('btn1');
-      let btn2 = document.getElementById('btn2');
-      let btn3 = document.getElementById('btn3');
-      let btn4 = document.getElementById('btn4');
+  
       
-      console.log(score1);
-
-         for (let i = 0; i < subjectname1.length; i++) {
-        if (subjectname1[i].innerText == 'CheckBox') {
-            //score1[i].appendChild(document.createElement('input'));
-            console.log(subjectname1[i].innerText);
-
-        } 
-      }
-
-     
-
-      for (let i = 0; i < subjectname1.length; i++) {
-        if (subjectname1[i].innerText == '5CheckBox') {
-            
-            console.log(subjectname1[i].innerText);
-         
-        } 
-      }
-
-
-      for (let i = 0; i < subjectname1.length; i++) {
-        if (subjectname1[i].innerText == '3CheckBox') {
-           
-            
-           console.log(subjectname1[i].innerText);
-        } 
-      }
-
-
-      for (let i = 0; i < subjectname1.length; i++) {
-        if (subjectname1[i].innerText == 'Writing') {
-            
-            console.log(subjectname1[i].innerText);
-        } 
-      }
- 
-
-      
-
-    </script>
-
-   
-      
-
 
 
 {% endblock %}", "s-dashboard-check.html", "/Users/nm/works/project/fbc/templates/s-dashboard-check.html");
