@@ -180,17 +180,18 @@
                    
 
         <div class="container text-center table">
-          <div class="row">
-            <div class="col">
+          
               <div class="row ">
-                <div class="col">점검 대상</div>
-                
-                <div class="col">항목</div>
-                <div class="col">점수1</div>
-                <div class="col">점수2</div>
-                <div class="col">생성일</div>
-                <div class="col">입력</div>
+               
+                  <div class="col">점검 대상</div>
+                  <div class="col">항목</div>
+                  <div class="col">점수1</div>
+                  <div class="col">점수2</div>
+                  <div class="col">생성일</div>
+                  <div class="col">입력</div>
+               
               </div>
+              
               {% for next_student1 in next_student1s%}
               <form action="{{doc_root}}s-dashboard-checkbox" method="post">
               <div class="row ">
@@ -200,9 +201,9 @@
                 <div  class="col" >
                   {% if next_student1.subjectname == "CheckBox" %}
                      {%  if next_student1.score == 1 %}
-                        <input type="checkbox" checked name="score1" checked value=1>
+                        <input type="checkbox" checked name="score1" value=1>
                       {% else %}
-                        <input type="checkbox" name="score1" value=1>
+                        <input type="checkbox" name="score1" value="1">
                       {% endif %}
                   {% elseif next_student1.subjectname == "5CheckBox" %}
                      {% if next_student1.score == 1%}
@@ -242,7 +243,7 @@
                   <input type="hidden" name="studentname" value="{{ next_student1.studentname }}">
                   <input type="hidden" name="studentnumber" value="{{ next_student1.studentnumber }}">
                   <input type="hidden" name="created_at" value="{{ next_student1.created_at }}">
-
+                 
                 </div>
                 <div class="col" >점수2</div>
                 <div class="col">{{ next_student1.created_at|date("Y/m/d") }}</div>
@@ -264,7 +265,7 @@
                 <div class="col">입력</div>
               </div>
               {% for next_student2 in next_student2s%}
-              <form action="{{doc_root}}s-dashboard-checkbox" method="post">
+              <form action="{{doc_root}}s-dashboard-checkbox2" method="post">
               <div class="row ">
                 <div class="col" >{{ next_student2.studentname }}</div>
                 
@@ -273,49 +274,49 @@
                 <div  class="col" >
                   {% if next_student2.subjectname == "CheckBox" %}
                      {%  if next_student2.score2 == 1 %}
-                        <input type="checkbox" checked name="score2" checked value=1>
+                        <input type="checkbox" checked name="score1" value=1>
                       {% else %}
-                        <input type="checkbox" name="score2">
+                        <input type="checkbox" name="score1" value="1">
                       {% endif %}
                   {% elseif next_student2.subjectname == "5CheckBox" %}
                      {% if next_student2.score2 == 1%}
-                          <input type="radio" name="score2" value="1" checked>&ensp;<input type="radio" name="score2" value="2">&ensp;<input type="radio" name="score2" value="3">&ensp;<input type="radio" name="score2" value="4">&ensp;<input type="radio" name="score2" value="5">
+                          <input type="radio" name="score1" value="1" checked>&ensp;<input type="radio" name="score1" value="2">&ensp;<input type="radio" name="score1" value="3">&ensp;<input type="radio" name="score1" value="4">&ensp;<input type="radio" name="score1" value="5">
                       {% elseif next_student2.score2 == 2%}
-                          <input type="radio" name="score2" value="1">&ensp;<input type="radio" name="score2" value="2" checked>&ensp;<input type="radio" name="score2" value="3">&ensp;<input type="radio" name="score2" value="4">&ensp;<input type="radio" name="score2" value="5">
+                          <input type="radio" name="score1" value="1">&ensp;<input type="radio" name="score1" value="2" checked>&ensp;<input type="radio" name="score1" value="3">&ensp;<input type="radio" name="score1" value="4">&ensp;<input type="radio" name="score1" value="5">
                       {% elseif next_student2.score2 == 3%}
-                          <input type="radio" name="score2" value="1">&ensp;<input type="radio" name="score2" value="2">&ensp;<input type="radio" name="score2" value="3" checked>&ensp;<input type="radio" name="score2" value="4">&ensp;<input type="radio" name="score2" value="5">
+                          <input type="radio" name="score1" value="1">&ensp;<input type="radio" name="score1" value="2">&ensp;<input type="radio" name="score1" value="3" checked>&ensp;<input type="radio" name="score1" value="4">&ensp;<input type="radio" name="score1" value="5">
                       {% elseif next_student2.score2 == 4%}
-                          <input type="radio" name="score2" value="1">&ensp;<input type="radio" name="score2" value="2">&ensp;<input type="radio" name="score2" value="3">&ensp;<input type="radio" name="score2" value="4" checked>&ensp;<input type="radio" name="score2" value="5">
+                          <input type="radio" name="score1" value="1">&ensp;<input type="radio" name="score1" value="2">&ensp;<input type="radio" name="score1" value="3">&ensp;<input type="radio" name="score1" value="4" checked>&ensp;<input type="radio" name="score1" value="5">
                       {% elseif next_student2.score2 == 5%}
-                          <input type="radio" name="score2" value="1">&ensp;<input type="radio" name="score2" value="2">&ensp;<input type="radio" name="score2" value="3">&ensp;<input type="radio" name="score2" value="4">&ensp;<input type="radio" name="score2" value="5" checked>
+                          <input type="radio" name="score1" value="1">&ensp;<input type="radio" name="score1" value="2">&ensp;<input type="radio" name="score1" value="3">&ensp;<input type="radio" name="score1" value="4">&ensp;<input type="radio" name="score1" value="5" checked>
                       {% else %}
-                          <input type="radio" name="score2" value="1">&ensp;<input type="radio" name="score2" value="2">&ensp;<input type="radio" name="score2" value="3">&ensp;<input type="radio" name="score2" value="4">&ensp;<input type="radio" name="score2" value="5">
+                          <input type="radio" name="score1" value="1">&ensp;<input type="radio" name="score1" value="2">&ensp;<input type="radio" name="score1" value="3">&ensp;<input type="radio" name="score1" value="4">&ensp;<input type="radio" name="score1" value="5">
                       {% endif %}
                   {% elseif next_student2.subjectname == "3CheckBox" %}
                       {% if next_student2.score2 == 1%}
-                          <input type="radio" name="score2" value="1" checked>&ensp;<input type="radio" name="score2" value="2">&ensp;<input type="radio" name="score2" value="3">
+                          <input type="radio" name="score1" value="1" checked>&ensp;<input type="radio" name="score1" value="2">&ensp;<input type="radio" name="score1" value="3">
                       {% elseif next_student2.score2 == 2%}
-                          <input type="radio" name="score2" value="1">&ensp;<input type="radio" name="score2" value="2" checked>&ensp;<input type="radio" name="score2" value="3">
+                          <input type="radio" name="score1" value="1">&ensp;<input type="radio" name="score1" value="2" checked>&ensp;<input type="radio" name="score1" value="3">
                       {% elseif next_student2.score2 == 3%}
-                          <input type="radio" name="score2" value="1">&ensp;<input type="radio" name="score2" value="2">&ensp;<input type="radio" name="score2" value="3" checked>
+                          <input type="radio" name="score1" value="1">&ensp;<input type="radio" name="score1" value="2">&ensp;<input type="radio" name="score1" value="3" checked>
                       {% else %}
-                           <input type="radio" name="score2" value="1">&ensp;<input type="radio" name="score2" value="2">&ensp;<input type="radio" name="score2" value="3">
+                           <input type="radio" name="score1" value="1">&ensp;<input type="radio" name="score1" value="2">&ensp;<input type="radio" name="score1" value="3">
                       {% endif %}
                            {% elseif next_student2.subjectname == "Writing" %}
                               {% if next_student2.score2 != null %}
-                              <textarea class="form-control" name="score2">{{ next_student2.score2 }}</textarea>
+                              <textarea class="form-control" name="score1">{{ next_student2.score2 }}</textarea>
                               {% else %}
-                              <textarea class="form-control" name="score2"></textarea>
+                              <textarea class="form-control" name="score1"></textarea>
                               {% endif %}
                   {% endif %}
                   
-
+                  
                   <input type="hidden" name="subjectname1" value="{{ next_student2.subjectname }}">
-                  <input type="hidden" name="score2" value="{{ next_student2.score2 }}">
+                  <input type="hidden" name="score" value="{{ next_student2.score2 }}">
                   <input type="hidden" name="studentname" value="{{ next_student2.studentname }}">
                   <input type="hidden" name="studentnumber" value="{{ next_student2.studentnumber }}">
                   <input type="hidden" name="created_at" value="{{ next_student2.created_at }}">
-
+                 
                 </div>
                 
                 <div class="col">{{ next_student2.created_at|date("Y/m/d") }}</div>
@@ -323,7 +324,11 @@
               </div>
               </form>
               {% endfor %}
-              
+           
+            </div>
+          </div>
+        </div>
+
 
               <br>
               <br>
@@ -358,67 +363,8 @@
   
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
 
-     <script>
-      let subjectname1 = document.getElementsByName('subjectname1');
-      let subjectname2 = document.getElementsByName('subjectname2');
-      let score1 = document.getElementsByName('score1');
-      let score2 = document.getElementsByName('score2');
-      let score3 = document.getElementsByName('score3');
-      let score4 = document.getElementsByName('score4');
-      let content1 = '<input type="checkbox" name="score1" value="1">';
-      let content2 = '<input type="checkbox" name="score1" value="1">&ensp;<input type="checkbox" name="score1" value="2">&ensp;<input type="checkbox" name="score1" value="3">&ensp;<input type="checkbox" name="score1" value="4">&ensp;<input type="checkbox" name="score1" value="5">';
-      let content3 = '<input type="checkbox" name="score1" value="1">';
-      let content4 = '<textarea></textarea>';
-      let btn1 = document.getElementById('btn1');
-      let btn2 = document.getElementById('btn2');
-      let btn3 = document.getElementById('btn3');
-      let btn4 = document.getElementById('btn4');
+  
       
-      console.log(score1);
-
-         for (let i = 0; i < subjectname1.length; i++) {
-        if (subjectname1[i].innerText == 'CheckBox') {
-            //score1[i].appendChild(document.createElement('input'));
-            console.log(subjectname1[i].innerText);
-
-        } 
-      }
-
-     
-
-      for (let i = 0; i < subjectname1.length; i++) {
-        if (subjectname1[i].innerText == '5CheckBox') {
-            
-            console.log(subjectname1[i].innerText);
-         
-        } 
-      }
-
-
-      for (let i = 0; i < subjectname1.length; i++) {
-        if (subjectname1[i].innerText == '3CheckBox') {
-           
-            
-           console.log(subjectname1[i].innerText);
-        } 
-      }
-
-
-      for (let i = 0; i < subjectname1.length; i++) {
-        if (subjectname1[i].innerText == 'Writing') {
-            
-            console.log(subjectname1[i].innerText);
-        } 
-      }
- 
-
-      
-
-    </script>
-
-   
-      
-
 
 
 {% endblock %}
