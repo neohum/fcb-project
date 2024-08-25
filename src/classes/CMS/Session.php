@@ -12,6 +12,8 @@ class Session
 
   public $studentnumber;
 
+  public $errorForAddClass;
+
   public function __construct()
   {
     session_start();
@@ -20,6 +22,7 @@ class Session
     $this->studentname = $_SESSION['studentname'] ?? null;
     $this->classname = $_SESSION['classname'] ?? null;
     $this->studentnumber = $_SESSION['studentnumber'] ?? null;
+    $this->errorForAddClass = $_SESSION['errorForAddClass'] ?? null;
   }
 
   public function create($member)
@@ -47,6 +50,11 @@ class Session
   public function className($member){
     session_regenerate_id(true);
     $_SESSION['className']  = $member['className'];
+  }
+
+  public function errorForAddClass($member){
+    session_regenerate_id(true);
+    $_SESSION['errorForAddClass'] = $member;
   }
 
   public function delete()

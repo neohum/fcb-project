@@ -10,7 +10,7 @@
     text-align: center;
     width: 100%;
     max-width: 500px;
-    min-height: 500px;
+    min-height: 700px;
     
     margin: 20px 300px;
     background-color: white;
@@ -216,7 +216,7 @@
             <ul class="navbar-item theme-brand flex-row  text-center">
                 <li class="nav-item theme-logo">
                     <a href="/">
-                        <img src="/src/assets/img/logo.svg" class="navbar-logo" alt="logo">
+                        <img src="../src/assets/img/logo2.svg" class="navbar-logo" alt="logo">
                     </a>
                 </li>
                 <li class="nav-item theme-text">
@@ -264,7 +264,7 @@
                     <div class="nav-logo">
                         <div class="nav-item theme-logo">
                             <a href="/">
-                                <img src="{{ doc_root }}src/assets/img/logo.svg" class="navbar-logo" alt="logo">
+                                <img src="../src/assets/img/logo2.svg" class="navbar-logo" alt="logo">
                             </a>
                         </div>
                         <div class="nav-item theme-text">
@@ -318,14 +318,12 @@
                             </div>
                             
                         </a>
-                      
-                    </li>
 
                     <li class="menu">
-                        <a href="#elements" data-bs-toggle="dropdown" aria-expanded="false" class="dropdown-toggle">
+                        <a href="{{ doc_root }}t-dashboard-student-manage" class="dropdown-toggle">
                             <div class="">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-zap"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
-                                <span>Elements</span>
+                                <span>우리반 등록 현황</span>
                             </div>
                             <div>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
@@ -338,57 +336,7 @@
                         <div class="heading"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus"><line x1="5" y1="12" x2="19" y2="12"></line></svg><span>TABLES AND FORMS</span></div>
                     </li>
 
-                    <li class="menu">
-                        <a href="#tables" data-bs-toggle="dropdown" aria-expanded="false" class="dropdown-toggle">
-                            <div class="">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-layers"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
-                                <span>Tables</span>
-                            </div>
-                            <div>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
-                            </div>
-                        </a>
-                        
-                    </li>
-
-                    <li class="menu">
-                        <a href="#forms" data-bs-toggle="dropdown" aria-expanded="false" class="dropdown-toggle">
-                            <div class="">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clipboard"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>
-                                <span>Forms</span>
-                            </div>
-                            <div>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
-                            </div>
-                        </a>
-                        
-                    </li>
-
-                    <li class="menu">
-                        <a href="#pages" data-bs-toggle="dropdown" aria-expanded="false" class="dropdown-toggle">
-                            <div class="">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg>
-                                <span>Pages</span>
-                            </div>
-                            <div>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
-                            </div>
-                        </a>
-                        
-                    </li>
-
-                    <li class="menu">
-                        <a href="#more" data-bs-toggle="dropdown" aria-expanded="false" class="dropdown-toggle">
-                            <div class="">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus-circle"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>
-                                <span>More</span>
-                            </div>
-                            <div>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
-                            </div>
-                        </a>
-                        
-                    </li>
+                 
 
                 </ul>
                 
@@ -436,12 +384,21 @@
                                 </a>
                                 =>
                                 <a class="dropdown-toggle btn btn-primary"  role="button" id="customDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <span>2.학생 일괄 업로드하기: 학급번호 {{ className }}</span> 
+                                            <span>2.학생 일괄 업로드하기: 학급번호 {{ className }} => 아래로 가서 "파일 올리기"를 해주세요</span> 
                                 </a>
                                 
                                 <p>
                                   
-                               
+                                 {% if errors %}
+                                    <div class="alert alert-danger" role="alert">
+                                        {{ errors }}
+                                    </div>
+                                    {% endif %}
+                                    {% if success %}
+                                    <div class="alert alert-success" role="alert">
+                                        {{ success }}
+                                    </div>
+                                    {% endif %}
                                   </div>
                                 <br>
                                 <br>
@@ -450,19 +407,20 @@
                                     <div class="header-section">
                                         <h1>학생 명단 올리기</h1>
                                         <p>아래 양식을 다운 받아 양식에 맞게 작성해주세요</p>
-                                        <p>첫 항목은 위에 있는 학급 번호 입니다. 학급번호를 확인해주세요</p>
+                                        <p>첫 항목은 학급 번호 입니다. 엑셀 상단에서부터 번호와 이름순으로 넣어주세요</p>
+                                        <P>예) 1, 홍길동 => 번호 형식은 1,2,3입니다.</P>
                                         <p>만약, 동명이인이 있는 경우에는 이름 끝에 숫자를 넣어 구분해주세요</p>
                                         <p>예) 홍길동, 홍길동 => 홍길동, 홍길동2</p>
-                                        <a href="{{doc_root}}uloads/form.xlsx" download>학생명단양식 다운로드</a>
+                                        <a href="{{doc_root}}download/form.xlsx" download>학생명단양식 다운로드</a>
                                     </div>
                                     <div class="drop-section">
                                         <div class="col">
                                             <div class="cloud-icon">
                                                 <img src="/icons/cloud.png" alt="cloud">
                                             </div>
-                                            <span>Drag & Drop your files here</span>
-                                            <span>OR</span>
-                                            <button class="file-selector">Browse Files</button>
+                                            <span>작성한 학생명단을 여기에 끌어다 놓거나 아래 "파일 올리기"를 이용해서 업로드하세요</span>
+                                            
+                                            <button class="file-selector">파일 올리기</button>
                                             <input type="file" class="file-selector-input" multiple>
                                         </div>
                                         <div class="col">
@@ -522,20 +480,6 @@
     <script src="/layouts/horizontal-light-menu/app.js"></script>
     <!-- END GLOBAL MANDATORY SCRIPTS -->
 
-    <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
-    <script src="/src/plugins/src/apex/apexcharts.min.js"></script>
-    <script src="/src/assets/js/dashboard/dash_1.js"></script>
-    <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
-
-     <script>
-      var className = localStorage.getItem('className');
-      document.getElementById('className').value = className;
-    </script>
-
-    <script>
-      localStorage.clear();
-      localStorage.setItem('className', '{{ className }}');
-    </script>
 
     <script>
       $("#excel_upload").click(function(){ 

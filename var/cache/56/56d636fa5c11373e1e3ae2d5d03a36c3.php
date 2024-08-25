@@ -13,8 +13,8 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* t-dashboard-make-s.html */
-class __TwigTemplate_49a41c3c978f1d760e901de08919b579 extends Template
+/* t-dashboard-upload2.html */
+class __TwigTemplate_78aa8da5fc1ef8cd4357c1e90ace8d90 extends Template
 {
     private $source;
     private $macros = [];
@@ -39,7 +39,7 @@ class __TwigTemplate_49a41c3c978f1d760e901de08919b579 extends Template
     protected function doDisplay(array $context, array $blocks = [])
     {
         $macros = $this->macros;
-        $this->parent = $this->loadTemplate("layout.html", "t-dashboard-make-s.html", 1);
+        $this->parent = $this->loadTemplate("layout.html", "t-dashboard-upload2.html", 1);
         yield from $this->parent->unwrap()->yield($context, array_merge($this->blocks, $blocks));
     }
 
@@ -245,6 +245,7 @@ class __TwigTemplate_49a41c3c978f1d760e901de08919b579 extends Template
 .list-section li.in-prog svg.tick{
     display: none;
 }
+
 </style>
 
 
@@ -272,21 +273,22 @@ class __TwigTemplate_49a41c3c978f1d760e901de08919b579 extends Template
             </ul>
 
 
-            <ul class=\"navbar-item flex-row ms-lg-auto ms-0 action-area\"> 
+            <ul class=\"navbar-item flex-row ms-lg-auto ms-0 action-area\">
 
+              
             <li class=\"nav-item dropdown user-profile-dropdown  order-lg-0 order-1\">
                     ";
-        // line 230
-        if ((CoreExtension::getAttribute($this->env, $this->source, ($context["session"] ?? null), "userName", [], "any", false, false, false, 230) == 0)) {
-            // line 231
+        // line 232
+        if ((CoreExtension::getAttribute($this->env, $this->source, ($context["session"] ?? null), "userName", [], "any", false, false, false, 232) == 0)) {
+            // line 233
             yield "                    <a href=\"";
             yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["doc_root"] ?? null), "html", null, true);
             yield "t-admin\" >로그인</a>
                     ";
         } else {
-            // line 233
+            // line 235
             yield "                                ";
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, ($context["session"] ?? null), "userName", [], "any", false, false, false, 233), "html", null, true);
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, ($context["session"] ?? null), "userName", [], "any", false, false, false, 235), "html", null, true);
             yield "님, 환영합니다. 
                            
                </li>
@@ -297,14 +299,14 @@ class __TwigTemplate_49a41c3c978f1d760e901de08919b579 extends Template
               <ul class=\"navbar-item flex-row action-area\">
               <li class=\"nav-item dropdown user-profile-dropdown  order-lg-0 order-1\">
                  <a href=\"";
-            // line 242
+            // line 244
             yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["doc_root"] ?? null), "html", null, true);
             yield "t-logout\" >로그아웃</a>
                 </li>
             </ul>
             ";
         }
-        // line 246
+        // line 248
         yield "        </header>
     </div>
     <!--  END NAVBAR  -->
@@ -324,7 +326,7 @@ class __TwigTemplate_49a41c3c978f1d760e901de08919b579 extends Template
                     <div class=\"nav-logo\">
                         <div class=\"nav-item theme-logo\">
                             <a href=\"/\">
-                                <img src=\"../src/assets/img/logo.svg\" class=\"navbar-logo\" alt=\"logo\">
+                                <img src=\"../src/assets/img/logo2.svg\" class=\"navbar-logo\" alt=\"logo\">
                             </a>
                         </div>
                         <div class=\"nav-item theme-text\">
@@ -341,7 +343,10 @@ class __TwigTemplate_49a41c3c978f1d760e901de08919b579 extends Template
            
                 <ul class=\"list-unstyled menu-categories\" id=\"accordionExample\">
                     <li class=\"menu \">
-                        <a href=\"t-dashboard\"  class=\"dropdown-toggle\">
+                        <a href=\"";
+        // line 284
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["doc_root"] ?? null), "html", null, true);
+        yield "t-dashboard\"  class=\"dropdown-toggle\">
                             <div class=\"\">
                                 <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-home\"><path d=\"M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z\"></path><polyline points=\"9 22 9 12 15 12 15 22\"></polyline></svg>
                                 <span>학생 점검 목록 생성</span>
@@ -356,7 +361,7 @@ class __TwigTemplate_49a41c3c978f1d760e901de08919b579 extends Template
                   
                     <li class=\"menu \">
                         <a href=\"";
-        // line 296
+        // line 298
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["doc_root"] ?? null), "html", null, true);
         yield "t-dashboard-regis-s\"  class=\"dropdown-toggle\">
                             <div class=\"\">
@@ -375,12 +380,12 @@ class __TwigTemplate_49a41c3c978f1d760e901de08919b579 extends Template
 
                     <li class=\"menu active\">
                         <a href=\"";
-        // line 312
+        // line 314
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["doc_root"] ?? null), "html", null, true);
         yield "t-dashboard-make-s\"class=\"dropdown-toggle\">
                             <div class=\"\">
                                 <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-box\"><path d=\"M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z\"></path><polyline points=\"3.27 6.96 12 12.01 20.73 6.96\"></polyline><line x1=\"12\" y1=\"22.08\" x2=\"12\" y2=\"12\"></line></svg>
-                                <span>우리반 생성/최초 1회만</span>
+                                <span>우리반 생성/학생 등록</span>
                             </div>
                             
                         </a>
@@ -389,7 +394,7 @@ class __TwigTemplate_49a41c3c978f1d760e901de08919b579 extends Template
 
                     <li class=\"menu\">
                         <a href=\"";
-        // line 323
+        // line 325
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["doc_root"] ?? null), "html", null, true);
         yield "t-dashboard-student-manage\" class=\"dropdown-toggle\">
                             <div class=\"\">
@@ -407,7 +412,7 @@ class __TwigTemplate_49a41c3c978f1d760e901de08919b579 extends Template
                         <div class=\"heading\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-minus\"><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"></line></svg><span>TABLES AND FORMS</span></div>
                     </li>
 
-                  
+                 
 
                 </ul>
                 
@@ -450,48 +455,17 @@ class __TwigTemplate_49a41c3c978f1d760e901de08919b579 extends Template
                    <ul class=\"navbar-nav flex-row ms-auto breadcrumb-action-dropdown\">
                         <li class=\"nav-item more-dropdown\">
                             <div class=\"nav-item more-dropdown ml-200 mb-20\">
-                              <a class=\"dropdown-toggle btn btn-primary\"  role=\"button\" id=\"className\" data-bs-toggle=\"modal\" data-bs-target=\"#exampleModal\">
-                                            <span>1.우리반 생성하기(제일 먼저 클릭)</span>
+                              <a class=\"dropdown-toggle btn\" role=\"button\" id=\"className\" >
+                                            <span>1.우리반 생성하기</span>
                                 </a>
                                 =>
-                                <a class=\"dropdown-toggle btn\"  role=\"button\" id=\"customDropdown\" data-bs-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
-                                            <span>2.학생 일괄 업로드하기</span>
-                                </a><p>
+                                <a class=\"dropdown-toggle btn btn-primary\"  role=\"button\" id=\"customDropdown\" data-bs-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
+                                            <span>2.학생 일괄 업로드하기(\"이미 학생들이 등록 되었습니다.\")</span> 
+                                </a>
+                                
+                                <p>
                                   
-                                <!-- Modal -->
-                                  <div class=\"modal fade\" id=\"exampleModal\" tabindex=\"-1\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">
-                                    <div class=\"modal-dialog\" >
-                                      <div class=\"modal-content\" style=\"background-color:white;\">
-                                        <div class=\"modal-header\">
-                                          <h5 class=\"modal-title\" id=\"exampleModalLabel\">우리반 생성하기</h5>
-                                          
-                                          <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"modal\" aria-label=\"Close\"></button>
-                                          
-                                        </div>
-                                         <form action=\"";
-        // line 400
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["doc_root"] ?? null), "html", null, true);
-        yield "t-dashboard-upload/\" method=\"post\">
-                                        <div class=\"modal-body\">
-                                          
-                                          <p>아래 번호를 메모해서 학생들에게 알려주세요</p>
-                                          <p>번호는 학생들이 접속할 때 필요합니다</p>
-                                          <p>\"우리반 생성하기\"는 한 번만 작업하시면 됩니다.</p>
-                                        
-                                            <input type=\"text\" class=\"form-control\" id=\"className\" name=\"className\" value=\"";
-        // line 407
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["className4"] ?? null), "html", null, true);
-        yield "\"/>
-                                         
-                                        </div>
-                                        <div class=\"modal-footer\">
-                                          <button type=\"button\" class=\"btn btn-secondary\" data-bs-dismiss=\"modal\">취소</button>
-                                          <button type=\"submit\" class=\"btn btn-primary\">우리반 생성하기</button>
-                                          
-                                        </div>
-                                         </form>
-                                      </div>
-                                    </div>
+                                 <script> alert(\"반 생성은 한 번만 할 수 있습니다. 이후의 수정은 우리반 등록 현황에서 가능합니다.\"); </script>
                                   </div>
                                 <br>
                                 <br>
@@ -505,18 +479,18 @@ class __TwigTemplate_49a41c3c978f1d760e901de08919b579 extends Template
                                         <p>만약, 동명이인이 있는 경우에는 이름 끝에 숫자를 넣어 구분해주세요</p>
                                         <p>예) 홍길동, 홍길동 => 홍길동, 홍길동2</p>
                                         <a href=\"";
-        // line 430
+        // line 407
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["doc_root"] ?? null), "html", null, true);
         yield "download/form.xlsx\" download>학생명단양식 다운로드</a>
                                     </div>
                                     <div class=\"drop-section\">
                                         <div class=\"col\">
                                             <div class=\"cloud-icon\">
-                                                <img src=\"../icons/cloud.png\" alt=\"cloud\">
+                                                <img src=\"/icons/cloud.png\" alt=\"cloud\">
                                             </div>
-                                            <span>Drag & Drop your files here</span>
-                                            <span>OR</span>
-                                            <button class=\"file-selector\">Browse Files</button>
+                                            <span>작성한 학생명단을 여기에 끌어다 놓거나 아래 \"파일 올리기\"를 이용해서 업로드하세요</span>
+                                            
+                                            <button class=\"file-selector\">파일 올리기</button>
                                             <input type=\"file\" class=\"file-selector-input\" multiple>
                                         </div>
                                         <div class=\"col\">
@@ -538,7 +512,10 @@ class __TwigTemplate_49a41c3c978f1d760e901de08919b579 extends Template
                         <p>
                          
                     </ul>
-
+                    <script>
+                      const value = localStorage.getItem('className');
+                      document.getElementById('className').value = value;
+                    </script>
                 </div>
 
             </div>
@@ -566,17 +543,12 @@ class __TwigTemplate_49a41c3c978f1d760e901de08919b579 extends Template
     <!-- END MAIN CONTAINER -->
 
     <!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
-    <script src=\"../src/bootstrap/js/bootstrap.bundle.min.js\"></script>
-    <script src=\"../src/plugins/src/perfect-scrollbar/perfect-scrollbar.min.js\"></script>
-    <script src=\"../src/plugins/src/mousetrap/mousetrap.min.js\"></script>
-    <script src=\"../src/plugins/src/waves/waves.min.js\"></script>
-    <script src=\"../layouts/horizontal-light-menu/app.js\"></script>
+    <script src=\"/src/bootstrap/js/bootstrap.bundle.min.js\"></script>
+    <script src=\"/src/plugins/src/perfect-scrollbar/perfect-scrollbar.min.js\"></script>
+    <script src=\"/src/plugins/src/mousetrap/mousetrap.min.js\"></script>
+    <script src=\"/src/plugins/src/waves/waves.min.js\"></script>
+    <script src=\"/layouts/horizontal-light-menu/app.js\"></script>
     <!-- END GLOBAL MANDATORY SCRIPTS -->
-
-    <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
-
- 
-   
 
 
 
@@ -589,7 +561,7 @@ class __TwigTemplate_49a41c3c978f1d760e901de08919b579 extends Template
      */
     public function getTemplateName()
     {
-        return "t-dashboard-make-s.html";
+        return "t-dashboard-upload2.html";
     }
 
     /**
@@ -605,7 +577,7 @@ class __TwigTemplate_49a41c3c978f1d760e901de08919b579 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  509 => 430,  483 => 407,  473 => 400,  393 => 323,  379 => 312,  360 => 296,  308 => 246,  301 => 242,  288 => 233,  282 => 231,  280 => 230,  51 => 3,  47 => 2,  36 => 1,);
+        return array (  483 => 407,  398 => 325,  384 => 314,  365 => 298,  348 => 284,  310 => 248,  303 => 244,  290 => 235,  284 => 233,  282 => 232,  51 => 3,  47 => 2,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -809,6 +781,7 @@ class __TwigTemplate_49a41c3c978f1d760e901de08919b579 extends Template
 .list-section li.in-prog svg.tick{
     display: none;
 }
+
 </style>
 
 
@@ -836,8 +809,9 @@ class __TwigTemplate_49a41c3c978f1d760e901de08919b579 extends Template
             </ul>
 
 
-            <ul class=\"navbar-item flex-row ms-lg-auto ms-0 action-area\"> 
+            <ul class=\"navbar-item flex-row ms-lg-auto ms-0 action-area\">
 
+              
             <li class=\"nav-item dropdown user-profile-dropdown  order-lg-0 order-1\">
                     {% if session.userName == 0%}
                     <a href=\"{{ doc_root }}t-admin\" >로그인</a>
@@ -874,7 +848,7 @@ class __TwigTemplate_49a41c3c978f1d760e901de08919b579 extends Template
                     <div class=\"nav-logo\">
                         <div class=\"nav-item theme-logo\">
                             <a href=\"/\">
-                                <img src=\"../src/assets/img/logo.svg\" class=\"navbar-logo\" alt=\"logo\">
+                                <img src=\"../src/assets/img/logo2.svg\" class=\"navbar-logo\" alt=\"logo\">
                             </a>
                         </div>
                         <div class=\"nav-item theme-text\">
@@ -891,7 +865,7 @@ class __TwigTemplate_49a41c3c978f1d760e901de08919b579 extends Template
            
                 <ul class=\"list-unstyled menu-categories\" id=\"accordionExample\">
                     <li class=\"menu \">
-                        <a href=\"t-dashboard\"  class=\"dropdown-toggle\">
+                        <a href=\"{{ doc_root }}t-dashboard\"  class=\"dropdown-toggle\">
                             <div class=\"\">
                                 <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-home\"><path d=\"M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z\"></path><polyline points=\"9 22 9 12 15 12 15 22\"></polyline></svg>
                                 <span>학생 점검 목록 생성</span>
@@ -924,7 +898,7 @@ class __TwigTemplate_49a41c3c978f1d760e901de08919b579 extends Template
                         <a href=\"{{ doc_root }}t-dashboard-make-s\"class=\"dropdown-toggle\">
                             <div class=\"\">
                                 <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-box\"><path d=\"M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z\"></path><polyline points=\"3.27 6.96 12 12.01 20.73 6.96\"></polyline><line x1=\"12\" y1=\"22.08\" x2=\"12\" y2=\"12\"></line></svg>
-                                <span>우리반 생성/최초 1회만</span>
+                                <span>우리반 생성/학생 등록</span>
                             </div>
                             
                         </a>
@@ -948,7 +922,7 @@ class __TwigTemplate_49a41c3c978f1d760e901de08919b579 extends Template
                         <div class=\"heading\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-minus\"><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"></line></svg><span>TABLES AND FORMS</span></div>
                     </li>
 
-                  
+                 
 
                 </ul>
                 
@@ -991,42 +965,17 @@ class __TwigTemplate_49a41c3c978f1d760e901de08919b579 extends Template
                    <ul class=\"navbar-nav flex-row ms-auto breadcrumb-action-dropdown\">
                         <li class=\"nav-item more-dropdown\">
                             <div class=\"nav-item more-dropdown ml-200 mb-20\">
-                              <a class=\"dropdown-toggle btn btn-primary\"  role=\"button\" id=\"className\" data-bs-toggle=\"modal\" data-bs-target=\"#exampleModal\">
-                                            <span>1.우리반 생성하기(제일 먼저 클릭)</span>
+                              <a class=\"dropdown-toggle btn\" role=\"button\" id=\"className\" >
+                                            <span>1.우리반 생성하기</span>
                                 </a>
                                 =>
-                                <a class=\"dropdown-toggle btn\"  role=\"button\" id=\"customDropdown\" data-bs-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
-                                            <span>2.학생 일괄 업로드하기</span>
-                                </a><p>
+                                <a class=\"dropdown-toggle btn btn-primary\"  role=\"button\" id=\"customDropdown\" data-bs-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
+                                            <span>2.학생 일괄 업로드하기(\"이미 학생들이 등록 되었습니다.\")</span> 
+                                </a>
+                                
+                                <p>
                                   
-                                <!-- Modal -->
-                                  <div class=\"modal fade\" id=\"exampleModal\" tabindex=\"-1\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">
-                                    <div class=\"modal-dialog\" >
-                                      <div class=\"modal-content\" style=\"background-color:white;\">
-                                        <div class=\"modal-header\">
-                                          <h5 class=\"modal-title\" id=\"exampleModalLabel\">우리반 생성하기</h5>
-                                          
-                                          <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"modal\" aria-label=\"Close\"></button>
-                                          
-                                        </div>
-                                         <form action=\"{{ doc_root }}t-dashboard-upload/\" method=\"post\">
-                                        <div class=\"modal-body\">
-                                          
-                                          <p>아래 번호를 메모해서 학생들에게 알려주세요</p>
-                                          <p>번호는 학생들이 접속할 때 필요합니다</p>
-                                          <p>\"우리반 생성하기\"는 한 번만 작업하시면 됩니다.</p>
-                                        
-                                            <input type=\"text\" class=\"form-control\" id=\"className\" name=\"className\" value=\"{{ className4 }}\"/>
-                                         
-                                        </div>
-                                        <div class=\"modal-footer\">
-                                          <button type=\"button\" class=\"btn btn-secondary\" data-bs-dismiss=\"modal\">취소</button>
-                                          <button type=\"submit\" class=\"btn btn-primary\">우리반 생성하기</button>
-                                          
-                                        </div>
-                                         </form>
-                                      </div>
-                                    </div>
+                                 <script> alert(\"반 생성은 한 번만 할 수 있습니다. 이후의 수정은 우리반 등록 현황에서 가능합니다.\"); </script>
                                   </div>
                                 <br>
                                 <br>
@@ -1044,11 +993,11 @@ class __TwigTemplate_49a41c3c978f1d760e901de08919b579 extends Template
                                     <div class=\"drop-section\">
                                         <div class=\"col\">
                                             <div class=\"cloud-icon\">
-                                                <img src=\"../icons/cloud.png\" alt=\"cloud\">
+                                                <img src=\"/icons/cloud.png\" alt=\"cloud\">
                                             </div>
-                                            <span>Drag & Drop your files here</span>
-                                            <span>OR</span>
-                                            <button class=\"file-selector\">Browse Files</button>
+                                            <span>작성한 학생명단을 여기에 끌어다 놓거나 아래 \"파일 올리기\"를 이용해서 업로드하세요</span>
+                                            
+                                            <button class=\"file-selector\">파일 올리기</button>
                                             <input type=\"file\" class=\"file-selector-input\" multiple>
                                         </div>
                                         <div class=\"col\">
@@ -1070,7 +1019,10 @@ class __TwigTemplate_49a41c3c978f1d760e901de08919b579 extends Template
                         <p>
                          
                     </ul>
-
+                    <script>
+                      const value = localStorage.getItem('className');
+                      document.getElementById('className').value = value;
+                    </script>
                 </div>
 
             </div>
@@ -1098,20 +1050,15 @@ class __TwigTemplate_49a41c3c978f1d760e901de08919b579 extends Template
     <!-- END MAIN CONTAINER -->
 
     <!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
-    <script src=\"../src/bootstrap/js/bootstrap.bundle.min.js\"></script>
-    <script src=\"../src/plugins/src/perfect-scrollbar/perfect-scrollbar.min.js\"></script>
-    <script src=\"../src/plugins/src/mousetrap/mousetrap.min.js\"></script>
-    <script src=\"../src/plugins/src/waves/waves.min.js\"></script>
-    <script src=\"../layouts/horizontal-light-menu/app.js\"></script>
+    <script src=\"/src/bootstrap/js/bootstrap.bundle.min.js\"></script>
+    <script src=\"/src/plugins/src/perfect-scrollbar/perfect-scrollbar.min.js\"></script>
+    <script src=\"/src/plugins/src/mousetrap/mousetrap.min.js\"></script>
+    <script src=\"/src/plugins/src/waves/waves.min.js\"></script>
+    <script src=\"/layouts/horizontal-light-menu/app.js\"></script>
     <!-- END GLOBAL MANDATORY SCRIPTS -->
 
-    <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
-
- 
-   
 
 
-
-{% endblock %}", "t-dashboard-make-s.html", "/Users/nm/works/project/fbc/templates/t-dashboard-make-s.html");
+{% endblock %}", "t-dashboard-upload2.html", "/Users/nm/works/project/fbc/templates/t-dashboard-upload2.html");
     }
 }

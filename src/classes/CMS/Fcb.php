@@ -67,7 +67,7 @@ class Fcb
     }
   }
 
-  public function insert(int $classname, int $studentnumber, string $studentname)
+  public function insert($classname, $studentnumber, $studentname)
   {
     try {
       $sql = "INSERT INTO student (classname, studentnumber, studentname) VALUES (:classname, :studentnumber, :studentname);";
@@ -82,6 +82,32 @@ class Fcb
     }
 
   }
+
+  public function getToTeacher($userid)
+  {
+    $sql = "SELECT classname FROM user WHERE userid = :userid;";
+    
+    $arguments['userid'] = $userid;
+
+    return $this->db->runSQL($sql, $arguments)->fetch();
+  }
+
+  public function setToTeacher($classname, $userid)
+  {
+    try {
+      $sql = "UPDATE user SET classname = :classname WHERE userid = :userid;";
+      
+      $arguments['classname'] = $classname;
+      $arguments['userid'] = $userid;
+
+      return $this->db->runSQL($sql, $arguments)->fetch();
+    } catch (\Exception $e) {
+      return $e->getMessage();
+    }
+
+  }
+
+
   public function setSubjectCheck(string $subjectname, $studentnumber, $subjectname2, int $classname, $studentname)
   {
   
