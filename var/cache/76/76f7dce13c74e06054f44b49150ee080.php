@@ -13,8 +13,8 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* t-dashboard-regis-s.html */
-class __TwigTemplate_13fe0dafd04ed916b984e5b11098fdd2 extends Template
+/* t-dashboard-each.html */
+class __TwigTemplate_8ba04aa67bbd93ded81607f9afe62e66 extends Template
 {
     private $source;
     private $macros = [];
@@ -39,7 +39,7 @@ class __TwigTemplate_13fe0dafd04ed916b984e5b11098fdd2 extends Template
     protected function doDisplay(array $context, array $blocks = [])
     {
         $macros = $this->macros;
-        $this->parent = $this->loadTemplate("layout.html", "t-dashboard-regis-s.html", 1);
+        $this->parent = $this->loadTemplate("layout.html", "t-dashboard-each.html", 1);
         yield from $this->parent->unwrap()->yield($context, array_merge($this->blocks, $blocks));
     }
 
@@ -258,14 +258,14 @@ class __TwigTemplate_13fe0dafd04ed916b984e5b11098fdd2 extends Template
         foreach ($context['_seq'] as $context["_key"] => $context["student"]) {
             // line 184
             yield "                            <div class=\"nav-item more-dropdown ml-130 mb-20\">
-                                <a class=\"btn\" href=\"";
+                                <a class=\"dropdown-toggle btn\" href=\"";
             // line 185
             yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["doc_root"] ?? null), "html", null, true);
             yield "t-dashboard-each/";
             yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["student"], "studentnumber", [], "any", false, false, false, 185), "html", null, true);
             yield "/";
             yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["student"], "studentname", [], "any", false, false, false, 185), "html", null, true);
-            yield "\" target=\"_blank\"  id=\"customDropdown\" >
+            yield "\" target=\"_blank\" role=\"button\" id=\"customDropdown\" data-bs-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
                                             <span>번호: ";
             // line 186
             yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["student"], "studentnumber", [], "any", false, false, false, 186), "html", null, true);
@@ -335,7 +335,7 @@ class __TwigTemplate_13fe0dafd04ed916b984e5b11098fdd2 extends Template
      */
     public function getTemplateName()
     {
-        return "t-dashboard-regis-s.html";
+        return "t-dashboard-each.html";
     }
 
     /**
@@ -540,7 +540,7 @@ class __TwigTemplate_13fe0dafd04ed916b984e5b11098fdd2 extends Template
                         <li class=\"nav-item more-dropdown\">
                            {% for student in students  %}
                             <div class=\"nav-item more-dropdown ml-130 mb-20\">
-                                <a class=\"btn\" href=\"{{ doc_root }}t-dashboard-each/{{ student.studentnumber }}/{{ student.studentname }}\" target=\"_blank\"  id=\"customDropdown\" >
+                                <a class=\"dropdown-toggle btn\" href=\"{{ doc_root }}t-dashboard-each/{{ student.studentnumber }}/{{ student.studentname }}\" target=\"_blank\" role=\"button\" id=\"customDropdown\" data-bs-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
                                             <span>번호: {{ student.studentnumber }} =>  {{ student.studentname }}</span>
                                 </a>
                                 
@@ -591,6 +591,6 @@ class __TwigTemplate_13fe0dafd04ed916b984e5b11098fdd2 extends Template
 
 
 
-{% endblock %}", "t-dashboard-regis-s.html", "/Users/nm/works/project/fbc/templates/t-dashboard-regis-s.html");
+{% endblock %}", "t-dashboard-each.html", "/Users/nm/works/project/fbc/templates/t-dashboard-each.html");
     }
 }

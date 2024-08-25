@@ -7,7 +7,10 @@ class CMS
                          // Stores reference to Like object
     protected $fcb              = null;                         // Stores reference to Fcb <object data="" type=""></object>
     
-    protected $session          = null;                         // Stores reference to Session object
+    protected $session          = null;
+
+    protected $student          = null;
+  // Stores reference to Session object
 
 
     public function __construct($dsn, $username, $password)
@@ -31,6 +34,14 @@ class CMS
             $this->session = new Session(); // Create repair object
         }
         return $this->session;                 // Return repair object
+    }
+
+    public function getStudent()
+    {
+        if ($this->student === null) {         // If $repair property null
+            $this->student = new Student($this->db); // Create repair object
+        }
+        return $this->student;                 // Return repair object
     }
 
 

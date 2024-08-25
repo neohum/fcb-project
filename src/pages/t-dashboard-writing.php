@@ -1,9 +1,9 @@
 <?php 
 declare(strict_types=1);
+error_reporting(E_ALL&~E_WARNING);
 $data = [];
 
 $data['subjectname'] = "Writing";
-$_SESSION['classname'] = 962279173;
 
 
 $data['subjectname2'] = "";
@@ -26,7 +26,7 @@ $data['studentname'] = [];
 $i = 0;
 $j = 0;
 while ($i <= $value) {
-  if ($j == 30){
+  if ($j == 60){
     break;
   } else {
   $data['studentname'] = $cms->getFcb()->getStudentName($_SESSION['classname'], $j);

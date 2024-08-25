@@ -33,4 +33,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         redirect('t-admin/');
 }
 
-echo $twig->render('t-dashboard-regis-s.html', $data);
+echo $twig->render('t-dashboard-each.html', $data);

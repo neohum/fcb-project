@@ -156,18 +156,16 @@
         
                     <tr>
                         <td>학생 이름</td>
-                        <td> </td>
-                        <td>{{ studentname }}</td>
+                        <td>: {{ studentname }}</td>
                     </tr>
                      <tr>
                         <td>번호</td>
-                        <td> </td>
-                        <td>{{ studentnumber }}</td>
+                        <td id="studentnumber">: {{ studentnumber }}</td>
                     </tr>
                     <tr>
                         <td>생성된 클래스명</td>
-                        <td> </td>
-                        <td>{{ classname }}</td>
+                        
+                        <td>: {{ classname }}</td>
                     </tr>
 
                 </table>
@@ -201,64 +199,90 @@
               <td >{{ checklist.subjectname }}</td>  
               <td >{{ checklist.subjectname2 }}</td> 
               
-                {% if checklist.subjectname == "Writing" %}
-              <td id="writing_score" class="" style="
-                                                      width: 200px;
-                                                      white-space: nowrap;
-                                                      overflow: hidden;
-                                                      text-overflow: ellipsis;
+                {% if checklist.subjectname == "CheckBox" %}
+                    {% if checklist.score == 1 %}
+                       <td> <input type="checkbox" checked disabled></td>
+                    {% else %}
+                        <td> 미작성 </td>
+                    {% endif %}
+                    {% if checklist.score2 == 1 %}
+                        <td> <input type="checkbox" checked disabled></td>
+                    {% else %}
+                        <td> 미작성 </td>
+                    {% endif %}
+                {% elseif checklist.subjectname == "5CheckBox" %}
+                    {% if checklist.score == 1 %}
+                        <td> <input type="radio" checked disabled> <input type="radio" > <input type="radio" > <input type="radio" > <input type="radio" ></td>
+                    {% elseif checklist.score == 2 %}
+                        <td> <input type="radio" > <input type="radio" checked disabled> <input type="radio" > <input type="radio" > <input type="radio" ></td>
 
-                                                      
-                                                      white-space: normal;">
-                  {{ checklist.score }}
-              </td>
-               <td id="writing_score2" style="
-                                              width: 200px;
-                                              white-space: nowrap;
-                                              overflow: hidden;
-                                              text-overflow: ellipsis;
+                    {% elseif checklist.score == 3 %}
+                        <td> <input type="radio" > <input type="radio" > <input type="radio" checked disabled> <input type="radio" > <input type="radio" ></td>
 
-                                              
-                                              white-space: normal;
-                                          ">{{ checklist.score2 }}</td>  
-               <td>{{ checklist.created_at|date('Y-m-d') }}</td>  
-         
-             
-            
-               
-                {% elseif checklist.subjectname== "5CheckBox"%}
-                <td id="checkbox5_score" name="checkbox5">
-                  {{ checklist.score }}
-               </td>  
-               <td id="checkbox5_score2" name="checkbox5">{{ checklist.score2 }}</td>  
-               <td>{{ checklist.created_at|date('Y-m-d') }}</td>
-              
+                    {% elseif checklist.score == 4 %}
+                        <td> <input type="radio" > <input type="radio" > <input type="radio" > <input type="radio" checked disabled> <input type="radio" ></td>
 
-            
-               
+                    {% elseif checklist.score == 5 %}
+                        <td> <input type="radio" > <input type="radio" > <input type="radio" > <input type="radio" > <input type="radio" checked disabled></td>
+                    {% else %}
+                        <td> 미작성 </td>
+                    {% endif %}
+                    {% if checklist.score2 == 1 %}
+                        <td> <input type="radio" checked disabled> <input type="radio" > <input type="radio" > <input type="radio" > <input type="radio" ></td>
+                    {% elseif checklist.score2 == 2 %}
+                        <td> <input type="radio" > <input type="radio" checked disabled> <input type="radio" > <input type="radio" > <input type="radio" ></td>
+
+                    {% elseif checklist.score2 == 3 %}
+                        <td> <input type="radio" > <input type="radio" > <input type="radio" checked disabled> <input type="radio" > <input type="radio" ></td>
+
+                    {% elseif checklist.score2 == 4 %}
+                        <td> <input type="radio" > <input type="radio" > <input type="radio" > <input type="radio" checked disabled> <input type="radio" ></td>
+
+                    {% elseif checklist.score2 == 5 %}
+                        <td> <input type="radio" > <input type="radio" > <input type="radio" > <input type="radio" > <input type="radio" checked disabled></td>
+                    {% else %}
+                        <td> 미작성 </td>
+                    {% endif %}
                 {% elseif checklist.subjectname == "3CheckBox" %}
-                <td id="checkbox3_score" name="checkbox3">
-                  {{ checklist.score }}
-                </td> 
-                <td id="checkbox3_score2" name="checkbox3">{{ checklist.score2 }} </td> 
-                <td>{{ checklist.created_at|date('Y-m-d') }}</td>
-            
+                    {% if checklist.score == 1 %}
+                       <td> <input type="radio" checked disabled> <input type="radio" > <input type="radio" ></td>
+                    {% elseif checklist.score == 2 %}
+                        <td> <input type="radio" > <input type="radio" checked disabled> <input type="radio" ></td>
+                    {% elseif checklist.score == 3 %}
+                        <td> <input type="radio" > <input type="radio" > <input type="radio" checked disabled></td>
+                    {% else %}
+                        <td> 미작성 </td>
+                    {% endif %}
+                    {% if checklist.score2 == 1 %}
+                        <td> <input type="radio" checked disabled> <input type="radio" > <input type="radio" ></td>
+                    {% elseif checklist.score2 == 2 %}
+                        <td> <input type="radio" > <input type="radio" checked disabled> <input type="radio" ></td>
+                    {% elseif checklist.score2 == 3 %}
+                        <td> <input type="radio" > <input type="radio" > <input type="radio" checked disabled></td>
+                    {% else %}
+                        <td> 미작성 </td>
+                    {% endif %}
 
-           
-               
-                {% elseif checklist.subjectname == "CheckBox" %}
-                <td id="checkbox_score">
-                {{ checklist.score }} 
-                </td>
-               <td id="checkbox_score2">{{ checklist.score2 }} </td>
-               <td>{{ checklist.created_at|date('Y-m-d') }}</td>
-             
-              {% endif %}
+                {% elseif checklist.subjectname == "Writing" %}
+                    {% if checklist.score != null %}
+                        <td> {{ checklist.score }}</td>
+                    {% else %}
+                        <td> 미작성 </td>
+                    {% endif %}
+                    {% if checklist.score2 != null %}
+                        <td> {{ checklist.score2 }}</td>
+                    {% else %}
+                        <td> 미작성 </td>
+                    {% endif %}
+
+                {% else %}
+
+                {% endif %}
+              <td >{{ checklist.created_at|date("Y-m-d") }}</td>
               </tr>
-            
-          
+              {% endfor %}
 
-            {% endfor %}
+              
             </tbody>
           </table>
         </div>
@@ -296,86 +320,9 @@
 
     
 
-    <script>
-      let writing_score = document.querySelector('#writing_score');
-      let writing_score2 = document.getElementById('writing_score2');
-      let checkbox_score = document.getElementById('checkbox_score');
-      let checkbox_score2 = document.getElementById('checkbox_score2');
-      let checkbox3_score = document.getElementById('checkbox3_score');
-      let checkbox3_score2 = document.getElementById('checkbox3_score2');
-      let checkbox5_score = document.getElementById('checkbox5_score');
-      let checkbox5_score2 = document.getElementById('checkbox5_score2');
       
-    
-      if (writing_score.innerHTML == 0) {
-        writing_score.innerHTML = "미작성";
-      }
-      if (writing_score2.innerHTML == 0) {
-        writing_score2.innerHTML = "미작성";
-      }
-      if (checkbox_score.innerHTML == 0) {
-        checkbox_score.innerHTML = "미작성";
-      } else {
-        checkbox_score.innerHTML = "<input type='checkbox' checked disabled />";
-      }
-
-      if (checkbox_score2.innerHTML == 0) {
-        checkbox_score2.innerHTML = "미작성";
-      } else {
-        checkbox_score2.innerHTML = "<input type='checkbox' checked disabled />";
-      }
-     
-      if (checkbox3_score.innerHTML == 0) {
-        checkbox3_score.innerHTML = "미작성";
-      } else if (checkbox3_score.innerHTML == 1) {
-        checkbox3_score.innerHTML = "<input type='checkbox' checked disabled />&ensp;<input type='checkbox'disabled />&ensp;<input type='checkbox'disabled  />";
-      } else if (checkbox3_score.innerHTML == 2) {
-        checkbox3_score.innerHTML = "<input type='checkbox'  disabled />&ensp;<input type='checkbox' checked disabled />&ensp;<input type='checkbox' disabled />";
-      } else if (checkbox3_score.innerHTML == 3) {
-        checkbox3_score.innerHTML = "<input type='checkbox' disabled />&ensp;<input type='checkbox'  disabled />&ensp;<input type='checkbox' checked disabled />";
-      }
-
-      if (checkbox3_score2.innerHTML == 0) {
-        checkbox3_score2.innerHTML = "미작성";
-      } else if (checkbox3_score2.innerHTML == 1) {
-        checkbox3_score2.innerHTML = "<input type='checkbox' checked disabled />&ensp;<input type='checkbox'disabled />&ensp;<input type='checkbox'disabled  />";
-      } else if (checkbox3_score2.innerHTML == 2) {
-        checkbox3_score2.innerHTML = "<input type='checkbox'  disabled />&ensp;<input type='checkbox' checked disabled />&ensp;<input type='checkbox' disabled />";
-      } else if (checkbox3_score2.innerHTML == 3) {
-        checkbox3_score2.innerHTML = "<input type='checkbox' disabled />&ensp;<input type='checkbox'  disabled />&ensp;<input type='checkbox' checked disabled />";
-      }
-
-      if (checkbox5_score.innerHTML == 0) {
-        checkbox5_score.innerHTML = "미작성";
-      } else if (checkbox5_score.innerHTML == 1) {
-        checkbox5_score.innerHTML = "<input type='checkbox' checked disabled />&ensp;<input type='checkbox'disabled />&ensp;<input type='checkbox'disabled />&ensp;<input type='checkbox'disabled />&ensp;<input type='checkbox'disabled />";
-      } else if (checkbox5_score.innerHTML == 2) {
-        checkbox5_score.innerHTML = "<input type='checkbox'  disabled />&ensp;<input type='checkbox' checked disabled />&ensp;<input type='checkbox' disabled />&ensp;<input type='checkbox' disabled />&ensp;<input type='checkbox' disabled />";
-      } else if (checkbox5_score.innerHTML == 3) {
-        checkbox5_score.innerHTML = "<input type='checkbox' disabled />&ensp;<input type='checkbox'  disabled />&ensp;<input type='checkbox' checked disabled />&ensp;<input type='checkbox' disabled />&ensp;<input type='checkbox' disabled />";
-      } else if (checkbox5_score.innerHTML == 4) {
-        checkbox5_score.innerHTML = "<input type='checkbox' disabled />&ensp;<input type='checkbox'  disabled />&ensp;<input type='checkbox' disabled />&ensp;<input type='checkbox' checked disabled />&ensp;<input type='checkbox' disabled />";
-      } else if (checkbox5_score.innerHTML == 5) {
-        checkbox5_score.innerHTML = "<input type='checkbox' disabled />&ensp;<input type='checkbox'  disabled />&ensp;<input type='checkbox' disabled />&ensp;<input type='checkbox' disabled />&ensp;<input type='checkbox' checked disabled />";
-      }
-
-      if (checkbox5_score2.innerHTML == 0) {
-        checkbox5_score2.innerHTML = "미작성";
-      } else if (checkbox5_score2.innerHTML == 1) {
-        checkbox5_score2.innerHTML = "<input type='checkbox' checked disabled />&ensp;<input type='checkbox'disabled />&ensp;<input type='checkbox'disabled />&ensp;<input type='checkbox'disabled />&ensp;<input type='checkbox'disabled />";
-      } else if (checkbox5_score2.innerHTML == 2) {
-        checkbox5_score2.innerHTML = "<input type='checkbox'  disabled />&ensp;<input type='checkbox' checked disabled />&ensp;<input type='checkbox' disabled />&ensp;<input type='checkbox' disabled />&ensp;<input type='checkbox' disabled />";
-      } else if (checkbox5_score2.innerHTML == 3) {
-        checkbox5_score2.innerHTML = "<input type='checkbox' disabled />&ensp;<input type='checkbox'  disabled />&ensp;<input type='checkbox' checked disabled />&ensp;<input type='checkbox' disabled />&ensp;<input type='checkbox' disabled />";
-      } else if (checkbox5_score2.innerHTML == 4) {
-        checkbox5_score2.innerHTML = "<input type='checkbox' disabled />&ensp;<input type='checkbox'  disabled />&ensp;<input type='checkbox' disabled />&ensp;<input type='checkbox' checked disabled />&ensp;<input type='checkbox' disabled />";
-      } else if (checkbox5_score2.innerHTML == 5) {
-        checkbox5_score2.innerHTML = "<input type='checkbox' disabled />&ensp;<input type='checkbox'  disabled />&ensp;<input type='checkbox' disabled />&ensp;<input type='checkbox' disabled />&ensp;<input type='checkbox' checked disabled />";
-      }
-    
-
-    </script>
-
-
+        
+      
+      
 
 {% endblock %}
