@@ -461,23 +461,202 @@ class __TwigTemplate_64dea34c3c733834ebaf67b994c062a2 extends Template
                                     <th>학생 이름</th>
                                     <th>수정</th>
                                     <th>삭제</th>
-                                    <th>추가</th>
+                                    
                                   </tr>
                                 </thead>
                                 <tbody>
-                                  <tr>
-                                    <td>123456789</td>
-                                    <td>1</td>
-                                    <td>홍일동</td>
-                                    <td><button type=\"button\" class=\"btn btn-primary\">수정</button></td>
-                                    <td><button type=\"button\" class=\"btn btn-danger\">삭제</button></td>
-                                    <td><button type=\"button\" class=\"btn btn-success\">추가</button></td>
+                                  ";
+        // line 397
+        $context['_parent'] = $context;
+        $context['_seq'] = CoreExtension::ensureTraversable(($context["students"] ?? null));
+        $context['loop'] = [
+          'parent' => $context['_parent'],
+          'index0' => 0,
+          'index'  => 1,
+          'first'  => true,
+        ];
+        if (is_array($context['_seq']) || (is_object($context['_seq']) && $context['_seq'] instanceof \Countable)) {
+            $length = count($context['_seq']);
+            $context['loop']['revindex0'] = $length - 1;
+            $context['loop']['revindex'] = $length;
+            $context['loop']['length'] = $length;
+            $context['loop']['last'] = 1 === $length;
+        }
+        foreach ($context['_seq'] as $context["_key"] => $context["student"]) {
+            // line 398
+            yield "                                  <tr>
+                                    <td>";
+            // line 399
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["student"], "classname", [], "any", false, false, false, 399), "html", null, true);
+            yield "</td>
+                                    <td>";
+            // line 400
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["student"], "studentnumber", [], "any", false, false, false, 400), "html", null, true);
+            yield "</td>
+                                    <td>";
+            // line 401
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["student"], "studentname", [], "any", false, false, false, 401), "html", null, true);
+            yield "</td>
+                                    <td><button type=\"button\" class=\"btn btn-primary\" data-bs-toggle=\"modal\" data-bs-target=\"#exampleModal";
+            // line 402
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["loop"], "index", [], "any", false, false, false, 402), "html", null, true);
+            yield "\">수정</button></td>
+                                    <!-- Modal -->
+                                  <div class=\"modal fade\" id=\"exampleModal";
+            // line 404
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["loop"], "index", [], "any", false, false, false, 404), "html", null, true);
+            yield "\" tabindex=\"-1\" aria-labelledby=\"exampleModalLabel";
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["loop"], "index", [], "any", false, false, false, 404), "html", null, true);
+            yield "\" aria-hidden=\"true\">
+                                    <div class=\"modal-dialog\" >
+                                      <div class=\"modal-content\" style=\"background-color:white;\">
+                                        <div class=\"modal-header\">
+                                          <h5 class=\"modal-title\" id=\"exampleModalLabel\">학생 정보 수정하기</h5>
+                                          
+                                          <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"modal\" aria-label=\"Close\"></button>
+                                          
+                                        </div>
+                                         <form action=\"";
+            // line 413
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["doc_root"] ?? null), "html", null, true);
+            yield "t-dashboard-student-modify\" method=\"post\">
+                                        <div class=\"modal-body\">
+                                          
+                                        
+                                            <div class=\"form-group\">
+                                              <input type=\"hidden\" name=\"id\" id=\"id\" value=\"";
+            // line 418
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["student"], "id", [], "any", false, false, false, 418), "html", null, true);
+            yield "\">
+                                              <input type=\"hidden\" name=\"classname\" id=\"classname\" value=\"";
+            // line 419
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["student"], "classname", [], "any", false, false, false, 419), "html", null, true);
+            yield "\">
+                                              <label for=\"studentnumber\">번호</label>
+                                              <input type=\"number\" class=\"form-control\" id=\"studentnumber\" name=\"studentnumber\"  value=\"";
+            // line 421
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["student"], "studentnumber", [], "any", false, false, false, 421), "html", null, true);
+            yield "\">
+                                              <label for=\"studentname\">이름</label>
+                                              <input type=\"text\" class=\"form-control\" id=\"studentname\" name=\"studentname\"  value =\"";
+            // line 423
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["student"], "studentname", [], "any", false, false, false, 423), "html", null, true);
+            yield "\">
+                                            </div>
+                                         
+                                        </div>
+                                        <div class=\"modal-footer\">
+                                          <button type=\"button\" class=\"btn btn-secondary\" data-bs-dismiss=\"modal\">취소</button>
+                                          <button type=\"submit\" class=\"btn btn-primary\">수정하기</button>
+                                          
+                                        </div>
+                                         </form>
+                                      </div>
+                                    </div>
+                                  </div>
+                                    <td><button type=\"button\" class=\"btn btn-danger\" data-bs-toggle=\"modal\" data-bs-target=\"#exampleModal1";
+            // line 436
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["loop"], "index", [], "any", false, false, false, 436), "html", null, true);
+            yield "\">삭제</button></td>
+                                    
+                                    <!-- Modal -->
+                                  <div class=\"modal fade\" id=\"exampleModal1";
+            // line 439
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["loop"], "index", [], "any", false, false, false, 439), "html", null, true);
+            yield "\" tabindex=\"-2\" aria-labelledby=\"exampleModalLabel1";
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["loop"], "index", [], "any", false, false, false, 439), "html", null, true);
+            yield "\" aria-hidden=\"true\">
+                                    <div class=\"modal-dialog\" >
+                                      <div class=\"modal-content\" style=\"background-color:white;\">
+                                        <div class=\"modal-header\">
+                                          <h5 class=\"modal-title\" id=\"exampleModalLabel\">학생 정보 삭제하기</h5>
+                                          
+                                          <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"modal\" aria-label=\"Close\"></button>
+                                          
+                                        </div>
+                                         <form action=\"";
+            // line 448
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["doc_root"] ?? null), "html", null, true);
+            yield "t-dashboard-student-delete\" method=\"post\">
+                                        <div class=\"modal-body\">
+                                          
+                                        
+                                            <div class=\"form-group\">
+                                              <input type=\"hidden\" name=\"id\" id=\"id\" value=\"";
+            // line 453
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["student"], "id", [], "any", false, false, false, 453), "html", null, true);
+            yield "\">
+                                              <input type=\"hidden\" name=\"classname\" id=\"classname\" value=\"";
+            // line 454
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["student"], "classname", [], "any", false, false, false, 454), "html", null, true);
+            yield "\">
+                                              <label for=\"studentnumber\">번호</label>
+                                              <input type=\"number\" class=\"form-control\" id=\"studentnumber\" name=\"studentnumber\"  value=\"";
+            // line 456
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["student"], "studentnumber", [], "any", false, false, false, 456), "html", null, true);
+            yield "\">
+                                              <label for=\"studentname\">이름</label>
+                                              <input type=\"text\" class=\"form-control\" id=\"studentname\" name=\"studentname\"  value =\"";
+            // line 458
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["student"], "studentname", [], "any", false, false, false, 458), "html", null, true);
+            yield "\">
+                                            </div>
+                                         
+                                        </div>
+                                        <div class=\"modal-footer\">
+                                          <button type=\"button\" class=\"btn btn-secondary\" data-bs-dismiss=\"modal\">취소</button>
+                                          <button type=\"submit\" class=\"btn btn-primary\">삭제하기</button>
+                                          
+                                        </div>
+                                         </form>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  
                                   </tr>
-                                </tbody>
+                                  
+                                  
+                                  ";
+            ++$context['loop']['index0'];
+            ++$context['loop']['index'];
+            $context['loop']['first'] = false;
+            if (isset($context['loop']['length'])) {
+                --$context['loop']['revindex0'];
+                --$context['loop']['revindex'];
+                $context['loop']['last'] = 0 === $context['loop']['revindex0'];
+            }
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['student'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 476
+        yield "                                </tbody>
                               </table>
 
-                                  
                               
+                              <br>
+                              <br>
+                              <div class=\"\">
+                                <h2>학생 추가</h2>
+                                <form action=\"";
+        // line 484
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["doc_root"] ?? null), "html", null, true);
+        yield "t-dashboard-student-manage\" method=\"post\">
+                                  <div class=\"form-group\">
+                                    <label for=\"studentnumber\">번호(시스템 설계상 제일 마지막에 추가 됩니다.)</label>
+                                    <input type=\"number\" class=\"form-control\" id=\"studentnumber\" name=\"studentnumber\" placeholder=\"학생 번호를 입력하세요. 제일 마지막에 추가됩니다.\">
+                                    <label for=\"studentname\">이름</label>
+                                    <input type=\"text\" class=\"form-control\" id=\"studentname\" name=\"studentname\" placeholder=\"학생 이름을 입력하세요\">
+                                  </div>
+                                  <br>
+                                  <input type=\"hidden\" name=\"classname\" value=\"";
+        // line 492
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["classname"] ?? null), "html", null, true);
+        yield "\">
+
+                                  
+                                  <button type=\"submit\" class=\"btn btn-success\">추가</button>
+                                </form>
                                 
 
                               </div>
@@ -556,7 +735,7 @@ class __TwigTemplate_64dea34c3c733834ebaf67b994c062a2 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  393 => 323,  379 => 312,  360 => 296,  308 => 246,  301 => 242,  288 => 233,  282 => 231,  280 => 230,  51 => 3,  47 => 2,  36 => 1,);
+        return array (  654 => 492,  643 => 484,  633 => 476,  601 => 458,  596 => 456,  591 => 454,  587 => 453,  579 => 448,  565 => 439,  559 => 436,  543 => 423,  538 => 421,  533 => 419,  529 => 418,  521 => 413,  507 => 404,  502 => 402,  498 => 401,  494 => 400,  490 => 399,  487 => 398,  470 => 397,  393 => 323,  379 => 312,  360 => 296,  308 => 246,  301 => 242,  288 => 233,  282 => 231,  280 => 230,  51 => 3,  47 => 2,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -953,23 +1132,110 @@ class __TwigTemplate_64dea34c3c733834ebaf67b994c062a2 extends Template
                                     <th>학생 이름</th>
                                     <th>수정</th>
                                     <th>삭제</th>
-                                    <th>추가</th>
+                                    
                                   </tr>
                                 </thead>
                                 <tbody>
+                                  {% for student in students %}
                                   <tr>
-                                    <td>123456789</td>
-                                    <td>1</td>
-                                    <td>홍일동</td>
-                                    <td><button type=\"button\" class=\"btn btn-primary\">수정</button></td>
-                                    <td><button type=\"button\" class=\"btn btn-danger\">삭제</button></td>
-                                    <td><button type=\"button\" class=\"btn btn-success\">추가</button></td>
+                                    <td>{{ student.classname }}</td>
+                                    <td>{{ student.studentnumber }}</td>
+                                    <td>{{ student.studentname }}</td>
+                                    <td><button type=\"button\" class=\"btn btn-primary\" data-bs-toggle=\"modal\" data-bs-target=\"#exampleModal{{ loop.index }}\">수정</button></td>
+                                    <!-- Modal -->
+                                  <div class=\"modal fade\" id=\"exampleModal{{ loop.index }}\" tabindex=\"-1\" aria-labelledby=\"exampleModalLabel{{ loop.index }}\" aria-hidden=\"true\">
+                                    <div class=\"modal-dialog\" >
+                                      <div class=\"modal-content\" style=\"background-color:white;\">
+                                        <div class=\"modal-header\">
+                                          <h5 class=\"modal-title\" id=\"exampleModalLabel\">학생 정보 수정하기</h5>
+                                          
+                                          <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"modal\" aria-label=\"Close\"></button>
+                                          
+                                        </div>
+                                         <form action=\"{{ doc_root }}t-dashboard-student-modify\" method=\"post\">
+                                        <div class=\"modal-body\">
+                                          
+                                        
+                                            <div class=\"form-group\">
+                                              <input type=\"hidden\" name=\"id\" id=\"id\" value=\"{{ student.id }}\">
+                                              <input type=\"hidden\" name=\"classname\" id=\"classname\" value=\"{{ student.classname }}\">
+                                              <label for=\"studentnumber\">번호</label>
+                                              <input type=\"number\" class=\"form-control\" id=\"studentnumber\" name=\"studentnumber\"  value=\"{{ student.studentnumber }}\">
+                                              <label for=\"studentname\">이름</label>
+                                              <input type=\"text\" class=\"form-control\" id=\"studentname\" name=\"studentname\"  value =\"{{ student.studentname }}\">
+                                            </div>
+                                         
+                                        </div>
+                                        <div class=\"modal-footer\">
+                                          <button type=\"button\" class=\"btn btn-secondary\" data-bs-dismiss=\"modal\">취소</button>
+                                          <button type=\"submit\" class=\"btn btn-primary\">수정하기</button>
+                                          
+                                        </div>
+                                         </form>
+                                      </div>
+                                    </div>
+                                  </div>
+                                    <td><button type=\"button\" class=\"btn btn-danger\" data-bs-toggle=\"modal\" data-bs-target=\"#exampleModal1{{ loop.index }}\">삭제</button></td>
+                                    
+                                    <!-- Modal -->
+                                  <div class=\"modal fade\" id=\"exampleModal1{{ loop.index }}\" tabindex=\"-2\" aria-labelledby=\"exampleModalLabel1{{ loop.index }}\" aria-hidden=\"true\">
+                                    <div class=\"modal-dialog\" >
+                                      <div class=\"modal-content\" style=\"background-color:white;\">
+                                        <div class=\"modal-header\">
+                                          <h5 class=\"modal-title\" id=\"exampleModalLabel\">학생 정보 삭제하기</h5>
+                                          
+                                          <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"modal\" aria-label=\"Close\"></button>
+                                          
+                                        </div>
+                                         <form action=\"{{ doc_root }}t-dashboard-student-delete\" method=\"post\">
+                                        <div class=\"modal-body\">
+                                          
+                                        
+                                            <div class=\"form-group\">
+                                              <input type=\"hidden\" name=\"id\" id=\"id\" value=\"{{ student.id }}\">
+                                              <input type=\"hidden\" name=\"classname\" id=\"classname\" value=\"{{ student.classname }}\">
+                                              <label for=\"studentnumber\">번호</label>
+                                              <input type=\"number\" class=\"form-control\" id=\"studentnumber\" name=\"studentnumber\"  value=\"{{ student.studentnumber }}\">
+                                              <label for=\"studentname\">이름</label>
+                                              <input type=\"text\" class=\"form-control\" id=\"studentname\" name=\"studentname\"  value =\"{{ student.studentname }}\">
+                                            </div>
+                                         
+                                        </div>
+                                        <div class=\"modal-footer\">
+                                          <button type=\"button\" class=\"btn btn-secondary\" data-bs-dismiss=\"modal\">취소</button>
+                                          <button type=\"submit\" class=\"btn btn-primary\">삭제하기</button>
+                                          
+                                        </div>
+                                         </form>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  
                                   </tr>
+                                  
+                                  
+                                  {% endfor %}
                                 </tbody>
                               </table>
 
-                                  
                               
+                              <br>
+                              <br>
+                              <div class=\"\">
+                                <h2>학생 추가</h2>
+                                <form action=\"{{ doc_root }}t-dashboard-student-manage\" method=\"post\">
+                                  <div class=\"form-group\">
+                                    <label for=\"studentnumber\">번호(시스템 설계상 제일 마지막에 추가 됩니다.)</label>
+                                    <input type=\"number\" class=\"form-control\" id=\"studentnumber\" name=\"studentnumber\" placeholder=\"학생 번호를 입력하세요. 제일 마지막에 추가됩니다.\">
+                                    <label for=\"studentname\">이름</label>
+                                    <input type=\"text\" class=\"form-control\" id=\"studentname\" name=\"studentname\" placeholder=\"학생 이름을 입력하세요\">
+                                  </div>
+                                  <br>
+                                  <input type=\"hidden\" name=\"classname\" value=\"{{ classname }}\">
+
+                                  
+                                  <button type=\"submit\" class=\"btn btn-success\">추가</button>
+                                </form>
                                 
 
                               </div>

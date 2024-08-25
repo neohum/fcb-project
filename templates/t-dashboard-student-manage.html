@@ -390,23 +390,110 @@
                                     <th>학생 이름</th>
                                     <th>수정</th>
                                     <th>삭제</th>
-                                    <th>추가</th>
+                                    
                                   </tr>
                                 </thead>
                                 <tbody>
+                                  {% for student in students %}
                                   <tr>
-                                    <td>123456789</td>
-                                    <td>1</td>
-                                    <td>홍일동</td>
-                                    <td><button type="button" class="btn btn-primary">수정</button></td>
-                                    <td><button type="button" class="btn btn-danger">삭제</button></td>
-                                    <td><button type="button" class="btn btn-success">추가</button></td>
+                                    <td>{{ student.classname }}</td>
+                                    <td>{{ student.studentnumber }}</td>
+                                    <td>{{ student.studentname }}</td>
+                                    <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal{{ loop.index }}">수정</button></td>
+                                    <!-- Modal -->
+                                  <div class="modal fade" id="exampleModal{{ loop.index }}" tabindex="-1" aria-labelledby="exampleModalLabel{{ loop.index }}" aria-hidden="true">
+                                    <div class="modal-dialog" >
+                                      <div class="modal-content" style="background-color:white;">
+                                        <div class="modal-header">
+                                          <h5 class="modal-title" id="exampleModalLabel">학생 정보 수정하기</h5>
+                                          
+                                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                          
+                                        </div>
+                                         <form action="{{ doc_root }}t-dashboard-student-modify" method="post">
+                                        <div class="modal-body">
+                                          
+                                        
+                                            <div class="form-group">
+                                              <input type="hidden" name="id" id="id" value="{{ student.id }}">
+                                              <input type="hidden" name="classname" id="classname" value="{{ student.classname }}">
+                                              <label for="studentnumber">번호</label>
+                                              <input type="number" class="form-control" id="studentnumber" name="studentnumber"  value="{{ student.studentnumber }}">
+                                              <label for="studentname">이름</label>
+                                              <input type="text" class="form-control" id="studentname" name="studentname"  value ="{{ student.studentname }}">
+                                            </div>
+                                         
+                                        </div>
+                                        <div class="modal-footer">
+                                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+                                          <button type="submit" class="btn btn-primary">수정하기</button>
+                                          
+                                        </div>
+                                         </form>
+                                      </div>
+                                    </div>
+                                  </div>
+                                    <td><button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal1{{ loop.index }}">삭제</button></td>
+                                    
+                                    <!-- Modal -->
+                                  <div class="modal fade" id="exampleModal1{{ loop.index }}" tabindex="-2" aria-labelledby="exampleModalLabel1{{ loop.index }}" aria-hidden="true">
+                                    <div class="modal-dialog" >
+                                      <div class="modal-content" style="background-color:white;">
+                                        <div class="modal-header">
+                                          <h5 class="modal-title" id="exampleModalLabel">학생 정보 삭제하기</h5>
+                                          
+                                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                          
+                                        </div>
+                                         <form action="{{ doc_root }}t-dashboard-student-delete" method="post">
+                                        <div class="modal-body">
+                                          
+                                        
+                                            <div class="form-group">
+                                              <input type="hidden" name="id" id="id" value="{{ student.id }}">
+                                              <input type="hidden" name="classname" id="classname" value="{{ student.classname }}">
+                                              <label for="studentnumber">번호</label>
+                                              <input type="number" class="form-control" id="studentnumber" name="studentnumber"  value="{{ student.studentnumber }}">
+                                              <label for="studentname">이름</label>
+                                              <input type="text" class="form-control" id="studentname" name="studentname"  value ="{{ student.studentname }}">
+                                            </div>
+                                         
+                                        </div>
+                                        <div class="modal-footer">
+                                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+                                          <button type="submit" class="btn btn-primary">삭제하기</button>
+                                          
+                                        </div>
+                                         </form>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  
                                   </tr>
+                                  
+                                  
+                                  {% endfor %}
                                 </tbody>
                               </table>
 
-                                  
                               
+                              <br>
+                              <br>
+                              <div class="">
+                                <h2>학생 추가</h2>
+                                <form action="{{ doc_root }}t-dashboard-student-manage" method="post">
+                                  <div class="form-group">
+                                    <label for="studentnumber">번호(시스템 설계상 제일 마지막에 추가 됩니다.)</label>
+                                    <input type="number" class="form-control" id="studentnumber" name="studentnumber" placeholder="학생 번호를 입력하세요. 제일 마지막에 추가됩니다.">
+                                    <label for="studentname">이름</label>
+                                    <input type="text" class="form-control" id="studentname" name="studentname" placeholder="학생 이름을 입력하세요">
+                                  </div>
+                                  <br>
+                                  <input type="hidden" name="classname" value="{{ classname }}">
+
+                                  
+                                  <button type="submit" class="btn btn-success">추가</button>
+                                </form>
                                 
 
                               </div>

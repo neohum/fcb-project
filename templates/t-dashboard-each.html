@@ -182,7 +182,7 @@
                         <li class="nav-item more-dropdown">
                            {% for student in students  %}
                             <div class="nav-item more-dropdown ml-130 mb-20">
-                                <a class="btn" href="{{ doc_root }}t-dashboard-each/{{ student.studentnumber }}/{{ student.studentname }}" target="_blank"  id="customDropdown" >
+                                <a class="dropdown-toggle btn" href="{{ doc_root }}t-dashboard-each/{{ student.studentnumber }}/{{ student.studentname }}" target="_blank" role="button" id="customDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <span>번호: {{ student.studentnumber }} =>  {{ student.studentname }}</span>
                                 </a>
                                 

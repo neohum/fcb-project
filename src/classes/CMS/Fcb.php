@@ -108,7 +108,7 @@ class Fcb
   }
 
 
-  public function setSubjectCheck(string $subjectname, $studentnumber, $subjectname2, int $classname, $studentname)
+  public function setSubjectCheck( $subjectname, $studentnumber, $subjectname2, $classname, $studentname)
   {
   
       $sql = "INSERT INTO subject (subjectname, studentnumber, subjectname2, classname, studentname) VALUES (:subjectname, :studentnumber, :subjectname2, :classname, :studentname);";
@@ -202,7 +202,7 @@ class Fcb
       return $this->db->runSQL($sql, $arguments)->fetch();
     }
   
-    public function getStudentName(int $classname, $studentnumber)
+    public function getStudentName( $classname, $studentnumber)
     {
       $sql = "SELECT studentname FROM student WHERE classname = :classname AND studentnumber = :studentnumber;";
       $arguments['classname'] = $classname;
