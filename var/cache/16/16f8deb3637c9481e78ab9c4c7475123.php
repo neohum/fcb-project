@@ -188,7 +188,7 @@ class __TwigTemplate_fc39257cbe08395a2f1b40952a667d34 extends Template
         yield "t-dashboard-make-s\"class=\"dropdown-toggle\">
                             <div class=\"\">
                                 <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-box\"><path d=\"M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z\"></path><polyline points=\"3.27 6.96 12 12.01 20.73 6.96\"></polyline><line x1=\"12\" y1=\"22.08\" x2=\"12\" y2=\"12\"></line></svg>
-                                <span>우리반 생성/학생 등록</span>
+                                <span>우리반 생성/최초 1회만 실행</span>
                             </div>
                             <div>
                             </div>
@@ -197,7 +197,10 @@ class __TwigTemplate_fc39257cbe08395a2f1b40952a667d34 extends Template
                     </li>
 
                     <li class=\"menu\">
-                        <a href=\"#elements\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\" class=\"dropdown-toggle\">
+                        <a href=\"";
+        // line 132
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["doc_root"] ?? null), "html", null, true);
+        yield "t-dashboard-student-manage\" class=\"dropdown-toggle\">
                             <div class=\"\">
                                 <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-zap\"><polygon points=\"13 2 3 14 12 14 11 22 21 10 12 10 13 2\"></polygon></svg>
                                 <span>우리반 등록 현황</span>
@@ -386,7 +389,7 @@ class __TwigTemplate_fc39257cbe08395a2f1b40952a667d34 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  187 => 120,  169 => 105,  114 => 52,  107 => 48,  94 => 39,  88 => 37,  86 => 36,  51 => 3,  47 => 2,  36 => 1,);
+        return array (  202 => 132,  187 => 120,  169 => 105,  114 => 52,  107 => 48,  94 => 39,  88 => 37,  86 => 36,  51 => 3,  47 => 2,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -513,7 +516,7 @@ class __TwigTemplate_fc39257cbe08395a2f1b40952a667d34 extends Template
                         <a href=\"{{ doc_root }}t-dashboard-make-s\"class=\"dropdown-toggle\">
                             <div class=\"\">
                                 <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-box\"><path d=\"M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z\"></path><polyline points=\"3.27 6.96 12 12.01 20.73 6.96\"></polyline><line x1=\"12\" y1=\"22.08\" x2=\"12\" y2=\"12\"></line></svg>
-                                <span>우리반 생성/학생 등록</span>
+                                <span>우리반 생성/최초 1회만 실행</span>
                             </div>
                             <div>
                             </div>
@@ -522,7 +525,7 @@ class __TwigTemplate_fc39257cbe08395a2f1b40952a667d34 extends Template
                     </li>
 
                     <li class=\"menu\">
-                        <a href=\"#elements\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\" class=\"dropdown-toggle\">
+                        <a href=\"{{ doc_root }}t-dashboard-student-manage\" class=\"dropdown-toggle\">
                             <div class=\"\">
                                 <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-zap\"><polygon points=\"13 2 3 14 12 14 11 22 21 10 12 10 13 2\"></polygon></svg>
                                 <span>우리반 등록 현황</span>

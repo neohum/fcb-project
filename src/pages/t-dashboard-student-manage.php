@@ -21,4 +21,5 @@ $_SESSION['classname'] = $data['className'];
 $data['username'] = $_SESSION['userName'];
 
 
-echo $twig->render('t-dashboard-make-s.html', $data);
+echo $twig->render('t-dashboard-student-manage.html', $data);
+

@@ -181,7 +181,7 @@ class __TwigTemplate_13fe0dafd04ed916b984e5b11098fdd2 extends Template
         yield "t-dashboard-make-s\"class=\"dropdown-toggle\">
                             <div class=\"\">
                                 <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-box\"><path d=\"M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z\"></path><polyline points=\"3.27 6.96 12 12.01 20.73 6.96\"></polyline><line x1=\"12\" y1=\"22.08\" x2=\"12\" y2=\"12\"></line></svg>
-                                <span>우리반 생성/학생 등록</span>
+                                <span>우리반 생성/최초 1회만</span>
                             </div>
                             <div>
                             </div>
@@ -190,7 +190,10 @@ class __TwigTemplate_13fe0dafd04ed916b984e5b11098fdd2 extends Template
                     </li>
 
                     <li class=\"menu\">
-                        <a href=\"#elements\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\" class=\"dropdown-toggle\">
+                        <a href=\"";
+        // line 125
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["doc_root"] ?? null), "html", null, true);
+        yield "t-dashboard-student-manage\" class=\"dropdown-toggle\">
                             <div class=\"\">
                                 <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-zap\"><polygon points=\"13 2 3 14 12 14 11 22 21 10 12 10 13 2\"></polygon></svg>
                                 <span>우리반 등록 현황</span>
@@ -206,57 +209,6 @@ class __TwigTemplate_13fe0dafd04ed916b984e5b11098fdd2 extends Template
                         <div class=\"heading\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-minus\"><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"></line></svg><span>TABLES AND FORMS</span></div>
                     </li>
 
-                    <li class=\"menu\">
-                        <a href=\"#tables\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\" class=\"dropdown-toggle\">
-                            <div class=\"\">
-                                <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-layers\"><polygon points=\"12 2 2 7 12 12 22 7 12 2\"></polygon><polyline points=\"2 17 12 22 22 17\"></polyline><polyline points=\"2 12 12 17 22 12\"></polyline></svg>
-                                <span>Tables</span>
-                            </div>
-                            <div>
-                                <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-chevron-right\"><polyline points=\"9 18 15 12 9 6\"></polyline></svg>
-                            </div>
-                        </a>
-                        
-                    </li>
-
-                    <li class=\"menu\">
-                        <a href=\"#forms\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\" class=\"dropdown-toggle\">
-                            <div class=\"\">
-                                <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-clipboard\"><path d=\"M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2\"></path><rect x=\"8\" y=\"2\" width=\"8\" height=\"4\" rx=\"1\" ry=\"1\"></rect></svg>
-                                <span>Forms</span>
-                            </div>
-                            <div>
-                                <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-chevron-right\"><polyline points=\"9 18 15 12 9 6\"></polyline></svg>
-                            </div>
-                        </a>
-                        
-                    </li>
-
-                    <li class=\"menu\">
-                        <a href=\"#pages\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\" class=\"dropdown-toggle\">
-                            <div class=\"\">
-                                <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-file\"><path d=\"M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z\"></path><polyline points=\"13 2 13 9 20 9\"></polyline></svg>
-                                <span>Pages</span>
-                            </div>
-                            <div>
-                                <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-chevron-right\"><polyline points=\"9 18 15 12 9 6\"></polyline></svg>
-                            </div>
-                        </a>
-                        
-                    </li>
-
-                    <li class=\"menu\">
-                        <a href=\"#more\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\" class=\"dropdown-toggle\">
-                            <div class=\"\">
-                                <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-plus-circle\"><circle cx=\"12\" cy=\"12\" r=\"10\"></circle><line x1=\"12\" y1=\"8\" x2=\"12\" y2=\"16\"></line><line x1=\"8\" y1=\"12\" x2=\"16\" y2=\"12\"></line></svg>
-                                <span>More</span>
-                            </div>
-                            <div>
-                                <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-chevron-right\"><polyline points=\"9 18 15 12 9 6\"></polyline></svg>
-                            </div>
-                        </a>
-                        
-                    </li>
 
                 </ul>
                 
@@ -300,7 +252,7 @@ class __TwigTemplate_13fe0dafd04ed916b984e5b11098fdd2 extends Template
                         <li class=\"nav-item more-dropdown\">
                             <div class=\"nav-item more-dropdown ml-130 mb-20\">
                                 <a class=\"dropdown-toggle btn\" href=\"";
-        // line 234
+        // line 183
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["doc_root"] ?? null), "html", null, true);
         yield "t-oxmake\" role=\"button\" id=\"customDropdown\" data-bs-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
                                             <span>O,X 선택형 생성하기</span>
@@ -402,7 +354,7 @@ class __TwigTemplate_13fe0dafd04ed916b984e5b11098fdd2 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  304 => 234,  180 => 113,  162 => 98,  108 => 46,  101 => 42,  88 => 33,  82 => 31,  80 => 30,  51 => 3,  47 => 2,  36 => 1,);
+        return array (  256 => 183,  195 => 125,  180 => 113,  162 => 98,  108 => 46,  101 => 42,  88 => 33,  82 => 31,  80 => 30,  51 => 3,  47 => 2,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -522,7 +474,7 @@ class __TwigTemplate_13fe0dafd04ed916b984e5b11098fdd2 extends Template
                         <a href=\"{{ doc_root }}t-dashboard-make-s\"class=\"dropdown-toggle\">
                             <div class=\"\">
                                 <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-box\"><path d=\"M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z\"></path><polyline points=\"3.27 6.96 12 12.01 20.73 6.96\"></polyline><line x1=\"12\" y1=\"22.08\" x2=\"12\" y2=\"12\"></line></svg>
-                                <span>우리반 생성/학생 등록</span>
+                                <span>우리반 생성/최초 1회만</span>
                             </div>
                             <div>
                             </div>
@@ -531,7 +483,7 @@ class __TwigTemplate_13fe0dafd04ed916b984e5b11098fdd2 extends Template
                     </li>
 
                     <li class=\"menu\">
-                        <a href=\"#elements\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\" class=\"dropdown-toggle\">
+                        <a href=\"{{ doc_root }}t-dashboard-student-manage\" class=\"dropdown-toggle\">
                             <div class=\"\">
                                 <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-zap\"><polygon points=\"13 2 3 14 12 14 11 22 21 10 12 10 13 2\"></polygon></svg>
                                 <span>우리반 등록 현황</span>
@@ -547,57 +499,6 @@ class __TwigTemplate_13fe0dafd04ed916b984e5b11098fdd2 extends Template
                         <div class=\"heading\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-minus\"><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"></line></svg><span>TABLES AND FORMS</span></div>
                     </li>
 
-                    <li class=\"menu\">
-                        <a href=\"#tables\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\" class=\"dropdown-toggle\">
-                            <div class=\"\">
-                                <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-layers\"><polygon points=\"12 2 2 7 12 12 22 7 12 2\"></polygon><polyline points=\"2 17 12 22 22 17\"></polyline><polyline points=\"2 12 12 17 22 12\"></polyline></svg>
-                                <span>Tables</span>
-                            </div>
-                            <div>
-                                <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-chevron-right\"><polyline points=\"9 18 15 12 9 6\"></polyline></svg>
-                            </div>
-                        </a>
-                        
-                    </li>
-
-                    <li class=\"menu\">
-                        <a href=\"#forms\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\" class=\"dropdown-toggle\">
-                            <div class=\"\">
-                                <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-clipboard\"><path d=\"M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2\"></path><rect x=\"8\" y=\"2\" width=\"8\" height=\"4\" rx=\"1\" ry=\"1\"></rect></svg>
-                                <span>Forms</span>
-                            </div>
-                            <div>
-                                <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-chevron-right\"><polyline points=\"9 18 15 12 9 6\"></polyline></svg>
-                            </div>
-                        </a>
-                        
-                    </li>
-
-                    <li class=\"menu\">
-                        <a href=\"#pages\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\" class=\"dropdown-toggle\">
-                            <div class=\"\">
-                                <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-file\"><path d=\"M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z\"></path><polyline points=\"13 2 13 9 20 9\"></polyline></svg>
-                                <span>Pages</span>
-                            </div>
-                            <div>
-                                <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-chevron-right\"><polyline points=\"9 18 15 12 9 6\"></polyline></svg>
-                            </div>
-                        </a>
-                        
-                    </li>
-
-                    <li class=\"menu\">
-                        <a href=\"#more\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\" class=\"dropdown-toggle\">
-                            <div class=\"\">
-                                <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-plus-circle\"><circle cx=\"12\" cy=\"12\" r=\"10\"></circle><line x1=\"12\" y1=\"8\" x2=\"12\" y2=\"16\"></line><line x1=\"8\" y1=\"12\" x2=\"16\" y2=\"12\"></line></svg>
-                                <span>More</span>
-                            </div>
-                            <div>
-                                <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-chevron-right\"><polyline points=\"9 18 15 12 9 6\"></polyline></svg>
-                            </div>
-                        </a>
-                        
-                    </li>
 
                 </ul>
                 
