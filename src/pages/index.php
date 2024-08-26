@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {                          // If form 
     if (empty($_POST['classname']) || empty($_POST['studentname'])) {     // If user id or password is empty
         $data['errors'] = '클래스 번호와 이름을 입력하세요.';        // Set error message
         echo "<script>alert('클래스 번호와 이름을 입력하세요.);</script>"; // Alert user
-        redirect('/');                                       // Redirect to admin page
+        redirect('../');                                       // Redirect to admin page
         exit();                                                     // Exit
                              // Create session
        // Get password
@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {                          // If form 
         } else {
             $data['errors'] = '클래스 번호와 이름이 일치하지 않습니다.'; // Set error message
             echo "<script>alert('클래스 번호와 이름이 일치하지 않습니다.');</script>"; // Alert user
-            redirect('/');                                   // Redirect to admin page
+            redirect('../');                                   // Redirect to admin page
             exit();                                                 // Exit
       }                                       // Redirect to admin page
     }
