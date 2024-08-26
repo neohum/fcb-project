@@ -248,16 +248,16 @@ class __TwigTemplate_13fe0dafd04ed916b984e5b11098fdd2 extends Template
                     <!--  END BREADCRUMBS  -->
                    <br>
     
-                   <ul class=\"navbar-nav flex-row ms-auto breadcrumb-action-dropdown\">
+                   <div class=\"\">
               
-                        <li class=\"nav-item more-dropdown\">
+                        <div class=\"\">
                            ";
         // line 183
         $context['_parent'] = $context;
         $context['_seq'] = CoreExtension::ensureTraversable(($context["students"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["student"]) {
             // line 184
-            yield "                            <div class=\"nav-item more-dropdown ml-130 mb-20\">
+            yield "                            <div class=\" mb-20\">
                                 <a class=\"btn\" href=\"";
             // line 185
             yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["doc_root"] ?? null), "html", null, true);
@@ -281,8 +281,8 @@ class __TwigTemplate_13fe0dafd04ed916b984e5b11098fdd2 extends Template
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['student'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 191
-        yield "                        </li>
-                    </ul>
+        yield "                        </div>
+                    </div>
 
                 </div>
 
@@ -535,19 +535,19 @@ class __TwigTemplate_13fe0dafd04ed916b984e5b11098fdd2 extends Template
                     <!--  END BREADCRUMBS  -->
                    <br>
     
-                   <ul class=\"navbar-nav flex-row ms-auto breadcrumb-action-dropdown\">
+                   <div class=\"\">
               
-                        <li class=\"nav-item more-dropdown\">
+                        <div class=\"\">
                            {% for student in students  %}
-                            <div class=\"nav-item more-dropdown ml-130 mb-20\">
+                            <div class=\" mb-20\">
                                 <a class=\"btn\" href=\"{{ doc_root }}t-dashboard-each/{{ student.studentnumber }}/{{ student.studentname }}\" target=\"_blank\"  id=\"customDropdown\" >
                                             <span>번호: {{ student.studentnumber }} =>  {{ student.studentname }}</span>
                                 </a>
                                 
                               </div>
                             {% endfor %}
-                        </li>
-                    </ul>
+                        </div>
+                    </div>
 
                 </div>
 
