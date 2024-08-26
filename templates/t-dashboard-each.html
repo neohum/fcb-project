@@ -180,19 +180,113 @@
                    <ul class="navbar-nav flex-row ms-auto breadcrumb-action-dropdown">
               
                         <li class="nav-item more-dropdown">
-                           {% for student in students  %}
+                           
                             <div class="nav-item more-dropdown ml-130 mb-20">
-                                <a class="dropdown-toggle btn" href="{{ doc_root }}t-dashboard-each/{{ student.studentnumber }}/{{ student.studentname }}" target="_blank" role="button" id="customDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <span>번호: {{ student.studentnumber }} =>  {{ student.studentname }}</span>
-                                </a>
-                                
-                              </div>
-                            {% endfor %}
+                                <h2><span>번호: {{ studentnumber }} =>  {{ studentname }} 학생의 평가 결과입니다.</span></h2>
+                            </div>
+                           
                         </li>
                     </ul>
 
                 </div>
-
+                <table class="table table-hover text-center">
+                  <thead>
+                    <tr>
+                        <th>평가 항목</th>
+                        <th>평가 결과 1</th>
+                        <th>평가 결과 2</th>
+                        <th>평가일</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for student in student_results %}
+                    
+                    <tr>
+                        <td>{{ student.subjectname2 }}</td>
+                        <td>
+                          {% if student.subjectname == "CheckBox" %}
+                     {%  if student.score == 1 %}
+                        <input type="checkbox" checked name="score1" value=1>
+                      {% else %}
+                        <input type="checkbox" name="score1" value="1">
+                      {% endif %}
+                  {% elseif student.subjectname == "5CheckBox" %}
+                     {% if student.score == 1%}
+                          <input type="radio" name="score1" value="1" checked>&ensp;<input type="radio" name="score1" value="2">&ensp;<input type="radio" name="score1" value="3">&ensp;<input type="radio" name="score1" value="4">&ensp;<input type="radio" name="score1" value="5">
+                      {% elseif student.score == 2%}
+                          <input type="radio" name="score1" value="1">&ensp;<input type="radio" name="score1" value="2" checked>&ensp;<input type="radio" name="score1" value="3">&ensp;<input type="radio" name="score1" value="4">&ensp;<input type="radio" name="score1" value="5">
+                      {% elseif student.score == 3%}
+                          <input type="radio" name="score1" value="1">&ensp;<input type="radio" name="score1" value="2">&ensp;<input type="radio" name="score1" value="3" checked>&ensp;<input type="radio" name="score1" value="4">&ensp;<input type="radio" name="score1" value="5">
+                      {% elseif student.score == 4%}
+                          <input type="radio" name="score1" value="1">&ensp;<input type="radio" name="score1" value="2">&ensp;<input type="radio" name="score1" value="3">&ensp;<input type="radio" name="score1" value="4" checked>&ensp;<input type="radio" name="score1" value="5">
+                      {% elseif student.score == 5%}
+                          <input type="radio" name="score1" value="1">&ensp;<input type="radio" name="score1" value="2">&ensp;<input type="radio" name="score1" value="3">&ensp;<input type="radio" name="score1" value="4">&ensp;<input type="radio" name="score1" value="5" checked>
+                      {% else %}
+                          <input type="radio" name="score1" value="1">&ensp;<input type="radio" name="score1" value="2">&ensp;<input type="radio" name="score1" value="3">&ensp;<input type="radio" name="score1" value="4">&ensp;<input type="radio" name="score1" value="5">
+                      {% endif %}
+                  {% elseif student.subjectname == "3CheckBox" %}
+                      {% if student.score == 1%}
+                          <input type="radio" name="score1" value="1" checked>&ensp;<input type="radio" name="score1" value="2">&ensp;<input type="radio" name="score1" value="3">
+                      {% elseif student.score == 2%}
+                          <input type="radio" name="score1" value="1">&ensp;<input type="radio" name="score1" value="2" checked>&ensp;<input type="radio" name="score1" value="3">
+                      {% elseif student.score == 3%}
+                          <input type="radio" name="score1" value="1">&ensp;<input type="radio" name="score1" value="2">&ensp;<input type="radio" name="score1" value="3" checked>
+                      {% else %}
+                           <input type="radio" name="score1" value="1">&ensp;<input type="radio" name="score1" value="2">&ensp;<input type="radio" name="score1" value="3">
+                      {% endif %}
+                           {% elseif student.subjectname == "Writing" %}
+                              {% if student.score != null %}
+                              <textarea class="form-control" name="score1">{{ student.score }}</textarea>
+                              {% else %}
+                              <textarea class="form-control" name="score1"></textarea>
+                              {% endif %}
+                  {% endif %}
+                        </td>
+                        <td>
+                          {% if student.subjectname == "CheckBox" %}
+                     {%  if student.score2 == 1 %}
+                        <input type="checkbox" checked name="score1" value=1>
+                      {% else %}
+                        <input type="checkbox" name="score1" value="1">
+                      {% endif %}
+                  {% elseif student.subjectname == "5CheckBox" %}
+                     {% if student.score2 == 1%}
+                          <input type="radio" name="score1" value="1" checked>&ensp;<input type="radio" name="score1" value="2">&ensp;<input type="radio" name="score1" value="3">&ensp;<input type="radio" name="score1" value="4">&ensp;<input type="radio" name="score1" value="5">
+                      {% elseif student.score2 == 2%}
+                          <input type="radio" name="score1" value="1">&ensp;<input type="radio" name="score1" value="2" checked>&ensp;<input type="radio" name="score1" value="3">&ensp;<input type="radio" name="score1" value="4">&ensp;<input type="radio" name="score1" value="5">
+                      {% elseif student.score2 == 3%}
+                          <input type="radio" name="score1" value="1">&ensp;<input type="radio" name="score1" value="2">&ensp;<input type="radio" name="score1" value="3" checked>&ensp;<input type="radio" name="score1" value="4">&ensp;<input type="radio" name="score1" value="5">
+                      {% elseif student.score2 == 4%}
+                          <input type="radio" name="score1" value="1">&ensp;<input type="radio" name="score1" value="2">&ensp;<input type="radio" name="score1" value="3">&ensp;<input type="radio" name="score1" value="4" checked>&ensp;<input type="radio" name="score1" value="5">
+                      {% elseif student.score2 == 5%}
+                          <input type="radio" name="score1" value="1">&ensp;<input type="radio" name="score1" value="2">&ensp;<input type="radio" name="score1" value="3">&ensp;<input type="radio" name="score1" value="4">&ensp;<input type="radio" name="score1" value="5" checked>
+                      {% else %}
+                          <input type="radio" name="score1" value="1">&ensp;<input type="radio" name="score1" value="2">&ensp;<input type="radio" name="score1" value="3">&ensp;<input type="radio" name="score1" value="4">&ensp;<input type="radio" name="score1" value="5">
+                      {% endif %}
+                  {% elseif student.subjectname == "3CheckBox" %}
+                      {% if student.score2 == 1%}
+                          <input type="radio" name="score1" value="1" checked>&ensp;<input type="radio" name="score1" value="2">&ensp;<input type="radio" name="score1" value="3">
+                      {% elseif student.score2 == 2%}
+                          <input type="radio" name="score1" value="1">&ensp;<input type="radio" name="score1" value="2" checked>&ensp;<input type="radio" name="score1" value="3">
+                      {% elseif student.score2 == 3%}
+                          <input type="radio" name="score1" value="1">&ensp;<input type="radio" name="score1" value="2">&ensp;<input type="radio" name="score1" value="3" checked>
+                      {% else %}
+                           <input type="radio" name="score1" value="1">&ensp;<input type="radio" name="score1" value="2">&ensp;<input type="radio" name="score1" value="3">
+                      {% endif %}
+                           {% elseif student.subjectname == "Writing" %}
+                              {% if student.score2 != null %}
+                              <textarea class="form-control" name="score1">{{ student.score2 }}</textarea>
+                              {% else %}
+                              <textarea class="form-control" name="score1"></textarea>
+                              {% endif %}
+                  {% endif %}
+                        </td>
+                        <td>{{ student.created_at|date('Y-m-d') }}</td>
+                    </tr>
+                    
+                    {% endfor %}
+                </tbody>
+                </table>
             </div>
             <br>
             <br>

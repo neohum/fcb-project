@@ -3,26 +3,14 @@ declare(strict_types=1);
 error_reporting(E_ALL&~E_WARNING);
 
 $data = [];
-$data['userid'] = $_SESSION['userName'];
+$data['seturl'] = $_SERVER['REQUEST_URI'];
+$data['seturl'] = explode('/', $data['seturl']);
+$data['studentnumber'] = $data['seturl'][3];
+$data['studentname'] = urldecode($data['seturl'][4]);
 
 
 
-$teacherid = $cms->getStudent()->getTeacher($data['userid']);
-
-$value = 0;
-foreach ($teacherid as $key => $value) {
-  if ($key == 'classname') {
-    $value;
-  }
-  
-}
-
-foreach ($value as $key => $value) {
-  $data['classname'] = $value;
-}
-
-
-$data['students'] = $cms->getStudent()->getStudentAll($data['classname']);
+$data['student_results'] = $cms->getStudent()->getStudentResultAll($data['studentnumber'], $data['studentname']);
 
 
 
