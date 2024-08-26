@@ -21,7 +21,7 @@ if (isset($_POST['userid']) ) {
             $data['login'] = $cms->getFcb()->insertFcb($data['userid'], $data['current-password']);
             $data['success'] = '가입이 완료 되었습니다.';
             echo "<script>alert('가입이 완료 되었습니다.');</script>";
-            redirect('t-admin/', $data);
+            redirect('t-admin/');
         }
 
     //세션 변수 등록
