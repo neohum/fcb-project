@@ -64,7 +64,7 @@ class __TwigTemplate_2ff01592f8ad33662428e752c8879c43 extends Template
       <link rel=\"stylesheet\" href=\"../css/style.css\">
      
       <link rel=\"stylesheet\" href=\"../css/responsive.css\">
-       <link rel=\"stylesheet\" href=\"../style.css\">
+   
       
       <!-- BEGIN GLOBAL MANDATORY STYLES -->
       <link href=\"https://fonts.googleapis.com/css?family=Nunito:400,600,700\" rel=\"stylesheet\">
@@ -174,7 +174,7 @@ class __TwigTemplate_2ff01592f8ad33662428e752c8879c43 extends Template
       <link rel=\"stylesheet\" href=\"../css/style.css\">
      
       <link rel=\"stylesheet\" href=\"../css/responsive.css\">
-       <link rel=\"stylesheet\" href=\"../style.css\">
+   
       
       <!-- BEGIN GLOBAL MANDATORY STYLES -->
       <link href=\"https://fonts.googleapis.com/css?family=Nunito:400,600,700\" rel=\"stylesheet\">
