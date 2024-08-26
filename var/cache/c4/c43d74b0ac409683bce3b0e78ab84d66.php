@@ -25,36 +25,72 @@ class __TwigTemplate_449cc5a4742b3d8bbad848c057fa91e1 extends Template
 
         $this->source = $this->getSourceContext();
 
-        $this->blocks = [
-            'content' => [$this, 'block_content'],
-        ];
-    }
+        $this->parent = false;
 
-    protected function doGetParent(array $context)
-    {
-        // line 1
-        return "layout.html";
+        $this->blocks = [
+        ];
     }
 
     protected function doDisplay(array $context, array $blocks = [])
     {
         $macros = $this->macros;
-        $this->parent = $this->loadTemplate("layout.html", "t-admin.html", 1);
-        yield from $this->parent->unwrap()->yield($context, array_merge($this->blocks, $blocks));
-    }
+        // line 1
+        yield "<!DOCTYPE html>
+<html lang=\"en\">
+<head>
+    <meta charset=\"utf-8\">
+    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">
+    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no\">
+    <title>schoolworks</title>
+    <link rel=\"icon\" type=\"image/x-icon\" href=\"https://upload.wikimedia.org/wikipedia/commons/8/8d/Icon_S_blue.svg\"/>
 
-    // line 2
-    public function block_content($context, array $blocks = [])
-    {
-        $macros = $this->macros;
-        // line 3
-        yield "<br>
-<br>
+      <link href=\"/layouts/vertical-light-menu/css/light/loader.css\" rel=\"stylesheet\" type=\"text/css\" />
+      <link href=\"/layouts/vertical-light-menu/css/dark/loader.css\" rel=\"stylesheet\" type=\"text/css\" />
+      <script src=\"/layouts/vertical-light-menu/loader.js\"></script>
+
+      
+      <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\"> 
+      <link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap\">
+      <link href=\"/layouts/vertical-light-menu/css/light/plugins.css\" rel=\"stylesheet\" type=\"text/css\" />
+      <link href=\"/layouts/vertical-light-menu/css/dark/plugins.css\" rel=\"stylesheet\" type=\"text/css\" />
+    
+       <!-- Css File -->
+   
+      <link rel=\"stylesheet\" href=\"/css/animate.min.css\">
+      <link rel=\"stylesheet\" href=\"/css/font-awesome.min.css\">
+      <link rel=\"stylesheet\" href=\"/css/mediabox.min.css\">
+      <link rel=\"stylesheet\" href=\"/css/owl.carousel.min.css\">
+      <link rel=\"stylesheet\" href=\"/css/style.css\">
+     
+      <link rel=\"stylesheet\" href=\"/css/responsive.css\">
+   
+      
+      <!-- BEGIN GLOBAL MANDATORY STYLES -->
+      <link href=\"https://fonts.googleapis.com/css?family=Nunito:400,600,700\" rel=\"stylesheet\">
+      <link href=\"/src/bootstrap/css/bootstrap.min.css\" rel=\"stylesheet\" type=\"text/css\" />
+      
+      <link href=\"/layouts/vertical-light-menu/css/light/plugins.css\" rel=\"stylesheet\" type=\"text/css\" />
+      <link href=\"/src/assets/css/light/authentication/auth-boxed.css\" rel=\"stylesheet\" type=\"text/css\" />
+      
+      <link href=\"/layouts/vertical-light-menu/css/dark/plugins.css\" rel=\"stylesheet\" type=\"text/css\" />
+      <link href=\"/src/assets/css/dark/authentication/auth-boxed.css\" rel=\"stylesheet\" type=\"text/css\" />
+      <link href=\"/src/assets/css/dark/authentication/auth-cover.css\" rel=\"stylesheet\" type=\"text/css\" />
+      <!-- END GLOBAL MANDATORY STYLES -->
+       <script defer src=\"https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js\"></script>
+       <script src=\"https://code.jquery.com/jquery-3.6.1.js\" integrity=\"sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=\" crossorigin=\"anonymous\"></script>
+        
+      <script src=\"https://unpkg.com/dropzone@5/dist/min/dropzone.min.js\"></script>
+<link rel=\"stylesheet\" href=\"https://unpkg.com/dropzone@5/dist/min/dropzone.min.css\" type=\"text/css\" />
+
+  </head>
+
+  <body>
+     
+
+    
 
 
-
-
-
+    
 
     <div class=\"auth-container d-flex\">
 
@@ -71,34 +107,34 @@ class __TwigTemplate_449cc5a4742b3d8bbad848c057fa91e1 extends Template
                                     
                                     <h2>관리자 로그인</h2>
                                     ";
-        // line 25
+        // line 72
         if (($context["errors"] ?? null)) {
-            // line 26
+            // line 73
             yield "                                    <div class=\"alert alert-danger\" role=\"alert\">
                                         ";
-            // line 27
+            // line 74
             yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["errors"] ?? null), "html", null, true);
             yield "
                                     </div>
                                     ";
         }
-        // line 30
+        // line 77
         yield "                                    ";
         if (($context["success"] ?? null)) {
-            // line 31
+            // line 78
             yield "                                    <div class=\"alert alert-success\" role=\"alert\">
                                         ";
-            // line 32
+            // line 79
             yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["success"] ?? null), "html", null, true);
             yield "
                                     </div>
                                     ";
         }
-        // line 35
+        // line 82
         yield "                                </div>
 
                                 <form action=\"";
-        // line 37
+        // line 84
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["doc_root"] ?? null), "html", null, true);
         yield "t-admin\" method=\"post\">
                                 <div class=\"col-md-12\">
@@ -129,7 +165,7 @@ class __TwigTemplate_449cc5a4742b3d8bbad848c057fa91e1 extends Template
                                 <div class=\"col-12\">
                                     <div class=\"text-center\">
                                         <p class=\"mb-0\">아직 계정이 없으신가요?<a href=\"";
-        // line 65
+        // line 112
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(($context["doc_root"] ?? null), "html", null, true);
         yield "t-signin\" class=\"text-warning\">가입하기</a></p>
                                     </div>
@@ -152,7 +188,34 @@ class __TwigTemplate_449cc5a4742b3d8bbad848c057fa91e1 extends Template
     
     <!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
 
-    <!-- END GLO -->
+ 
+
+    <!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
+   
+    <!-- END GLOBAL MANDATORY SCRIPTS -->
+        <!-- **** All JS Files ***** -->
+    <script src=\"/js/jquery.min.js\"></>
+    <script src=\"/js/popper.min.js\"></script>
+    
+
+      
+    <script src=\"/src/bootstrap/js/bootstrap.bundle.min.js\"></script>
+    <script src=\"/src/plugins/src/perfect-scrollbar/perfect-scrollbar.min.js\"></script>
+    <script src=\"/src/plugins/src/mousetrap/mousetrap.min.js\"></script>
+    <script src=\"/src/plugins/src/waves/waves.min.js\"></script>
+    <script src=\"/layouts/vertical-light-menu/app.js\"></script>
+
+    
+
+   
+  </body>
+</html>
+
+
+
+
+
+
 ";
         return; yield '';
     }
@@ -178,20 +241,67 @@ class __TwigTemplate_449cc5a4742b3d8bbad848c057fa91e1 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  133 => 65,  102 => 37,  98 => 35,  92 => 32,  89 => 31,  86 => 30,  80 => 27,  77 => 26,  75 => 25,  51 => 3,  47 => 2,  36 => 1,);
+        return array (  169 => 112,  138 => 84,  134 => 82,  128 => 79,  125 => 78,  122 => 77,  116 => 74,  113 => 73,  111 => 72,  38 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("{% extends 'layout.html' %}
-{% block content %}
-<br>
-<br>
+        return new Source("<!DOCTYPE html>
+<html lang=\"en\">
+<head>
+    <meta charset=\"utf-8\">
+    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">
+    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no\">
+    <title>schoolworks</title>
+    <link rel=\"icon\" type=\"image/x-icon\" href=\"https://upload.wikimedia.org/wikipedia/commons/8/8d/Icon_S_blue.svg\"/>
+
+      <link href=\"/layouts/vertical-light-menu/css/light/loader.css\" rel=\"stylesheet\" type=\"text/css\" />
+      <link href=\"/layouts/vertical-light-menu/css/dark/loader.css\" rel=\"stylesheet\" type=\"text/css\" />
+      <script src=\"/layouts/vertical-light-menu/loader.js\"></script>
+
+      
+      <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\"> 
+      <link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap\">
+      <link href=\"/layouts/vertical-light-menu/css/light/plugins.css\" rel=\"stylesheet\" type=\"text/css\" />
+      <link href=\"/layouts/vertical-light-menu/css/dark/plugins.css\" rel=\"stylesheet\" type=\"text/css\" />
+    
+       <!-- Css File -->
+   
+      <link rel=\"stylesheet\" href=\"/css/animate.min.css\">
+      <link rel=\"stylesheet\" href=\"/css/font-awesome.min.css\">
+      <link rel=\"stylesheet\" href=\"/css/mediabox.min.css\">
+      <link rel=\"stylesheet\" href=\"/css/owl.carousel.min.css\">
+      <link rel=\"stylesheet\" href=\"/css/style.css\">
+     
+      <link rel=\"stylesheet\" href=\"/css/responsive.css\">
+   
+      
+      <!-- BEGIN GLOBAL MANDATORY STYLES -->
+      <link href=\"https://fonts.googleapis.com/css?family=Nunito:400,600,700\" rel=\"stylesheet\">
+      <link href=\"/src/bootstrap/css/bootstrap.min.css\" rel=\"stylesheet\" type=\"text/css\" />
+      
+      <link href=\"/layouts/vertical-light-menu/css/light/plugins.css\" rel=\"stylesheet\" type=\"text/css\" />
+      <link href=\"/src/assets/css/light/authentication/auth-boxed.css\" rel=\"stylesheet\" type=\"text/css\" />
+      
+      <link href=\"/layouts/vertical-light-menu/css/dark/plugins.css\" rel=\"stylesheet\" type=\"text/css\" />
+      <link href=\"/src/assets/css/dark/authentication/auth-boxed.css\" rel=\"stylesheet\" type=\"text/css\" />
+      <link href=\"/src/assets/css/dark/authentication/auth-cover.css\" rel=\"stylesheet\" type=\"text/css\" />
+      <!-- END GLOBAL MANDATORY STYLES -->
+       <script defer src=\"https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js\"></script>
+       <script src=\"https://code.jquery.com/jquery-3.6.1.js\" integrity=\"sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=\" crossorigin=\"anonymous\"></script>
+        
+      <script src=\"https://unpkg.com/dropzone@5/dist/min/dropzone.min.js\"></script>
+<link rel=\"stylesheet\" href=\"https://unpkg.com/dropzone@5/dist/min/dropzone.min.css\" type=\"text/css\" />
+
+  </head>
+
+  <body>
+     
+
+    
 
 
-
-
-
+    
 
     <div class=\"auth-container d-flex\">
 
@@ -268,7 +378,34 @@ class __TwigTemplate_449cc5a4742b3d8bbad848c057fa91e1 extends Template
     
     <!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
 
-    <!-- END GLO -->
-{% endblock %}", "t-admin.html", "/Users/nm/works/project/fbc/templates/t-admin.html");
+ 
+
+    <!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
+   
+    <!-- END GLOBAL MANDATORY SCRIPTS -->
+        <!-- **** All JS Files ***** -->
+    <script src=\"/js/jquery.min.js\"></>
+    <script src=\"/js/popper.min.js\"></script>
+    
+
+      
+    <script src=\"/src/bootstrap/js/bootstrap.bundle.min.js\"></script>
+    <script src=\"/src/plugins/src/perfect-scrollbar/perfect-scrollbar.min.js\"></script>
+    <script src=\"/src/plugins/src/mousetrap/mousetrap.min.js\"></script>
+    <script src=\"/src/plugins/src/waves/waves.min.js\"></script>
+    <script src=\"/layouts/vertical-light-menu/app.js\"></script>
+
+    
+
+   
+  </body>
+</html>
+
+
+
+
+
+
+", "t-admin.html", "/Users/nm/works/project/fbc/templates/t-admin.html");
     }
 }
