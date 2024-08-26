@@ -51,6 +51,14 @@ class Student
       return $this->db->runSQL($sql, $arguments)->fetch();
   }
 
+  public function getStudentResultAll($studentnumber, $studentname)
+  {
+      $sql = "SELECT * FROM subject WHERE studentnumber = :studentnumber AND studentname = :studentname";
+      $arguments['studentnumber'] = $studentnumber;
+      $arguments['studentname'] = $studentname;
+      return $this->db->runSQL($sql, $arguments)->fetchAll();
+  }
+
   public function deleteStudent($id)
   {
       $sql = "DELETE FROM student WHERE id = :id;";
